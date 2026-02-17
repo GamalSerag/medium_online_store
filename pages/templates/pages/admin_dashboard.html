@@ -1,0 +1,199 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Admin Dashboard" %} | {% trans "Medium Store" %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <span class="text-2xl font-bold text-indigo-600">{% trans "Store Admin" %}</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">{% trans "Staff Area" %}</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="text-sm text-gray-500">{% trans "Logged in as" %} {{ user.username }}</span>
+            <form action="{% url 'set_language' %}" method="post" class="inline-flex">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                {% if LANGUAGE_CODE == 'ar' %}
+                <input type="hidden" name="language" value="en">
+                <button type="submit"
+                    class="text-xs font-medium px-2 py-1 rounded border border-gray-300 text-gray-700 hover:text-indigo-600 hover:border-indigo-300">
+                    EN
+                </button>
+                {% else %}
+                <input type="hidden" name="language" value="ar">
+                <button type="submit"
+                    class="text-xs font-medium px-2 py-1 rounded border border-gray-300 text-gray-700 hover:text-indigo-600 hover:border-indigo-300">
+                    AR</button>
+                {% endif %}
+            </form>
+            <a href="/admin/" class="text-sm font-medium text-gray-600 hover:text-indigo-600">{% trans "Django Admin" %}</a>
+            <a href="/" class="text-sm font-medium text-gray-600 hover:text-indigo-600">{% trans "View Site" %}</a>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-8">
+
+        {% if messages %}
+        <div class="mb-6">
+            {% for message in messages %}
+            <div
+                class="p-4 rounded-md {% if message.tags == 'success' %}bg-green-50 text-green-700{% else %}bg-red-50 text-red-700{% endif %}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <h1 class="text-3xl font-bold mb-8 text-gray-900">{% trans "Dashboard Overview" %}</h1>
+
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
+            <!-- Orders Today -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-sm font-medium text-gray-500 mb-1">{% trans "Orders Today" %}</p>
+                <p class="text-3xl font-bold text-gray-900">{{ orders_today }}</p>
+            </div>
+
+            <!-- Orders This Week -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-sm font-medium text-gray-500 mb-1">{% trans "Orders This Week" %}</p>
+                <p class="text-3xl font-bold text-gray-900">{{ orders_this_week }}</p>
+            </div>
+
+            <!-- Revenue -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-sm font-medium text-gray-500 mb-1">{% trans "Total Revenue" %}</p>
+                <p class="text-3xl font-bold text-green-600">${{ total_revenue|floatformat:2 }}</p>
+            </div>
+
+            <!-- Pending Orders -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-sm font-medium text-gray-500 mb-1">{% trans "Pending Orders" %}</p>
+                <p class="text-3xl font-bold text-orange-500">{{ pending_orders_count }}</p>
+            </div>
+
+            <!-- Successful Orders -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-sm font-medium text-gray-500 mb-1">{% trans "Successful Orders" %}</p>
+                <p class="text-3xl font-bold text-blue-600">{{ successful_orders_count }}</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Recent Orders Table -->
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+                    <h2 class="text-lg font-semibold text-gray-900">{% trans "Recent Orders" %}</h2>
+                    <a href="/admin/orders/order/" class="text-sm text-indigo-600 hover:underline">{% trans "View All" %}</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3">{% trans "Order #" %}</th>
+                                <th class="px-6 py-3">{% trans "Customer" %}</th>
+                                <th class="px-6 py-3">{% trans "Status" %}</th>
+                                <th class="px-6 py-3">{% trans "Total" %}</th>
+                                <th class="px-6 py-3">{% trans "Action" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in recent_orders %}
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium text-gray-900">{{ order.order_number }}</td>
+                                <td class="px-6 py-4">
+                                    {{ order.customer_name }}
+                                    <div class="text-xs text-gray-400">{{ order.phone }}</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 rounded-full text-xs font-semibold
+                                        {% if order.status == 'pending' %}bg-yellow-100 text-yellow-800
+                                        {% elif order.status == 'confirmed' %}bg-blue-100 text-blue-800
+                                        {% elif order.status == 'shipped' %}bg-indigo-100 text-indigo-800
+                                        {% elif order.status == 'delivered' %}bg-green-100 text-green-800
+                                        {% else %}bg-gray-100 text-gray-800{% endif %}
+                                    ">
+                                        {{ order.get_status_display }}
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4">${{ order.totals }}</td>
+                                <td class="px-6 py-4 flex items-center gap-3">
+                                    <a href="{% url 'admin_order_detail' order.pk %}"
+                                        class="bg-gray-100 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 px-3 py-1.5 rounded text-xs font-medium transition-colors border border-gray-200">
+                                        {% trans "View" %}
+                                    </a>
+                                    <form action="{% url 'update_order_status' order.pk %}" method="POST"
+                                        class="flex gap-2 items-center">
+                                        {% csrf_token %}
+                                        <select name="status"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded p-1.5 focus:ring-indigo-500 focus:border-indigo-500">
+                                            {% for code, label in status_choices %}
+                                            <option value="{{ code }}" {% if order.status == code %}selected{% endif %}>{{label}}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <button type="submit"
+                                            class="text-indigo-600 hover:text-indigo-900 text-xs font-medium">{% trans "Update" %}</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="5" class="px-6 py-4 text-center text-gray-500">{% trans "No orders found."
+                                    %}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Best Sellers -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 h-fit">
+                <div class="px-6 py-4 border-b border-gray-200">
+                    <h2 class="text-lg font-semibold text-gray-900">{% trans "Best Sellers" %}</h2>
+                </div>
+                <ul class="divide-y divide-gray-100">
+                    {% for product in best_sellers %}
+                    <li class="px-6 py-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 font-bold text-xs">
+                                {{ forloop.counter }}
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">{{ product.name }}</p>
+                                <p class="text-xs text-gray-500">{{ product.category.name }}</p>
+                            </div>
+                        </div>
+                        <span class="text-sm font-semibold text-gray-700">{{ product.sales_count }} {% trans "sold"
+                            %}</span>
+                    </li>
+                    {% empty %}
+                    <li class="px-6 py-4 text-sm text-gray-500 text-center">{% trans "No sales data yet." %}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

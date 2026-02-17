@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Shopping Cart" %} - {% trans "Medium Store" %}{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb -->
+<section class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <nav class="text-sm text-gray-500">
+            <a href="{% url 'home' %}" class="hover:text-indigo-600">{% trans "Home" %}</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-900">{% trans "Shopping Cart" %}</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Cart Content -->
+<section class="py-12 bg-gray-50 min-h-screen">
+    <div class="max-w-7xl mx-auto px-6">
+        <h1 class="text-3xl font-bold text-gray-900 mb-8">{% trans "Shopping Cart" %}</h1>
+
+        {% if is_empty %}
+        <!-- Empty Cart State -->
+        <div class="bg-white rounded-3xl shadow-lg p-12 text-center">
+            <div class="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{% trans "Your cart is empty" %}</h2>
+            <p class="text-gray-500 mb-8">{% trans "Looks like you haven't added any items to your cart yet." %}</p>
+            <a href="{% url 'home' %}"
+                class="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                {% trans "Continue Shopping" %}
+            </a>
+        </div>
+        {% else %}
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Cart Items -->
+            <div class="lg:col-span-2 space-y-4">
+                {% for item in cart_items %}
+                <div class="bg-white rounded-2xl shadow-md p-6 flex gap-6">
+                    <!-- Product Image -->
+                    <div class="w-24 h-24 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100">
+                        {% if item.product.images.first %}
+                        <img src="{{ item.product.images.first.image.url }}" alt="{{ item.product.images.all.0 }}"
+                            class="w-full h-full object-cover">
+                        {% else %}
+                        <div class="w-full h-full flex items-center justify-center text-gray-400">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <a href="{% url 'product_detail' item.product.slug %}"
+                                    class="text-lg font-semibold text-gray-900 hover:text-indigo-600">{{
+                                    item.product.name }}</a>
+                                <p class="text-sm text-gray-500">{{ item.product.category.name }}</p>
+                            </div>
+                            <span class="text-lg font-bold text-indigo-600">${{ item.total_price }}</span>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-4">
+                            <!-- Quantity Update Form -->
+                            <form action="{% url 'cart_update' item.product.id %}" method="post"
+                                class="flex items-center gap-2">
+                                {% csrf_token %}
+                                <label class="text-sm text-gray-600">{% trans "Qty" %}:</label>
+                                <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                                    <button type="button" onclick="updateQty(this, -1)"
+                                        class="px-3 py-2 bg-gray-50 hover:bg-gray-100 transition-colors">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M20 12H4" />
+                                        </svg>
+                                    </button>
+                                    <input type="number" name="quantity" value="{{ item.quantity }}" min="1"
+                                        max="{{ item.product.stock }}"
+                                        class="w-12 text-center border-0 focus:ring-0 text-sm font-semibold">
+                                    <button type="button" onclick="updateQty(this, 1)"
+                                        class="px-3 py-2 bg-gray-50 hover:bg-gray-100 transition-colors">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 4v16m8-8H4" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <button type="submit"
+                                    class="ml-2 px-3 py-2 text-sm text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors">
+                                    {% trans "Update" %}
+                                </button>
+                            </form>
+
+                            <!-- Remove Button -->
+                            <form action="{% url 'cart_remove' item.product.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit"
+                                    class="flex items-center gap-1 text-sm text-red-600 hover:text-red-800 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                    {% trans "Remove" %}
+                                </button>
+                            </form>
+                        </div>
+
+                        <p class="text-xs text-gray-400 mt-2">${{ item.price }} {% trans "each" %}</p>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- Continue Shopping Link -->
+                <a href="{% url 'home' %}"
+                    class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium mt-4">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    {% trans "Continue Shopping" %}
+                </a>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-6">{% trans "Order Summary" %}</h2>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">{% trans "Subtotal" %}</span>
+                            <span class="font-semibold text-gray-900">${{ subtotal }}</span>
+                        </div>
+
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">{% trans "Shipping" %}</span>
+                            {% if shipping == 0 %}
+                            <span class="font-semibold text-green-600">{% trans "FREE" %}</span>
+                            {% else %}
+                            <span class="font-semibold text-gray-900">${{ shipping }}</span>
+                            {% endif %}
+                        </div>
+
+                        {% if shipping != 0 %}
+                        <p class="text-xs text-gray-400">{% trans "Free shipping on orders over $50" %}</p>
+                        {% endif %}
+
+                        <hr class="border-gray-200">
+
+                        <div class="flex justify-between text-lg">
+                            <span class="font-semibold text-gray-900">{% trans "Total" %}</span>
+                            <span class="font-bold text-indigo-600">${{ total }}</span>
+                        </div>
+                    </div>
+
+                    <a href="{% url 'checkout' %}"
+                        class="w-full mt-6 flex items-center justify-center gap-2 px-8 py-4 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                        {% trans "Proceed to Checkout" %}
+                    </a>
+
+                    <!-- Security Badge -->
+                    <div class="mt-6 flex items-center justify-center gap-2 text-xs text-gray-400">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        {% trans "Secure Checkout" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- JavaScript for Quantity Updates -->
+<script>
+    function updateQty(button, delta) {
+        const form = button.closest('form');
+        const input = form.querySelector('input[name="quantity"]');
+        const currentValue = parseInt(input.value);
+        const max = parseInt(input.max);
+        const newValue = currentValue + delta;
+
+        if (newValue >= 1 && newValue <= max) {
+            input.value = newValue;
+        }
+    }
+</script>
+{% endblock %}

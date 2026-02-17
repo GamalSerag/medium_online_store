@@ -1,0 +1,25 @@
+{% load i18n %}
+<div class="rounded-2xl border border-red-100 bg-white p-6 shadow-sm">
+    <div class="flex items-center justify-between gap-4 mb-3">
+        <h3 class="text-lg font-semibold text-gray-900">{{ offer.title }}</h3>
+        {% if offer.offer_type == 'percentage' %}
+        <span class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700">
+            {{ offer.value }}% {% trans "OFF" %}
+        </span>
+        {% else %}
+        <span class="inline-flex items-center rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700">
+            ${{ offer.value }} {% trans "OFF" %}
+        </span>
+        {% endif %}
+    </div>
+
+    <p class="text-sm text-gray-600">
+        {% if offer.product %}
+        {{ offer.product.name }}
+        {% elif offer.category %}
+        {% trans "On all" %} {{ offer.category.name }}
+        {% else %}
+        {% trans "Storewide offer" %}
+        {% endif %}
+    </p>
+</div>

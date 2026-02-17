@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{ product.name }} - {% trans "Medium Store" %}{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb -->
+<section class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <nav class="text-sm text-gray-500">
+            <a href="{% url 'home' %}" class="hover:text-indigo-600">{% trans "Home" %}</a>
+            <span class="mx-2">/</span>
+            <a href="{% url 'category_products' product.category.slug %}" class="hover:text-indigo-600"> {{
+                product.category.name }}</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-900">{{ product.name }}</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Product Detail -->
+<section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+
+                <!-- Image Gallery -->
+                <div class="p-8 bg-gray-50">
+                    <!-- Main Image -->
+                    <div class="aspect-square rounded-2xl overflow-hidden bg-white shadow-inner mb-4">
+                        {% if images %}
+                        <img id="main-image" src="{{ images.0.image.url }}" alt="{{ product.name }}"
+                            class="w-full h-full object-contain">
+                        {% else %}
+                        <div
+                            class="w-full h-full flex items-center justify-center bg-gradient-to-br from-indigo-100 to-purple-100">
+                            <svg class="w-32 h-32 text-indigo-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Thumbnails -->
+                    {% if images and images.count > 1 %}
+                    <div class="flex gap-3 overflow-x-auto pb-2">
+                        {% for img in images %}
+                        <button type="button" onclick="changeImage(event, '{{ img.image.url }}')"
+                            class="flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-indigo-500 focus:border-indigo-500 transition-all thumbnail-btn {% if forloop.first %}border-indigo-500{% endif %}">
+                            <img src="{{ img.image.url }}" alt="{{ img.alt_text|default:product.name }}"
+                                class="w-full h-full object-cover">
+                        </button>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Product Info -->
+                <div class="p-8 lg:p-12 flex flex-col">
+                    <!-- Category & Badges -->
+                    <div class="flex items-center gap-3 mb-4">
+                        <a href="{% url 'category_products' product.category.slug %}"
+                            class="text-sm text-indigo-600 hover:text-indigo-800 font-medium">
+                            {{ product.category.name }}
+                        </a>
+
+                        {% if not in_stock %}
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full">
+                            {% trans "Out of Stock" %}
+                        </span>
+                        {% endif %}
+
+                        {% if discount_percent %}
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
+                            {{ discount_percent }}% {% trans "OFF" %}
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{{ product.name }}</h1>
+
+                    <!-- Price -->
+                    <div class="flex items-baseline gap-4 mb-6">
+                        {% if discount_price %}
+                        <span class="text-4xl font-bold text-indigo-600">${{ discount_price }}</span>
+                        <span class="text-xl text-gray-400 line-through">${{ product.price }}</span>
+                        {% elif product.on_sale %}
+                        <span class="text-4xl font-bold text-indigo-600">${{ product.price }}</span>
+                        <span class="text-xl text-gray-400 line-through">${{ product.compare_at_price }}</span>
+                        {% else %}
+                        <span class="text-4xl font-bold text-gray-900">${{ product.price }}</span>
+                        {% endif %}
+                    </div>
+
+                    <!-- Offer Banner -->
+                    {% if offer %}
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-4 rounded-xl mb-6">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <span class="font-semibold">{{ offer.title }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <!-- Description -->
+                    <div class="prose prose-gray mb-8">
+                        <p class="text-gray-600 leading-relaxed">{{ product.description }}</p>
+                    </div>
+
+                    <!-- Stock Info -->
+                    {% if in_stock %}
+                    <div class="flex items-center gap-2 text-green-600 mb-6">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-sm font-medium">
+                            {% trans "In Stock" %} ({{ product.stock }} {% trans "available" %})
+                        </span>
+                    </div>
+                    {% endif %}
+
+                    <!-- Quantity Selector & Actions -->
+                    <div class="mt-auto space-y-4">
+
+                        <!-- Quantity -->
+                        <div class="flex items-center gap-4">
+                            <label class="text-sm font-medium text-gray-700">{% trans "Quantity" %}:</label>
+                            <div class="flex items-center border border-gray-300 rounded-xl overflow-hidden">
+                                <button type="button" onclick="decrementQty()"
+                                    class="px-4 py-3 bg-gray-50 hover:bg-gray-100 transition-colors {% if not in_stock %}opacity-50 cursor-not-allowed{% endif %}"
+                                    {% if not in_stock %}disabled{% endif %}>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 12H4" />
+                                    </svg>
+                                </button>
+
+                                <input type="number" id="quantity" value="1" min="1" max="{{ max_quantity }}"
+                                    class="w-16 text-center border-0 focus:ring-0 font-semibold" {% if not in_stock %}disabled{% endif %}>
+
+                                <button type="button" onclick="incrementQty()"
+                                    class="px-4 py-3 bg-gray-50 hover:bg-gray-100 transition-colors {% if not in_stock %}opacity-50 cursor-not-allowed{% endif %}"
+                                    {% if not in_stock %}disabled{% endif %}>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+
+                            <!-- Add to Cart Form -->
+                            <form action="{% url 'cart_add' product.id %}" method="post" class="flex-1">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" id="cart-quantity" value="1">
+                                <input type="hidden" name="next" value="{{ request.path }}">
+                                <button type="submit"
+                                    class="w-full flex items-center justify-center gap-2 px-8 py-4 border-2 border-indigo-600 text-indigo-600 rounded-xl font-semibold hover:bg-indigo-50 transition-colors {% if not in_stock %}opacity-50 cursor-not-allowed{% endif %}"
+                                    {% if not in_stock %}disabled{% endif %}>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                    {% trans "Add to Cart" %}
+                                </button>
+                            </form>
+
+                            <!-- Buy Now Form -->
+                            <form action="{% url 'cart_add' product.id %}" method="post" class="flex-1">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" id="buynow-quantity" value="1">
+                                <input type="hidden" name="override" value="true">
+                                <input type="hidden" name="next" value="{% url 'checkout' %}">
+                                <button type="submit"
+                                    class="w-full flex items-center justify-center gap-2 px-8 py-4 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors {% if not in_stock %}opacity-50 cursor-not-allowed bg-gray-400 hover:bg-gray-400{% endif %}"
+                                    {% if not in_stock %}disabled{% endif %}>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                    {% trans "Buy Now" %}
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        {% if related_products %}
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">{% trans "You May Also Like" %}</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {% for product in related_products %}
+                {% include 'pages/partials/_product_card.html' with product=product %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+
+<!-- JavaScript for Gallery and Quantity -->
+<script>
+    function changeImage(e, url) {
+        const main = document.getElementById('main-image');
+        if (main) main.src = url;
+
+        // Update active thumbnail border
+        document.querySelectorAll('.thumbnail-btn').forEach(btn => {
+            btn.classList.remove('border-indigo-500');
+            btn.classList.add('border-transparent');
+        });
+
+        const btn = e && e.target ? e.target.closest('.thumbnail-btn') : null;
+        if (btn) {
+            btn.classList.add('border-indigo-500');
+            btn.classList.remove('border-transparent');
+        }
+    }
+
+    function syncQuantity() {
+        const qtyInput = document.getElementById('quantity');
+        if (!qtyInput) return;
+
+        const qty = qtyInput.value;
+        const cartQty = document.getElementById('cart-quantity');
+        const buyNowQty = document.getElementById('buynow-quantity');
+
+        if (cartQty) cartQty.value = qty;
+        if (buyNowQty) buyNowQty.value = qty;
+    }
+
+    function incrementQty() {
+        const input = document.getElementById('quantity');
+        if (!input) return;
+
+        const max = parseInt(input.max || "999999", 10);
+        const current = parseInt(input.value || "1", 10);
+
+        if (current < max) {
+            input.value = current + 1;
+            syncQuantity();
+        }
+    }
+
+    function decrementQty() {
+        const input = document.getElementById('quantity');
+        if (!input) return;
+
+        const current = parseInt(input.value || "1", 10);
+        if (current > 1) {
+            input.value = current - 1;
+            syncQuantity();
+        }
+    }
+
+    // Sync on manual input change
+    const qty = document.getElementById('quantity');
+    if (qty) qty.addEventListener('change', syncQuantity);
+</script>
+{% endblock %}

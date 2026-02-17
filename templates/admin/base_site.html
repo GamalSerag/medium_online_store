@@ -1,0 +1,18 @@
+﻿{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block userlinks %}
+{{ block.super }}
+<form action="{% url 'set_language' %}" method="post" style="display:inline; margin-left:10px;">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.get_full_path }}">
+    {% get_current_language as LANGUAGE_CODE %}
+    {% if LANGUAGE_CODE == 'ar' %}
+    <input type="hidden" name="language" value="en">
+    <button type="submit" style="padding:2px 8px; cursor:pointer;">EN</button>
+    {% else %}
+    <input type="hidden" name="language" value="ar">
+    <button type="submit" style="padding:2px 8px; cursor:pointer;">AR</button>
+    {% endif %}
+</form>
+{% endblock %}

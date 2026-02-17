@@ -1,0 +1,97 @@
+﻿{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Home" %} | {% trans "Medium Store" %}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section
+    class="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 text-white py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-0 left-0 w-72 h-72 bg-pink-500 rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">{% trans "Discover Premium Products" %}</h1>
+        <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">{% trans "Explore our curated collection of high-quality products at unbeatable prices." %}</p>
+        <a href="#categories"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-white text-indigo-600 rounded-full font-semibold hover:bg-gray-100 transition-all shadow-xl">
+            {% trans "Start Shopping" %}
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </a>
+    </div>
+</section>
+
+<!-- Section 1: Categories -->
+<section id="categories" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{% trans "Shop by Category" %}</h2>
+            <p class="text-gray-600 max-w-xl mx-auto">{% trans "Browse our wide range of categories to find exactly what you're looking for." %}</p>
+        </div>
+
+        {% if categories %}
+        <div style="display: flex !important; flex-wrap: wrap !important; margin: -1.5rem !important;">
+            {% for category in categories %}
+            <div style="width: 25% !important; padding: 1.5rem !important; box-sizing: border-box !important;">
+                {% include 'pages/partials/_category_card.html' with category=category %}
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+        {% else %}
+        <div class="text-center py-12 text-gray-500">
+            <p>{% trans "No categories available yet." %}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Section 2: Best Sellers -->
+<section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <span class="inline-block px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold mb-4">🔥
+                {% trans "Trending Now" %}</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{% trans "Best Sellers" %}</h2>
+            <p class="text-gray-600 max-w-xl mx-auto">{% trans "Our most popular products based on sales." %}</p>
+        </div>
+
+        {% if best_sellers %}
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {% for product in best_sellers %}
+            {% include 'pages/partials/_product_card.html' with product=product show_badge=True %}
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-12 text-gray-500">
+            <p>{% trans "No products available yet." %}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Section 3: Active Offers -->
+{% if offers %}
+<section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <span class="inline-block px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-semibold mb-4">💰 {%
+                trans "Limited Time" %}</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{% trans "Special Offers" %}</h2>
+            <p class="text-gray-600 max-w-xl mx-auto">{% trans "Don't miss out on these amazing deals!" %}</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {% for offer in offers %}
+            {% include 'pages/partials/_offer_card.html' with offer=offer %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

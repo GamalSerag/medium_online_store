@@ -38,3 +38,6 @@ env/
 .vscode/
 .idea/
 *.swp
+
+.env.production
+.env.staging

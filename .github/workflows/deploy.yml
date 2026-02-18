@@ -1,0 +1,39 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            if [ "${{ github.ref_name }}" = "main" ]; then
+              echo "Deploying Production..."
+              cd /srv/django/alserag/prod/app
+              git pull origin main
+              /srv/django/alserag/prod/venv/bin/pip install -r requirements.txt
+              /srv/django/alserag/prod/venv/bin/python manage.py migrate --noinput
+              /srv/django/alserag/prod/venv/bin/python manage.py collectstatic --noinput
+              sudo systemctl restart alserag-prod
+            fi
+
+            if [ "${{ github.ref_name }}" = "develop" ]; then
+              echo "Deploying Staging..."
+              cd /srv/django/alserag/dev/app
+              git pull origin develop
+              /srv/django/alserag/dev/venv/bin/pip install -r requirements.txt
+              /srv/django/alserag/dev/venv/bin/python manage.py migrate --noinput
+              /srv/django/alserag/dev/venv/bin/python manage.py collectstatic --noinput
+              sudo systemctl restart alserag-dev
+            fi

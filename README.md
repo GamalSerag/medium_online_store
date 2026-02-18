@@ -29,4 +29,5 @@ A Django-based online store application.
 5.  Run the development server:
     ```bash
     python manage.py runserver
+    
     ```

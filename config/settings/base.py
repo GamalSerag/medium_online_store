@@ -19,7 +19,9 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+# Read the .env file configured in the environment, defaulting to .env
+env_file = os.path.join(BASE_DIR, os.environ.get('ENV_FILE', '.env'))
+environ.Env.read_env(env_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/

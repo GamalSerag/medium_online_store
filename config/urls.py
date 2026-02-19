@@ -26,6 +26,11 @@ urlpatterns = [
     path('', include('pages.urls')),
 ]
 
+# Admin Site Config
+admin.site.site_header = "Al-Serag Store Administration"
+admin.site.site_title = "Al-Serag Store Admin Portal"
+admin.site.index_title = "Welcome to Al-Serag Store Portal"
+
 # Serve media files in development
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

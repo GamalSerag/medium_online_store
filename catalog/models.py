@@ -36,6 +36,8 @@ class Product(models.Model):
     # Best-seller tracking: denormalized field for read performance
     sales_count = models.PositiveIntegerField(default=0, db_index=True)
     
+    discount_percentage = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(100)])
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -52,6 +54,18 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
+            
+        # Calculate price based on discount_percentage
+        if self.discount_percentage > 0:
+            if self.compare_at_price is None:
+                # If no original price set, assign current price to it
+                self.compare_at_price = self.price
+            
+            # Calculate new selling price
+            from decimal import Decimal
+            discount_factor = Decimal(1) - (Decimal(self.discount_percentage) / Decimal(100))
+            self.price = self.compare_at_price * discount_factor
+            
         super().save(*args, **kwargs)
     
     @property

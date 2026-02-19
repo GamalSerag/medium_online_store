@@ -16,6 +16,10 @@
         <span class="absolute top-3 left-3 px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full">
             {% trans "Out of Stock" %}
         </span>
+        {% elif product.discount_percentage > 0 %}
+        <span class="absolute top-3 left-3 px-2 py-1 bg-red-600 text-white text-xs font-bold rounded-full">
+            -{{ product.discount_percentage }}%
+        </span>
         {% elif product.on_sale %}
         <span class="absolute top-3 left-3 px-2 py-1 bg-green-500 text-white text-xs font-bold rounded-full">
             {% trans "SALE" %}
@@ -29,9 +33,9 @@
         <p class="text-sm text-gray-500 line-clamp-2 mb-3">{{ product.description }}</p>
 
         <div class="flex items-center gap-2">
-            <span class="text-lg font-bold text-gray-900">${{ product.price }}</span>
-            {% if product.on_sale %}
-            <span class="text-sm text-gray-400 line-through">${{ product.compare_at_price }}</span>
+            <span class="text-lg font-bold text-gray-900">EGP {{ product.price }}</span>
+            {% if product.discount_percentage > 0 or product.on_sale %}
+            <span class="text-sm text-gray-400 line-through">EGP {{ product.compare_at_price }}</span>
             {% endif %}
         </div>
     </div>

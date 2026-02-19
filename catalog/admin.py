@@ -16,7 +16,7 @@ class CategoryAdmin(TranslationAdmin):
 
 @admin.register(Product)
 class ProductAdmin(TranslationAdmin):
-    list_display = ['name', 'price', 'stock', 'is_active', 'is_featured', 'sales_count']
+    list_display = ['name', 'price', 'compare_at_price', 'discount_percentage', 'stock', 'is_active', 'is_featured']
     list_filter = ['is_active', 'is_featured', 'category']
     search_fields = ['name', 'description']
     prepopulated_fields = {'slug': ('name',)}

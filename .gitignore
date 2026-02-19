@@ -41,3 +41,5 @@ env/
 
 .env.production
 .env.staging
+
+help.txt

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %}{{ product.name }} - {% trans "Medium Store" %}{% endblock %}
+{% block title %}{{ product.name }} - {% trans "Al-Serag Store" %}{% endblock %}
 
 {% block content %}
 <!-- Breadcrumb -->
@@ -10,8 +10,7 @@
         <nav class="text-sm text-gray-500">
             <a href="{% url 'home' %}" class="hover:text-indigo-600">{% trans "Home" %}</a>
             <span class="mx-2">/</span>
-            <a href="{% url 'category_products' product.category.slug %}" class="hover:text-indigo-600"> {{
-                product.category.name }}</a>
+            <a href="{% url 'category_products' product.category.slug %}" class="hover:text-indigo-600"> {{ product.category.name }}</a>
             <span class="mx-2">/</span>
             <span class="text-gray-900">{{ product.name }}</span>
         </nav>
@@ -72,7 +71,10 @@
                         </span>
                         {% endif %}
 
-                        {% if discount_percent %}
+                        {% if product.discount_percentage > 0 %}
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full"> -{{ product.discount_percentage }}%
+                        </span>
+                        {% elif discount_percent %}
                         <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
                             {{ discount_percent }}% {% trans "OFF" %}
                         </span>
@@ -85,13 +87,13 @@
                     <!-- Price -->
                     <div class="flex items-baseline gap-4 mb-6">
                         {% if discount_price %}
-                        <span class="text-4xl font-bold text-indigo-600">${{ discount_price }}</span>
-                        <span class="text-xl text-gray-400 line-through">${{ product.price }}</span>
-                        {% elif product.on_sale %}
-                        <span class="text-4xl font-bold text-indigo-600">${{ product.price }}</span>
-                        <span class="text-xl text-gray-400 line-through">${{ product.compare_at_price }}</span>
+                        <span class="text-4xl font-bold text-indigo-600">EGP {{ discount_price }}</span>
+                        <span class="text-xl text-gray-400 line-through">EGP {{ product.price }}</span>
+                        {% elif product.discount_percentage > 0 or product.on_sale %}
+                        <span class="text-4xl font-bold text-indigo-600">EGP {{ product.price }}</span>
+                        <span class="text-xl text-gray-400 line-through">EGP {{ product.compare_at_price }}</span>
                         {% else %}
-                        <span class="text-4xl font-bold text-gray-900">${{ product.price }}</span>
+                        <span class="text-4xl font-bold text-gray-900">EGP {{ product.price }}</span>
                         {% endif %}
                     </div>
 

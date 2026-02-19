@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% trans "Admin Dashboard" %} | {% trans "Medium Store" %}</title>
+    <title>{% trans "Admin Dashboard" %} | {% trans "Al-Serag Store" %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -79,7 +79,7 @@
             <!-- Revenue -->
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <p class="text-sm font-medium text-gray-500 mb-1">{% trans "Total Revenue" %}</p>
-                <p class="text-3xl font-bold text-green-600">${{ total_revenue|floatformat:2 }}</p>
+                <p class="text-3xl font-bold text-green-600">EGP {{ total_revenue|floatformat:2 }}</p>
             </div>
 
             <!-- Pending Orders -->
@@ -133,7 +133,7 @@
                                         {{ order.get_status_display }}
                                     </span>
                                 </td>
-                                <td class="px-6 py-4">${{ order.totals }}</td>
+                                <td class="px-6 py-4">EGP {{ order.totals }}</td>
                                 <td class="px-6 py-4 flex items-center gap-3">
                                     <a href="{% url 'admin_order_detail' order.pk %}"
                                         class="bg-gray-100 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 px-3 py-1.5 rounded text-xs font-medium transition-colors border border-gray-200">

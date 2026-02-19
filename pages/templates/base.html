@@ -5,13 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% trans 'Medium Online Store - Quality products at great prices' %}">
-    <title>{% block title %}{% trans "Medium Store" %}{% endblock %}</title>
+    <meta name="description" content="{% trans 'Al-Serag Online Store - Quality products at great prices' %}">
+    <title>{% block title %}{% trans "Al-Serag Store" %}{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'pages/site.css' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'pages/favicon.png' %}?v=3">
+    <link rel="shortcut icon" href="{% static 'pages/favicon.png' %}?v=3">
 </head>
 
 <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
@@ -24,9 +27,9 @@
                 <a href="{% url 'home' %}" class="flex items-center gap-2">
                     <div
                         class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">M</span>
+                        <span class="text-white font-bold text-lg">S</span>
                     </div>
-                    <span class="text-xl font-bold text-gray-900">{% trans "Medium Store" %}</span>
+                    <span class="text-xl font-bold text-gray-900">{% trans "Al-Serag Store" %}</span>
                 </a>
 
                 <!-- Navigation Links -->
@@ -96,9 +99,9 @@
                     <div class="flex items-center gap-2 mb-4">
                         <div
                             class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
-                            <span class="text-white font-bold text-lg">M</span>
+                            <span class="text-white font-bold text-lg">A</span>
                         </div>
-                        <span class="text-xl font-bold text-white">{% trans "Medium Store" %}</span>
+                        <span class="text-xl font-bold text-white">{% trans "Al-Serag Store" %}</span>
                     </div>
                     <p class="text-gray-500 max-w-sm">{% trans "Your one-stop destination for quality products at unbeatable prices." %}</p>
                 </div>
@@ -119,14 +122,14 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4">{% trans "Contact Us" %}</h4>
                     <ul class="space-y-2">
-                        <li>📧 support@mediumstore.com</li>
-                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📧 support@alseragshop.com</li>
+                        <li>📞 +201099628684</li>
                     </ul>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-                <p>&copy; 2026 {% trans "Medium Store" %}. {% trans "All rights reserved." %}</p>
+                <p>&copy; 2026 {% trans "Al-Serag Store" %}. {% trans "All rights reserved." %}</p>
             </div>
         </div>
     </footer>

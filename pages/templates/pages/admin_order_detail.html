@@ -38,16 +38,16 @@
                                     <div class="text-xs text-gray-400">{{ item.product.category.name }}</div>
                                     {% endif %}
                                 </td>
-                                <td class="px-6 py-4">${{ item.unit_price }}</td>
+                                <td class="px-6 py-4">EGP {{ item.unit_price }}</td>
                                 <td class="px-6 py-4">{{ item.quantity }}</td>
-                                <td class="px-6 py-4 font-semibold text-gray-900">${{ item.line_total }}</td>
+                                <td class="px-6 py-4 font-semibold text-gray-900">EGP {{ item.line_total }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
                         <tfoot class="bg-gray-50">
                             <tr>
                                 <td colspan="3" class="px-6 py-3 text-right font-semibold">{% trans "Total" %}</td>
-                                <td class="px-6 py-3 font-bold text-gray-900">${{ order.totals }}</td>
+                                <td class="px-6 py-3 font-bold text-gray-900">EGP {{ order.totals }}</td>
                             </tr>
                         </tfoot>
                     </table>

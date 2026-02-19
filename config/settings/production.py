@@ -11,4 +11,4 @@ DATABASES = {
     'default': env.db('DATABASE_URL', default='postgres://alserag_user:STRONG_PASSWORD@127.0.0.1:5432/alserag_prod')
 }
 
-# test auto deploy
+# test auto deploy2

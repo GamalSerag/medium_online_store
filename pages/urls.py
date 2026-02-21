@@ -3,11 +3,12 @@ from .views import (
     AdminDashboardView, UpdateOrderStatusView, HomePageView, 
     CategoryProductsView, ProductDetailView, CartDetailView,
     cart_add, cart_update, cart_remove, CheckoutView, OrderSuccessView,
-    AdminOrderDetailView
+    AdminOrderDetailView, AllProductsView
 )
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
+    path('products/', AllProductsView.as_view(), name='all_products'),
     path('category/<slug:slug>/', CategoryProductsView.as_view(), name='category_products'),
     path('product/<slug:slug>/', ProductDetailView.as_view(), name='product_detail'),
     

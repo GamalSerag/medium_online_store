@@ -11,50 +11,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'pages/site.css' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'pages/favicon.png' %}?v=3">
-    <link rel="shortcut icon" href="{% static 'pages/favicon.png' %}?v=3">
+    <link rel="icon" type="image/x-icon" href="{% static 'pages/favicon.ico' %}?v=6">
+    <link rel="icon" type="image/png" sizes="64x64" href="{% static 'pages/favicon.png' %}?v=6">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'pages/apple-touch-icon.png' %}?v=6">
+    <link rel="shortcut icon" href="{% static 'pages/favicon.ico' %}?v=6">
 </head>
 
 <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
 
     <!-- Navbar -->
     <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <a href="{% url 'home' %}" class="flex items-center gap-2">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">S</span>
-                    </div>
-                    <span class="text-xl font-bold text-gray-900">{% trans "Al-Serag Store" %}</span>
+                    <img src="{% static 'pages/logo.jpg' %}" alt="Al-Serag Store" class="h-10 w-auto rounded-lg object-contain">
+                    <span class="text-xl font-bold text-gray-900 hidden sm:inline">{% trans "Al-Serag Store" %}</span>
                 </a>
 
-                <!-- Navigation Links -->
+                <!-- Desktop Navigation Links -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="{% url 'home' %}"
-                        class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">{% trans "Home" %}</a>
-                    <a href="#categories" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">{% trans "Categories" %}</a>
-                    <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">{% trans "Products" %}</a>
-                    <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">{% trans "Offers" %}</a>
+                    <a href="{% url 'home' %}" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">{% trans "Home" %}</a>
+                    <a href="{% url 'home' %}#categories" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">{% trans "Categories" %}</a>
+                    <a href="{% url 'all_products' %}" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">{% trans "Products" %}</a>
+                    <a href="{% url 'home' %}#offers" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">{% trans "Offers" %}</a>
                 </div>
 
                 <!-- Right Side -->
-                <div class="flex items-center gap-4">
-                    <!-- Language Switcher -->
-                    <form action="{% url 'set_language' %}" method="post" class="hidden sm:block">
+                <div class="flex items-center gap-3">
+                    <!-- Language Switcher (Desktop) -->
+                    <form action="{% url 'set_language' %}" method="post" class="hidden md:block">
                         {% csrf_token %}
                         <input type="hidden" name="next" value="{{ request.path }}">
                         {% if LANGUAGE_CODE == 'ar' %}
                         <input type="hidden" name="language" value="en">
-                        <button type="submit"
-                            class="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-600 hover:border-indigo-300 hover:text-indigo-600 transition-all">EN</button>
+                        <button type="submit" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-600 hover:border-indigo-300 hover:text-indigo-600 transition-all">EN</button>
                         {% else %}
                         <input type="hidden" name="language" value="ar">
-                        <button type="submit"
-                            class="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-600 hover:border-indigo-300 hover:text-indigo-600 transition-all">AR</button>
+                        <button type="submit" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-600 hover:border-indigo-300 hover:text-indigo-600 transition-all">AR</button>
                         {% endif %}
                     </form>
 
@@ -66,20 +61,64 @@
                         </svg>
                     </a>
 
-                    <!-- User Menu -->
-                    {% if user.is_authenticated %}
-                    <div class="flex items-center gap-2">
+                    <!-- Desktop User Menu -->
+                    <div class="hidden md:flex items-center gap-2">
+                        {% if user.is_authenticated %}
                         {% if user.is_staff %}
-                        <a href="{% url 'admin_dashboard' %}"
-                            class="text-sm font-medium text-indigo-600 hover:text-indigo-700">{% trans "Dashboard" %}</a>
+                        <!-- <a href="{% url 'admin_dashboard' %}" class="text-sm font-medium text-indigo-600 hover:text-indigo-700">{% trans "Dashboard" %}</a> -->
                         {% endif %}
                         <a href="{% url 'logout' %}" class="text-sm font-medium text-gray-600 hover:text-gray-800">{% trans "Logout" %}</a>
+                        {% else %}
+                        <a href="{% url 'login' %}" class="text-sm font-medium px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">{% trans "Login" %}</a>
+                        {% endif %}
                     </div>
-                    {% else %}
-                    <a href="{% url 'login' %}"
-                        class="text-sm font-medium px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">{% trans "Login" %}</a>
-                    {% endif %}
+
+                    <!-- Mobile Hamburger Button -->
+                    <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
+                        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+            <div class="px-4 py-4 space-y-3">
+                <!-- Mobile Nav Links -->
+                <a href="{% url 'home' %}" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors">{% trans "Home" %}</a>
+                <a href="{% url 'home' %}#categories" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors">{% trans "Categories" %}</a>
+                <a href="{% url 'all_products' %}" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors">{% trans "Products" %}</a>
+                <a href="{% url 'home' %}#offers" class="block px-3 py-2 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors">{% trans "Offers" %}</a>
+
+                <hr class="border-gray-200">
+
+                <!-- Mobile Language Switcher -->
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.path }}">
+                    {% if LANGUAGE_CODE == 'ar' %}
+                    <input type="hidden" name="language" value="en">
+                    <button type="submit" class="w-full text-left px-3 py-2 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors">🌐 English</button>
+                    {% else %}
+                    <input type="hidden" name="language" value="ar">
+                    <button type="submit" class="w-full text-left px-3 py-2 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 font-medium transition-colors">🌐 العربية</button>
+                    {% endif %}
+                </form>
+
+                <!-- Mobile Auth Links -->
+                {% if user.is_authenticated %}
+                {% if user.is_staff %}
+                <a href="{% url 'admin_dashboard' %}" class="block px-3 py-2 rounded-lg text-indigo-600 hover:bg-indigo-50 font-medium transition-colors">{% trans "Dashboard" %}</a>
+                {% endif %}
+                <a href="{% url 'logout' %}" class="block px-3 py-2 rounded-lg text-red-600 hover:bg-red-50 font-medium transition-colors">{% trans "Logout" %}</a>
+                {% else %}
+                <a href="{% url 'login' %}" class="block text-center px-4 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors">{% trans "Login" %}</a>
+                {% endif %}
             </div>
         </div>
     </nav>
@@ -97,10 +136,7 @@
                 <!-- Brand -->
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-2 mb-4">
-                        <div
-                            class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
-                            <span class="text-white font-bold text-lg">A</span>
-                        </div>
+                        <img src="{% static 'pages/logo.jpg' %}" alt="Al-Serag Store" class="h-10 w-auto rounded-lg object-contain">
                         <span class="text-xl font-bold text-white">{% trans "Al-Serag Store" %}</span>
                     </div>
                     <p class="text-gray-500 max-w-sm">{% trans "Your one-stop destination for quality products at unbeatable prices." %}</p>
@@ -110,8 +146,7 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4">{% trans "Quick Links" %}</h4>
                     <ul class="space-y-2">
-                        <li><a href="{% url 'home' %}" class="hover:text-white transition-colors">{% trans "Home" %}</a>
-                        </li>
+                        <li><a href="{% url 'home' %}" class="hover:text-white transition-colors">{% trans "Home" %}</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">{% trans "Products" %}</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">{% trans "About Us" %}</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">{% trans "Contact" %}</a></li>
@@ -133,6 +168,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            menu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        }
+    </script>
 
 </body>
 

@@ -100,6 +100,82 @@ class CategoryProductsView(TemplateView):
         return context
 
 
+class AllProductsView(TemplateView):
+    """Public page listing all active products with search, filter, and pagination."""
+    template_name = 'pages/all_products.html'
+    paginate_by = 12
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        # Start with all active products
+        products = Product.objects.filter(is_active=True)
+        
+        # Search by product name
+        search_query = self.request.GET.get('q', '').strip()
+        if search_query:
+            products = products.filter(name__icontains=search_query)
+        context['search_query'] = search_query
+        
+        # Filter by category
+        selected_category = self.request.GET.get('category', '')
+        if selected_category:
+            products = products.filter(category__slug=selected_category)
+        context['selected_category'] = selected_category
+        
+        # Filter by price range
+        min_price = self.request.GET.get('min_price', '')
+        max_price = self.request.GET.get('max_price', '')
+        
+        if min_price:
+            try:
+                products = products.filter(price__gte=float(min_price))
+            except ValueError:
+                pass
+        if max_price:
+            try:
+                products = products.filter(price__lte=float(max_price))
+            except ValueError:
+                pass
+        
+        context['min_price'] = min_price
+        context['max_price'] = max_price
+        
+        # Sorting
+        sort_by = self.request.GET.get('sort', 'newest')
+        if sort_by == 'price_low':
+            products = products.order_by('price')
+        elif sort_by == 'price_high':
+            products = products.order_by('-price')
+        elif sort_by == 'name':
+            products = products.order_by('name')
+        else:
+            products = products.order_by('-created_at')
+        context['sort_by'] = sort_by
+        
+        # Pagination
+        from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+        paginator = Paginator(products, self.paginate_by)
+        page = self.request.GET.get('page', 1)
+        
+        try:
+            products_page = paginator.page(page)
+        except PageNotAnInteger:
+            products_page = paginator.page(1)
+        except EmptyPage:
+            products_page = paginator.page(paginator.num_pages)
+        
+        context['products'] = products_page
+        context['page_obj'] = products_page
+        context['paginator'] = paginator
+        context['is_paginated'] = paginator.num_pages > 1
+        
+        # Get all categories for sidebar filter
+        context['all_categories'] = Category.objects.filter(is_active=True)
+        
+        return context
+
+
 class ProductDetailView(TemplateView):
     """Product detail page with image gallery, pricing, and purchase options."""
     template_name = 'pages/product_detail.html'

@@ -216,8 +216,8 @@ msgid ""
 "Ensure this value is a multiple of step size %(limit_value)s, starting from "
 "%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
 msgstr ""
-"تأكد أن هذه القيمة من مضاعفات قيمة الخطوة %(limit_value)s بدءًا من %(offset)s، "
-"مثل: %(offset)s و%(valid_value1)s و%(valid_value2)s ... إلخ."
+"تأكد أن هذه القيمة من مضاعفات قيمة الخطوة %(limit_value)s بدءًا من "
+"%(offset)s، مثل: %(offset)s و%(valid_value1)s و%(valid_value2)s ... إلخ."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:473
 #, python-format
@@ -227,12 +227,22 @@ msgid ""
 msgid_plural ""
 "Ensure this value has at least %(limit_value)d characters (it has "
 "%(show_value)d)."
-msgstr[0] "تأكد أن هذه القيمة تحتوي على %(limit_value)d حرف على الأقل (تحتوي على %(show_value)d)."
-msgstr[1] "تأكد أن هذه القيمة تحتوي على حرف واحد على الأقل (تحتوي على %(show_value)d)."
-msgstr[2] "تأكد أن هذه القيمة تحتوي على حرفين على الأقل (تحتوي على %(show_value)d)."
-msgstr[3] "تأكد أن هذه القيمة تحتوي على %(limit_value)d أحرف على الأقل (تحتوي على %(show_value)d)."
-msgstr[4] "تأكد أن هذه القيمة تحتوي على %(limit_value)d حرفًا على الأقل (تحتوي على %(show_value)d)."
-msgstr[5] "تأكد أن هذه القيمة تحتوي على %(limit_value)d حرف على الأقل (تحتوي على %(show_value)d)."
+msgstr[0] ""
+"تأكد أن هذه القيمة تحتوي على %(limit_value)d حرف على الأقل (تحتوي على "
+"%(show_value)d)."
+msgstr[1] ""
+"تأكد أن هذه القيمة تحتوي على حرف واحد على الأقل (تحتوي على %(show_value)d)."
+msgstr[2] ""
+"تأكد أن هذه القيمة تحتوي على حرفين على الأقل (تحتوي على %(show_value)d)."
+msgstr[3] ""
+"تأكد أن هذه القيمة تحتوي على %(limit_value)d أحرف على الأقل (تحتوي على "
+"%(show_value)d)."
+msgstr[4] ""
+"تأكد أن هذه القيمة تحتوي على %(limit_value)d حرفًا على الأقل (تحتوي على "
+"%(show_value)d)."
+msgstr[5] ""
+"تأكد أن هذه القيمة تحتوي على %(limit_value)d حرف على الأقل (تحتوي على "
+"%(show_value)d)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:491
 #, python-format
@@ -242,12 +252,22 @@ msgid ""
 msgid_plural ""
 "Ensure this value has at most %(limit_value)d characters (it has "
 "%(show_value)d)."
-msgstr[0] "تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرف (تحتوي على %(show_value)d)."
-msgstr[1] "تأكد أن هذه القيمة لا تحتوي على أكثر من حرف واحد (تحتوي على %(show_value)d)."
-msgstr[2] "تأكد أن هذه القيمة لا تحتوي على أكثر من حرفين (تحتوي على %(show_value)d)."
-msgstr[3] "تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d أحرف (تحتوي على %(show_value)d)."
-msgstr[4] "تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرفًا (تحتوي على %(show_value)d)."
-msgstr[5] "تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرف (تحتوي على %(show_value)d)."
+msgstr[0] ""
+"تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرف (تحتوي على "
+"%(show_value)d)."
+msgstr[1] ""
+"تأكد أن هذه القيمة لا تحتوي على أكثر من حرف واحد (تحتوي على %(show_value)d)."
+msgstr[2] ""
+"تأكد أن هذه القيمة لا تحتوي على أكثر من حرفين (تحتوي على %(show_value)d)."
+msgstr[3] ""
+"تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d أحرف (تحتوي على "
+"%(show_value)d)."
+msgstr[4] ""
+"تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرفًا (تحتوي على "
+"%(show_value)d)."
+msgstr[5] ""
+"تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرف (تحتوي على "
+"%(show_value)d)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:514
 #: .\venv\Lib\site-packages\django\forms\fields.py:366
@@ -295,7 +315,9 @@ msgstr[5] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة 
 msgid ""
 "File extension “%(extension)s” is not allowed. Allowed extensions are: "
 "%(allowed_extensions)s."
-msgstr "امتداد الملف “%(extension)s” غير مسموح به. الامتدادات المسموح بها هي: %(allowed_extensions)s."
+msgstr ""
+"امتداد الملف “%(extension)s” غير مسموح به. الامتدادات المسموح بها هي: "
+"%(allowed_extensions)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:659
 msgid "Null characters are not allowed."
@@ -340,7 +362,9 @@ msgstr "%(model_name)s بهذه %(field_label)s موجود بالفعل."
 #, python-format
 msgid ""
 "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr "يجب أن تكون %(field_label)s فريدة بحسب %(date_field_label)s (%(lookup_type)s)."
+msgstr ""
+"يجب أن تكون %(field_label)s فريدة بحسب %(date_field_label)s "
+"(%(lookup_type)s)."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:180
 #, python-format
@@ -379,7 +403,8 @@ msgstr "أعداد صحيحة مفصولة بفواصل"
 msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
-msgstr "القيمة “%(value)s” بتنسيق تاريخ غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD."
+msgstr ""
+"القيمة “%(value)s” بتنسيق تاريخ غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1431
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1566
@@ -398,14 +423,18 @@ msgstr "تاريخ (بدون وقت)"
 msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
 "HH:MM[:ss[.uuuuuu]][TZ] format."
-msgstr "القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]."
+msgstr ""
+"القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1570
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
 "[TZ]) but it is an invalid date/time."
-msgstr "القيمة “%(value)s” بالتنسيق الصحيح (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) لكنها تاريخ/وقت غير صالح."
+msgstr ""
+"القيمة “%(value)s” بالتنسيق الصحيح (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) "
+"لكنها تاريخ/وقت غير صالح."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1575
 msgid "Date (with time)"
@@ -425,7 +454,9 @@ msgstr "عدد عشري"
 msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] "
 "[[HH:]MM:]ss[.uuuuuu] format."
-msgstr "القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق [DD] [[HH:]MM:]ss[.uuuuuu]."
+msgstr ""
+"القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق [DD] "
+"[[HH:]MM:]ss[.uuuuuu]."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1868
 msgid "Duration"
@@ -509,14 +540,16 @@ msgstr "نص"
 msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
-msgstr "القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق HH:MM[:ss[.uuuuuu]]."
+msgstr ""
+"القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق HH:MM[:ss[.uuuuuu]]."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2530
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
-msgstr "القيمة “%(value)s” بالتنسيق الصحيح (HH:MM[:ss[.uuuuuu]]) لكنها وقت غير صالح."
+msgstr ""
+"القيمة “%(value)s” بالتنسيق الصحيح (HH:MM[:ss[.uuuuuu]]) لكنها وقت غير صالح."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2534
 msgid "Time"
@@ -694,8 +727,8 @@ msgid ""
 "ManagementForm data is missing or has been tampered with. Missing fields: "
 "%(field_names)s. You may need to file a bug report if the issue persists."
 msgstr ""
-"بيانات ManagementForm مفقودة أو تم العبث بها. الحقول المفقودة: %(field_names)s. "
-"قد تحتاج إلى إرسال تقرير خطأ إذا استمرت المشكلة."
+"بيانات ManagementForm مفقودة أو تم العبث بها. الحقول المفقودة: "
+"%(field_names)s. قد تحتاج إلى إرسال تقرير خطأ إذا استمرت المشكلة."
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:65
 #, python-format
@@ -743,7 +776,9 @@ msgstr "يرجى تصحيح البيانات المكررة للحقل %(field)s
 msgid ""
 "Please correct the duplicate data for %(field_name)s which must be unique "
 "for the %(lookup)s in %(date_field)s."
-msgstr "يرجى تصحيح البيانات المكررة للحقل %(field_name)s والتي يجب أن تكون فريدة حسب %(lookup)s في %(date_field)s."
+msgstr ""
+"يرجى تصحيح البيانات المكررة للحقل %(field_name)s والتي يجب أن تكون فريدة حسب "
+"%(lookup)s في %(date_field)s."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:922
 msgid "Please correct the duplicate values below."
@@ -768,7 +803,8 @@ msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
 msgstr ""
-"تعذّر تفسير %(datetime)s في المنطقة الزمنية %(current_timezone)s؛ قد يكون ملتبسًا أو قد لا يكون موجودًا."
+"تعذّر تفسير %(datetime)s في المنطقة الزمنية %(current_timezone)s؛ قد يكون "
+"ملتبسًا أو قد لا يكون موجودًا."
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:527
 msgid "Clear"
@@ -1233,8 +1269,9 @@ msgid ""
 "required for security reasons, to ensure that your browser is not being "
 "hijacked by third parties."
 msgstr ""
-"تظهر هذه الرسالة لأن هذا الموقع عبر HTTPS يتطلب إرسال ترويسة “Referer” من المتصفح، "
-"لكن لم يتم إرسالها. هذه الترويسة مطلوبة لأسباب أمنية للتأكد من أن متصفحك لم يتم اختطافه من طرف ثالث."
+"تظهر هذه الرسالة لأن هذا الموقع عبر HTTPS يتطلب إرسال ترويسة “Referer” من "
+"المتصفح، لكن لم يتم إرسالها. هذه الترويسة مطلوبة لأسباب أمنية للتأكد من أن "
+"متصفحك لم يتم اختطافه من طرف ثالث."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:40
 msgid ""
@@ -1242,8 +1279,8 @@ msgid ""
 "enable them, at least for this site, or for HTTPS connections, or for “same-"
 "origin” requests."
 msgstr ""
-"إذا كنت قد ضبطت متصفحك لتعطيل ترويسات “Referer”، يرجى إعادة تفعيلها على الأقل لهذا الموقع، "
-"أو لاتصالات HTTPS، أو لطلبات “same-origin”."
+"إذا كنت قد ضبطت متصفحك لتعطيل ترويسات “Referer”، يرجى إعادة تفعيلها على "
+"الأقل لهذا الموقع، أو لاتصالات HTTPS، أو لطلبات “same-origin”."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:45
 msgid ""
@@ -1253,10 +1290,10 @@ msgid ""
 "If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
-"إذا كنت تستخدم الوسم <meta name=\"referrer\" content=\"no-referrer\"> أو ترويسة "
-"“Referrer-Policy: no-referrer”، يرجى إزالتهما. حماية CSRF تحتاج ترويسة “Referer” "
-"لإجراء تحقق صارم. إذا كنت قلقًا بشأن الخصوصية، استخدم بدائل مثل <a rel=\"noreferrer\" …> "
-"للروابط نحو مواقع الطرف الثالث."
+"إذا كنت تستخدم الوسم <meta name=\"referrer\" content=\"no-referrer\"> أو "
+"ترويسة “Referrer-Policy: no-referrer”، يرجى إزالتهما. حماية CSRF تحتاج "
+"ترويسة “Referer” لإجراء تحقق صارم. إذا كنت قلقًا بشأن الخصوصية، استخدم بدائل "
+"مثل <a rel=\"noreferrer\" …> للروابط نحو مواقع الطرف الثالث."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:54
 msgid ""
@@ -1264,16 +1301,17 @@ msgid ""
 "submitting forms. This cookie is required for security reasons, to ensure "
 "that your browser is not being hijacked by third parties."
 msgstr ""
-"تظهر هذه الرسالة لأن هذا الموقع يتطلب ملف تعريف ارتباط CSRF عند إرسال النماذج. "
-"هذا الملف مطلوب لأسباب أمنية للتأكد من أن متصفحك لم يتم اختطافه من طرف ثالث."
+"تظهر هذه الرسالة لأن هذا الموقع يتطلب ملف تعريف ارتباط CSRF عند إرسال "
+"النماذج. هذا الملف مطلوب لأسباب أمنية للتأكد من أن متصفحك لم يتم اختطافه من "
+"طرف ثالث."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:60
 msgid ""
 "If you have configured your browser to disable cookies, please re-enable "
 "them, at least for this site, or for “same-origin” requests."
 msgstr ""
-"إذا كنت قد ضبطت متصفحك لتعطيل ملفات تعريف الارتباط، يرجى إعادة تفعيلها على الأقل لهذا الموقع "
-"أو لطلبات “same-origin”."
+"إذا كنت قد ضبطت متصفحك لتعطيل ملفات تعريف الارتباط، يرجى إعادة تفعيلها على "
+"الأقل لهذا الموقع أو لطلبات “same-origin”."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:66
 msgid "More information is available with DEBUG=True."
@@ -1312,7 +1350,9 @@ msgstr "لا توجد %(verbose_name_plural)s متاحة"
 msgid ""
 "Future %(verbose_name_plural)s not available because "
 "%(class_name)s.allow_future is False."
-msgstr "لا تتوفر %(verbose_name_plural)s المستقبلية لأن %(class_name)s.allow_future يساوي False."
+msgstr ""
+"لا تتوفر %(verbose_name_plural)s المستقبلية لأن %(class_name)s.allow_future "
+"يساوي False."
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:720
 #, python-format
@@ -1376,9 +1416,9 @@ msgid ""
 "rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
 "configured any URLs."
 msgstr ""
-"ترى هذه الصفحة لأن <a href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
-"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> موجودة في ملف الإعدادات لديك "
-"ولم تقم بإعداد أي روابط (URLs)."
+"ترى هذه الصفحة لأن <a href=\"https://docs.djangoproject.com/en/%(version)s/"
+"ref/settings/#debug\" target=\"_blank\" rel=\"noopener\">DEBUG=True</a> "
+"موجودة في ملف الإعدادات لديك ولم تقم بإعداد أي روابط (URLs)."
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:217
 msgid "Django Documentation"
@@ -1407,7 +1447,6 @@ msgstr "تواصل، احصل على مساعدة، أو ساهم"
 #
 # Home Page Translations
 #
-
 #: .\pages\templates\pages\home.html
 msgid "Home"
 msgstr "الرئيسية"
@@ -1417,7 +1456,8 @@ msgid "Discover Premium Products"
 msgstr "اكتشف منتجات مميزة"
 
 #: .\pages\templates\pages\home.html
-msgid "Explore our curated collection of high-quality products at unbeatable prices."
+msgid ""
+"Explore our curated collection of high-quality products at unbeatable prices."
 msgstr "استكشف مجموعتنا المختارة من المنتجات عالية الجودة بأسعار لا تُقاوم."
 
 #: .\pages\templates\pages\home.html
@@ -1429,7 +1469,8 @@ msgid "Shop by Category"
 msgstr "تسوق حسب الفئة"
 
 #: .\pages\templates\pages\home.html
-msgid "Browse our wide range of categories to find exactly what you're looking for."
+msgid ""
+"Browse our wide range of categories to find exactly what you're looking for."
 msgstr "تصفح مجموعة واسعة من الفئات للعثور على ما تبحث عنه."
 
 #: .\pages\templates\pages\home.html
@@ -1463,7 +1504,6 @@ msgstr "لا تفوت هذه الصفقات الرائعة!"
 #
 # Base Template (Navbar & Footer) Translations
 #
-
 #: .\pages\templates\base.html
 msgid "Medium Online Store - Quality products at great prices"
 msgstr "متجر متوسط - منتجات ذات جودة بأسعار رائعة"
@@ -1519,7 +1559,6 @@ msgstr "جميع الحقوق محفوظة."
 #
 # Product Card Partial Translations
 #
-
 #: .\pages\templates\pages\partials\_product_card.html
 msgid "Best Seller"
 msgstr "الأكثر مبيعًا"
@@ -1531,7 +1570,6 @@ msgstr "تخفيض"
 #
 # Offer Card Partial Translations
 #
-
 #: .\pages\templates\pages\partials\_offer_card.html
 msgid "OFF"
 msgstr "خصم"
@@ -1555,7 +1593,6 @@ msgstr "تسوق الآن"
 #
 # Category Page Translations
 #
-
 #: .\pages\templates\pages\category_products.html
 msgid "products found"
 msgstr "منتج"
@@ -1615,7 +1652,6 @@ msgstr "حاول تعديل معايير البحث أو التصفية"
 #
 # Product Detail Page Translations
 #
-
 #: .\pages\templates\pages\product_detail.html
 msgid "Out of Stock"
 msgstr "غير متوفر"
@@ -1647,14 +1683,6 @@ msgstr "قد يعجبك أيضًا"
 #: .\pages\templates\pages\partials\_product_card.html
 msgid "No image"
 msgstr "لا توجد صورة"
-
-#: .\pages\templates\pages\product_detail.html
-msgid "OFF"
-msgstr "خصم"
-
-#: .\pages\templates\pages\partials\_product_card.html
-msgid "SALE"
-msgstr "تخفيض"
 
 #: .\pages\templates\pages\cart.html
 msgid "Shopping Cart"
@@ -1707,10 +1735,6 @@ msgstr "مجاني"
 #: .\pages\templates\pages\cart.html
 msgid "Free shipping on orders over $50"
 msgstr "شحن مجاني للطلبات التي تزيد عن 50 دولار"
-
-#: .\pages\templates\pages\cart.html
-msgid "Total"
-msgstr "الإجمالي"
 
 #: .\pages\templates\pages\cart.html
 msgid "Proceed to Checkout"
@@ -1772,63 +1796,6 @@ msgstr "تم تحديث السلة."
 msgid "Item removed from cart."
 msgstr "تمت إزالة المنتج من السلة."
 
-#: .\pages\templates\pages\category_products.html
-msgid "products found"
-msgstr "منتجات موجودة"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Filters"
-msgstr "الفلاتر"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Search"
-msgstr "بحث"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Search products..."
-msgstr "بحث عن منتجات..."
-
-#: .\pages\templates\pages\category_products.html
-msgid "Price Range"
-msgstr "نطاق السعر"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Min"
-msgstr "الحد الأدنى"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Max"
-msgstr "الحد الأقصى"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Apply Filters"
-msgstr "تطبيق الفلاتر"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Clear Filters"
-msgstr "مسح الفلاتر"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Other Categories"
-msgstr "فئات أخرى"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Previous"
-msgstr "السابق"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Next"
-msgstr "التالي"
-
-#: .\pages\templates\pages\category_products.html
-msgid "No products found"
-msgstr "لم يتم العثور على منتجات"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Try adjusting your search or filter criteria"
-msgstr "حاول تعديل البحث أو معايير الفلترة"
-
-
 #: manually added
 msgid "Successful Orders"
 msgstr "الطلبات الناجحة"
@@ -1853,7 +1820,6 @@ msgstr "تم التوصيل"
 msgid "Cancelled"
 msgstr "ملغي"
 
-
 #: manually added for order detail
 msgid "Order Details"
 msgstr "تفاصيل الطلب"
@@ -1870,17 +1836,11 @@ msgstr "المنتج"
 msgid "Price"
 msgstr "السعر"
 
-msgid "Quantity"
-msgstr "الكمية"
-
 msgid "Customer Details"
 msgstr "تفاصيل العميل"
 
 msgid "Name"
 msgstr "الاسم"
-
-msgid "Phone"
-msgstr "الهاتف"
 
 msgid "Address"
 msgstr "العنوان"
@@ -1899,3 +1859,88 @@ msgstr "تحديث الحالة"
 
 msgid "View"
 msgstr "عرض"
+
+# =============================================
+# Navbar & Footer
+# =============================================
+msgid "Al-Serag Store"
+msgstr "متجر السراج"
+
+msgid "Register"
+msgstr "إنشاء حساب"
+
+# =============================================
+# Hero Section
+# =============================================
+msgid "Curated Elegance"
+msgstr "أناقة مختارة"
+
+msgid "Timeless Antiques"
+msgstr "تحف خالدة"
+
+msgid "& Premium Decor"
+msgstr "وديكور فاخر"
+
+msgid ""
+"Discover handpicked treasures from around the world — vintage furniture, "
+"artisan crafts, and exquisite decorative pieces that tell a story."
+msgstr ""
+"اكتشف كنوزًا مختارة بعناية من حول العالم — أثاث عتيق، حِرف يدوية، وقطع ديكور "
+"رائعة تحكي قصة."
+
+msgid "Explore Collection"
+msgstr "استكشف المجموعة"
+
+msgid "View All Products"
+msgstr "عرض جميع المنتجات"
+
+msgid "Our most popular products loved by customers."
+msgstr "أكثر المنتجات شعبية لدى عملائنا."
+
+msgid "No special offers at the moment."
+msgstr "لا توجد عروض خاصة حاليًا."
+
+# =============================================
+# All Products Page
+# =============================================
+msgid "All Products"
+msgstr "جميع المنتجات"
+
+msgid "Browse all our products"
+msgstr "تصفّح جميع منتجاتنا"
+
+msgid "Category"
+msgstr "القسم"
+
+msgid "All Categories"
+msgstr "جميع الأقسام"
+
+msgid "Sort By"
+msgstr "ترتيب حسب"
+
+msgid "Newest First"
+msgstr "الأحدث أولًا"
+
+msgid "Price: Low to High"
+msgstr "السعر: من الأقل للأعلى"
+
+msgid "Price: High to Low"
+msgstr "السعر: من الأعلى للأقل"
+
+msgid "Name: A to Z"
+msgstr "الاسم: أ - ي"
+
+msgid "Active Filters"
+msgstr "التصفيات النشطة"
+
+msgid "No products found matching your criteria."
+msgstr "لم يتم العثور على منتجات تطابق معاييرك."
+
+msgid "Try adjusting your filters or search terms."
+msgstr "حاول تعديل التصفية أو مصطلحات البحث."
+
+msgid "Sale"
+msgstr "تخفيض"
+
+msgid "sold"
+msgstr "مباع"

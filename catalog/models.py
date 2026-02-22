@@ -86,6 +86,20 @@ class ProductImage(models.Model):
         return f"Image for {self.product.name}"
 
 
+class ProductColor(models.Model):
+    product = models.ForeignKey(Product, related_name='colors', on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    hex_code = models.CharField(max_length=7, help_text='e.g. #FF0000')
+    image = models.ImageField(upload_to='products/colors/', blank=True, null=True, help_text='Image for this color variant')
+    ordering = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['ordering']
+
+    def __str__(self):
+        return f"{self.name} ({self.hex_code})"
+
+
 class Offer(models.Model):
     OFFER_TYPE_CHOICES = [
         ('percentage', 'Percentage'),

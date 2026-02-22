@@ -1944,3 +1944,6 @@ msgstr "تخفيض"
 
 msgid "sold"
 msgstr "مباع"
+
+msgid "Color"
+msgstr "اللون"

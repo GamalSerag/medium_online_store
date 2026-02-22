@@ -32,6 +32,18 @@
         <h3 class="text-lg font-semibold text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors">{{ product.name }}</h3>
         <p class="text-sm text-gray-500 line-clamp-2 mb-3">{{ product.description }}</p>
 
+        <!-- Color Dots -->
+        {% if product.colors.all %}
+        <div class="flex items-center gap-1.5 mb-3">
+            {% for color in product.colors.all|slice:":5" %}
+            <span class="w-4 h-4 rounded-full border border-gray-300 inline-block" style="background-color: {{ color.hex_code }};" title="{{ color.name }}"></span>
+            {% endfor %}
+            {% if product.colors.count > 5 %}
+            <span class="text-xs text-gray-400">+{{ product.colors.count|add:"-5" }}</span>
+            {% endif %}
+        </div>
+        {% endif %}
+
         <div class="flex items-center gap-2">
             <span class="text-lg font-bold text-gray-900">EGP {{ product.price }}</span>
             {% if product.discount_percentage > 0 or product.on_sale %}

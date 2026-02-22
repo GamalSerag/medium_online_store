@@ -1,11 +1,16 @@
 ﻿from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
-from .models import Category, Product, ProductImage, Offer
+from .models import Category, Product, ProductImage, ProductColor, Offer
 
 
 class ProductImageInline(admin.TabularInline):
     model = ProductImage
     extra = 1
+
+
+class ProductColorInline(admin.StackedInline):
+    model = ProductColor
+    extra = 0
 
 
 @admin.register(Category)
@@ -20,7 +25,7 @@ class ProductAdmin(TranslationAdmin):
     list_filter = ['is_active', 'is_featured', 'category']
     search_fields = ['name', 'description']
     prepopulated_fields = {'slug': ('name',)}
-    inlines = [ProductImageInline]
+    inlines = [ProductImageInline, ProductColorInline]
 
 
 @admin.register(Offer)

@@ -12,18 +12,16 @@
         {% endwith %}
 
         <!-- Badges -->
+        {% if show_badge %}
+        <span class="absolute top-2 right-2 px-1.5 py-0.5 bg-amber-500 text-white text-[10px] font-bold rounded-full shadow">🔥 {% trans "Best Seller" %}</span>
+        {% endif %}
+
         {% if product.stock == 0 %}
-        <span class="absolute top-3 left-3 px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full">
-            {% trans "Out of Stock" %}
-        </span>
+        <span class="absolute top-2 left-2 px-1.5 py-0.5 bg-red-500 text-white text-[10px] font-bold rounded-full">{% trans "Out of Stock" %}</span>
         {% elif product.discount_percentage > 0 %}
-        <span class="absolute top-3 left-3 px-2 py-1 bg-red-600 text-white text-xs font-bold rounded-full">
-            -{{ product.discount_percentage }}%
-        </span>
+        <span class="absolute top-2 left-2 px-1.5 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-full">-{{ product.discount_percentage }}%</span>
         {% elif product.on_sale %}
-        <span class="absolute top-3 left-3 px-2 py-1 bg-green-500 text-white text-xs font-bold rounded-full">
-            {% trans "SALE" %}
-        </span>
+        <span class="absolute top-2 left-2 px-1.5 py-0.5 bg-green-500 text-white text-[10px] font-bold rounded-full">{% trans "SALE" %}</span>
         {% endif %}
     </div>
 

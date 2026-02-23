@@ -20,7 +20,7 @@ urlpatterns = [
     
     # Checkout URL
     path('checkout/', CheckoutView.as_view(), name='checkout'),
-    path('order-success/<str:order_number>/', OrderSuccessView.as_view(), name='order_success'),
+    path('order-success/', OrderSuccessView.as_view(), name='order_success'),
     
     # Admin URLs
     path('admin-dashboard/', AdminDashboardView.as_view(), name='admin_dashboard'),

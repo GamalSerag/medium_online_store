@@ -22,10 +22,17 @@ class HomePageView(TemplateView):
         # Active categories (limit 8)
         context['categories'] = Category.objects.filter(is_active=True)[:8]
         
-        # Best-selling products (by sales_count, limit 8)
-        context['best_sellers'] = Product.objects.filter(
-            is_active=True
-        ).order_by('-sales_count')[:8]
+        # Best-selling products (by sales_count, limit 5)
+        best_sellers = Product.objects.filter(
+            is_active=True, sales_count__gt=0
+        ).order_by('-sales_count')[:5]
+        context['best_sellers'] = best_sellers
+        context['best_seller_ids'] = list(best_sellers.values_list('id', flat=True))
+        
+        # Featured products
+        context['featured_products'] = Product.objects.filter(
+            is_active=True, is_featured=True
+        ).order_by('-created_at')[:8]
         
         # Active offers (valid date range)
         context['offers'] = Offer.objects.filter(
@@ -409,8 +416,11 @@ class CheckoutView(TemplateView):
             # Clear Cart
             cart.clear()
 
+            # Store order number in session for success page
+            request.session['last_order_number'] = order.order_number
+
             # Redirect to success page
-            return redirect('order_success', order_number=order.order_number)
+            return redirect('order_success')
         
         # If form invalid, re-render logic
         context = self.get_context_data()
@@ -418,18 +428,14 @@ class CheckoutView(TemplateView):
         return self.render_to_response(context)
 
 
-class OrderSuccessView(DetailView):
-    model = Order
+class OrderSuccessView(TemplateView):
     template_name = 'pages/order_success.html'
-    context_object_name = 'order'
-    slug_field = 'order_number'
-    slug_url_kwarg = 'order_number'
-
-    def get_object(self):
-        return get_object_or_404(Order, order_number=self.kwargs['order_number'])
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        order_number = self.request.session.get('last_order_number')
+        if order_number:
+            context['order'] = get_object_or_404(Order, order_number=order_number)
         return context
 
 class AdminOrderDetailView(StaffRequiredMixin, DetailView):

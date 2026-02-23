@@ -209,9 +209,29 @@
     </div>
 </section>
 
-<!-- Section 3: Active Offers -->
+<!-- Section 3: Featured Products -->
+{% if featured_products %}
+<section id="featured" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <span class="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold mb-4">⭐
+                {% trans "Hand Picked" %}</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{% trans "Featured Products" %}</h2>
+            <p class="text-gray-600 max-w-xl mx-auto">{% trans "Our curated selection of premium products just for you." %}</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {% for product in featured_products %}
+            {% include 'pages/partials/_product_card.html' with product=product %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Section 4: Active Offers -->
 {% if offers %}
-<section id="offers" class="py-16 md:py-24 bg-gray-50">
+<section id="offers" class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-12">
             <span class="inline-block px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-semibold mb-4">💰 {%

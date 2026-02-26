@@ -28,4 +28,17 @@
         </div>
     </div>
 </section>
+
+<script>
+fbq('track', 'Purchase', {
+  value: {{ order.total|floatformat:2 }},
+  currency: "EGP",
+  contents: [
+    {% for item in order.items.all %}
+    {id: "{{ item.product.id }}", quantity: {{ item.quantity }} }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ],
+  content_type: "product"
+});
+</script>
 {% endblock %}

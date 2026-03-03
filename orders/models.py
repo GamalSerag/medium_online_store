@@ -18,6 +18,8 @@ class Order(models.Model):
     # Customer Info
     customer_name = models.CharField(max_length=255)
     phone = models.CharField(max_length=20)
+    state = models.CharField(max_length=100, default='Cairo')
+    city = models.CharField(max_length=100, default='Cairo')
     address = models.TextField()
     notes = models.TextField(blank=True)
     

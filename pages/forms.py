@@ -17,6 +17,20 @@ class CheckoutForm(forms.ModelForm):
             'placeholder': _("Enter your phone number")
         })
     )
+    state = forms.CharField(
+        label=_("State / Governorate"),
+        widget=forms.Select(attrs={
+            'class': 'w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors',
+            'id': 'state-select',
+        })
+    )
+    city = forms.CharField(
+        label=_("City"),
+        widget=forms.Select(attrs={
+            'class': 'w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors',
+            'id': 'city-select',
+        })
+    )
     address = forms.CharField(
         label=_("Address"),
         widget=forms.Textarea(attrs={
@@ -26,7 +40,7 @@ class CheckoutForm(forms.ModelForm):
         })
     )
     notes = forms.CharField(
-        label=_("Order Notes (Optional)"),
+        label=_("Order Notes (Optional) "),
         required=False,
         widget=forms.Textarea(attrs={
             'class': 'w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors',
@@ -37,4 +51,4 @@ class CheckoutForm(forms.ModelForm):
 
     class Meta:
         model = Order
-        fields = ['customer_name', 'phone', 'address', 'notes']
+        fields = ['customer_name', 'phone', 'state', 'city', 'address', 'notes']

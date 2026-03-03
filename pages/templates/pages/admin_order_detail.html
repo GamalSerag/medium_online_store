@@ -70,6 +70,10 @@
                         <span class="text-gray-900 font-medium">{{ order.phone }}</span>
                     </div>
                     <div>
+                        <span class="text-xs text-gray-500 block uppercase">{% trans "State / City" %}</span>
+                        <span class="text-gray-900 font-medium">{{ order.state }}, {{ order.city }}</span>
+                    </div>
+                    <div>
                         <span class="text-xs text-gray-500 block uppercase">{% trans "Address" %}</span>
                         <span class="text-gray-900">{{ order.address|linebreaksbr }}</span>
                     </div>

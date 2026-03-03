@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Medium Store 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-08 10:30+0200\n"
+"POT-Creation-Date: 2026-03-03 10:01+0200\n"
 "PO-Revision-Date: 2026-02-09 08:30+0200\n"
 "Last-Translator: Auto\n"
 "Language-Team: Arabic\n"
@@ -17,86 +17,2430 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
+#: .\orders\models.py:9
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#: .\orders\models.py:10
+msgid "Confirmed"
+msgstr "تم التأكيد"
+
+#: .\orders\models.py:11
+msgid "Shipped"
+msgstr "تم الشحن"
+
+#: .\orders\models.py:12
+msgid "Delivered"
+msgstr "تم التوصيل"
+
+#: .\orders\models.py:13
+msgid "Cancelled"
+msgstr "ملغي"
+
+#: .\pages\forms.py:7
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: .\pages\forms.py:10
+msgid "Enter your full name"
+msgstr "أدخل اسمك بالكامل"
+
+#: .\pages\forms.py:14
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: .\pages\forms.py:17
+msgid "Enter your phone number"
+msgstr "أدخل رقم هاتفك"
+
+#: .\pages\forms.py:21
+msgid "State / Governorate"
+msgstr "المحافظة"
+
+#: .\pages\forms.py:28
+msgid "City"
+msgstr "المدينة"
+
+#: .\pages\forms.py:35 .\pages\templates\pages\admin_order_detail.html:77
+msgid "Address"
+msgstr "العنوان"
+
+#: .\pages\forms.py:38
+msgid "Street address, City, etc."
+msgstr "اسم الشارع، المنطقة، إلخ."
+
+#: .\pages\forms.py:43
+msgid "Order Notes (Optional) "
+msgstr "ملاحظات الطلب (اختياري)"
+
+#: .\pages\forms.py:47
+msgid "Any special instructions?"
+msgstr "أي تعليمات خاصة؟"
+
+#: .\pages\templates\accounts\login.html:7
+#: .\pages\templates\accounts\login.html:16 .\pages\templates\base.html:91
+#: .\pages\templates\base.html:139
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#
+# Base Template (Navbar & Footer) Translations
+#
+#: .\pages\templates\base.html:8
+#, fuzzy
+#| msgid "Medium Online Store - Quality products at great prices"
+msgid "Al-Serag Online Store - Quality products at great prices"
+msgstr "متجر متوسط - منتجات ذات جودة بأسعار رائعة"
+
+# =============================================
+# Navbar & Footer
+# =============================================
+#: .\pages\templates\base.html:9 .\pages\templates\base.html:49
+#: .\pages\templates\base.html:159 .\pages\templates\base.html:186
+#: .\pages\templates\pages\admin_dashboard.html:8
+#: .\pages\templates\pages\all_products.html:4
+#: .\pages\templates\pages\cart.html:4
+#: .\pages\templates\pages\category_products.html:4
+#: .\pages\templates\pages\checkout.html:4 .\pages\templates\pages\home.html:4
+#: .\pages\templates\pages\order_success.html:4
+#: .\pages\templates\pages\product_detail.html:4
+msgid "Al-Serag Store"
+msgstr "متجر السراج"
+
+#
+# Home Page Translations
+#
+#: .\pages\templates\base.html:54 .\pages\templates\base.html:112
+#: .\pages\templates\base.html:168 .\pages\templates\pages\all_products.html:11
+#: .\pages\templates\pages\cart.html:11
+#: .\pages\templates\pages\category_products.html:11
+#: .\pages\templates\pages\home.html:4
+#: .\pages\templates\pages\product_detail.html:11
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\pages\templates\base.html:55 .\pages\templates\base.html:113
+msgid "Categories"
+msgstr "الفئات"
+
+#: .\pages\templates\base.html:56 .\pages\templates\base.html:114
+#: .\pages\templates\base.html:169
+msgid "Products"
+msgstr "المنتجات"
+
+#: .\pages\templates\base.html:57 .\pages\templates\base.html:115
+msgid "Offers"
+msgstr "العروض"
+
+#: .\pages\templates\base.html:87 .\pages\templates\base.html:135
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#: .\pages\templates\base.html:89 .\pages\templates\base.html:137
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: .\pages\templates\base.html:161
+msgid "Your one-stop destination for quality products at unbeatable prices."
+msgstr "وجهتك الأولى للمنتجات عالية الجودة بأسعار لا تُقاوم."
+
+#: .\pages\templates\base.html:166
+msgid "Quick Links"
+msgstr "روابط سريعة"
+
+#: .\pages\templates\base.html:170
+msgid "About Us"
+msgstr "من نحن"
+
+#: .\pages\templates\base.html:171
+msgid "Contact"
+msgstr "اتصل بنا"
+
+#: .\pages\templates\base.html:177
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: .\pages\templates\base.html:186
+msgid "All rights reserved."
+msgstr "جميع الحقوق محفوظة."
+
 #: .\pages\templates\pages\admin_dashboard.html:8
 msgid "Admin Dashboard"
 msgstr "لوحة تحكم المسؤول"
-
-#: .\pages\templates\pages\admin_dashboard.html:8
-msgid "Medium Store"
-msgstr "متجر متوسط"
 
 #: .\pages\templates\pages\admin_dashboard.html:24
 msgid "Store Admin"
 msgstr "مسؤول المتجر"
 
-#: .\pages\templates\pages\admin_dashboard.html:29
+#: .\pages\templates\pages\admin_dashboard.html:25
+msgid "Staff Area"
+msgstr ""
+
+#: .\pages\templates\pages\admin_dashboard.html:28
 msgid "Logged in as"
 msgstr "تم تسجيل الدخول باسم"
 
-#: .\pages\templates\pages\admin_dashboard.html:32
+#: .\pages\templates\pages\admin_dashboard.html:45
+#, fuzzy
+#| msgid "Django Community"
+msgid "Django Admin"
+msgstr "مجتمع Django"
+
+#: .\pages\templates\pages\admin_dashboard.html:46
 msgid "View Site"
 msgstr "عرض الموقع"
 
-#: .\pages\templates\pages\admin_dashboard.html:49
+#: .\pages\templates\pages\admin_dashboard.html:63
 msgid "Dashboard Overview"
 msgstr "نظرة عامة على لوحة التحكم"
 
-#: .\pages\templates\pages\admin_dashboard.html:55
+#: .\pages\templates\pages\admin_dashboard.html:69
 msgid "Orders Today"
 msgstr "طلبات اليوم"
 
-#: .\pages\templates\pages\admin_dashboard.html:61
+#: .\pages\templates\pages\admin_dashboard.html:75
 msgid "Orders This Week"
 msgstr "طلبات هذا الأسبوع"
 
-#: .\pages\templates\pages\admin_dashboard.html:67
+#: .\pages\templates\pages\admin_dashboard.html:81
 msgid "Total Revenue"
 msgstr "إجمالي الإيرادات"
 
-#: .\pages\templates\pages\admin_dashboard.html:73
+#: .\pages\templates\pages\admin_dashboard.html:87
 msgid "Pending Orders"
 msgstr "الطلبات المعلّقة"
 
-#: .\pages\templates\pages\admin_dashboard.html:83
+#: .\pages\templates\pages\admin_dashboard.html:93
+msgid "Successful Orders"
+msgstr "الطلبات الناجحة"
+
+#: .\pages\templates\pages\admin_dashboard.html:103
 msgid "Recent Orders"
 msgstr "أحدث الطلبات"
 
-#: .\pages\templates\pages\admin_dashboard.html:91
+#: .\pages\templates\pages\admin_dashboard.html:104
+#, fuzzy
+#| msgid "View"
+msgid "View All"
+msgstr "عرض"
+
+#: .\pages\templates\pages\admin_dashboard.html:110
 msgid "Order #"
 msgstr "رقم الطلب"
 
-#: .\pages\templates\pages\admin_dashboard.html:92
+#: .\pages\templates\pages\admin_dashboard.html:111
 msgid "Customer"
 msgstr "العميل"
 
-#: .\pages\templates\pages\admin_dashboard.html:93
+#: .\pages\templates\pages\admin_dashboard.html:112
 msgid "Status"
 msgstr "الحالة"
 
-#: .\pages\templates\pages\admin_dashboard.html:94
+#: .\pages\templates\pages\admin_dashboard.html:113
+#: .\pages\templates\pages\admin_order_detail.html:29
+#: .\pages\templates\pages\admin_order_detail.html:49
+#: .\pages\templates\pages\cart.html:165
+#: .\pages\templates\pages\checkout.html:159
 msgid "Total"
 msgstr "الإجمالي"
 
-#: .\pages\templates\pages\admin_dashboard.html:95
+#: .\pages\templates\pages\admin_dashboard.html:114
 msgid "Action"
 msgstr "إجراء"
 
-#: .\pages\templates\pages\admin_dashboard.html:148
+#: .\pages\templates\pages\admin_dashboard.html:140
+msgid "View"
+msgstr "عرض"
+
+#: .\pages\templates\pages\admin_dashboard.html:152
+#: .\pages\templates\pages\admin_order_detail.html:122
+#: .\pages\templates\pages\cart.html:104
+msgid "Update"
+msgstr "تحديث"
+
+#: .\pages\templates\pages\admin_dashboard.html:170
+#: .\pages\templates\pages\home.html:194
 msgid "Best Sellers"
 msgstr "الأكثر مبيعًا"
 
-#: .\pages\templates\pages\admin_dashboard.html:167
+#: .\pages\templates\pages\admin_dashboard.html:185
+msgid "sold"
+msgstr "مباع"
+
+#: .\pages\templates\pages\admin_dashboard.html:188
 msgid "No sales data yet."
 msgstr "لا توجد بيانات مبيعات بعد."
 
-#: .\pages\views.py:49
+#: .\pages\templates\pages\admin_order_detail.html:7
+msgid "Order Details"
+msgstr "تفاصيل الطلب"
+
+#: .\pages\templates\pages\admin_order_detail.html:10
+msgid "Back to Dashboard"
+msgstr "العودة للوحة التحكم"
+
+#: .\pages\templates\pages\admin_order_detail.html:20
+msgid "Order Items"
+msgstr "عناصر الطلب"
+
+#: .\pages\templates\pages\admin_order_detail.html:26
+msgid "Product"
+msgstr "المنتج"
+
+#: .\pages\templates\pages\admin_order_detail.html:27
+msgid "Price"
+msgstr "السعر"
+
+#: .\pages\templates\pages\admin_order_detail.html:28
+#: .\pages\templates\pages\product_detail.html:155
+msgid "Quantity"
+msgstr "الكمية"
+
+#: .\pages\templates\pages\admin_order_detail.html:62
+msgid "Customer Details"
+msgstr "تفاصيل العميل"
+
+#: .\pages\templates\pages\admin_order_detail.html:65
+msgid "Name"
+msgstr "الاسم"
+
+#: .\pages\templates\pages\admin_order_detail.html:69
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#: .\pages\templates\pages\admin_order_detail.html:73
+msgid "State / City"
+msgstr ""
+
+#: .\pages\templates\pages\admin_order_detail.html:82
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: .\pages\templates\pages\admin_order_detail.html:93
+msgid "Order Status"
+msgstr "حالة الطلب"
+
+#: .\pages\templates\pages\admin_order_detail.html:105
+msgid "Created"
+msgstr "تم الإنشاء"
+
+#: .\pages\templates\pages\admin_order_detail.html:111
+msgid "Update Status"
+msgstr "تحديث الحالة"
+
+# =============================================
+# All Products Page
+# =============================================
+#: .\pages\templates\pages\all_products.html:4
+#: .\pages\templates\pages\all_products.html:13
+#: .\pages\templates\pages\all_products.html:15
+msgid "All Products"
+msgstr "جميع المنتجات"
+
+#
+# Category Page Translations
+#
+#: .\pages\templates\pages\all_products.html:17
+#: .\pages\templates\pages\category_products.html:17
+msgid "products found"
+msgstr "منتج"
+
+#: .\pages\templates\pages\all_products.html:36
+#: .\pages\templates\pages\all_products.html:43
+#: .\pages\templates\pages\category_products.html:30
+msgid "Filters"
+msgstr "التصفية"
+
+#: .\pages\templates\pages\all_products.html:50
+#: .\pages\templates\pages\category_products.html:35
+msgid "Search"
+msgstr "البحث"
+
+#: .\pages\templates\pages\all_products.html:53
+#: .\pages\templates\pages\category_products.html:38
+msgid "Search products..."
+msgstr "البحث في المنتجات..."
+
+#: .\pages\templates\pages\all_products.html:65
+msgid "Category"
+msgstr "القسم"
+
+#: .\pages\templates\pages\all_products.html:68
+msgid "All Categories"
+msgstr "جميع الأقسام"
+
+#: .\pages\templates\pages\all_products.html:77
+#: .\pages\templates\pages\category_products.html:50
+msgid "Price Range"
+msgstr "نطاق السعر"
+
+#: .\pages\templates\pages\all_products.html:80
+#: .\pages\templates\pages\category_products.html:53
+msgid "Min"
+msgstr "الحد الأدنى"
+
+#: .\pages\templates\pages\all_products.html:83
+#: .\pages\templates\pages\category_products.html:56
+msgid "Max"
+msgstr "الحد الأقصى"
+
+#: .\pages\templates\pages\all_products.html:90
+msgid "Sort By"
+msgstr "ترتيب حسب"
+
+#: .\pages\templates\pages\all_products.html:93
+msgid "Newest First"
+msgstr "الأحدث أولًا"
+
+#: .\pages\templates\pages\all_products.html:94
+msgid "Price: Low to High"
+msgstr "السعر: من الأقل للأعلى"
+
+#: .\pages\templates\pages\all_products.html:95
+msgid "Price: High to Low"
+msgstr "السعر: من الأعلى للأقل"
+
+#: .\pages\templates\pages\all_products.html:96
+msgid "Name: A to Z"
+msgstr "الاسم: أ - ي"
+
+#: .\pages\templates\pages\all_products.html:103
+#: .\pages\templates\pages\category_products.html:64
+msgid "Apply Filters"
+msgstr "تطبيق التصفية"
+
+#: .\pages\templates\pages\all_products.html:109
+#: .\pages\templates\pages\all_products.html:187
+#: .\pages\templates\pages\category_products.html:70
+#: .\pages\templates\pages\category_products.html:153
+msgid "Clear Filters"
+msgstr "مسح التصفية"
+
+#: .\pages\templates\pages\all_products.html:143
+#: .\pages\templates\pages\category_products.html:110
+msgid "Previous"
+msgstr "السابق"
+
+#: .\pages\templates\pages\all_products.html:167
+#: .\pages\templates\pages\category_products.html:133
+msgid "Next"
+msgstr "التالي"
+
+#: .\pages\templates\pages\all_products.html:183
+#: .\pages\templates\pages\category_products.html:149
+msgid "No products found"
+msgstr "لم يتم العثور على منتجات"
+
+#: .\pages\templates\pages\all_products.html:184
+#: .\pages\templates\pages\category_products.html:150
+msgid "Try adjusting your search or filter criteria"
+msgstr "حاول تعديل معايير البحث أو التصفية"
+
+#: .\pages\templates\pages\cart.html:4 .\pages\templates\pages\cart.html:13
+#: .\pages\templates\pages\cart.html:21
+msgid "Shopping Cart"
+msgstr "سلة التسوق"
+
+#: .\pages\templates\pages\cart.html:32
+msgid "Your cart is empty"
+msgstr "سلة التسوق فارغة"
+
+#: .\pages\templates\pages\cart.html:33
+msgid "Looks like you haven't added any items to your cart yet."
+msgstr "يبدو أنك لم تضف أي منتجات إلى سلة التسوق بعد."
+
+#: .\pages\templates\pages\cart.html:40 .\pages\templates\pages\cart.html:134
+#: .\pages\templates\pages\order_success.html:24
+msgid "Continue Shopping"
+msgstr "مواصلة التسوق"
+
+#: .\pages\templates\pages\cart.html:82
+#: .\pages\templates\pages\checkout.html:135
+msgid "Qty"
+msgstr "الكمية"
+
+#: .\pages\templates\pages\cart.html:117
+msgid "Remove"
+msgstr "إزالة"
+
+#: .\pages\templates\pages\cart.html:122
+msgid "each"
+msgstr "لكل منتج"
+
+#: .\pages\templates\pages\cart.html:141
+#: .\pages\templates\pages\checkout.html:118
+msgid "Order Summary"
+msgstr "ملخص الطلب"
+
+#: .\pages\templates\pages\cart.html:145
+#: .\pages\templates\pages\checkout.html:145
+msgid "Subtotal"
+msgstr "المجموع الفرعي"
+
+#: .\pages\templates\pages\cart.html:150
+#: .\pages\templates\pages\checkout.html:149
+msgid "Shipping"
+msgstr "الشحن"
+
+#: .\pages\templates\pages\cart.html:152
+msgid "FREE"
+msgstr "مجاني"
+
+#: .\pages\templates\pages\cart.html:159
+#, fuzzy
+#| msgid "Free shipping on orders over $50"
+msgid "Free shipping on orders over EGP 50"
+msgstr "شحن مجاني للطلبات التي تزيد عن 50 دولار"
+
+#: .\pages\templates\pages\cart.html:176
+msgid "Proceed to Checkout"
+msgstr "المتابعة للدفع"
+
+#: .\pages\templates\pages\cart.html:186
+msgid "Secure Checkout"
+msgstr "دفع آمن"
+
+#: .\pages\templates\pages\category_products.html:77
+msgid "Other Categories"
+msgstr "فئات أخرى"
+
+#: .\pages\templates\pages\checkout.html:4
+#: .\pages\templates\pages\checkout.html:10
+msgid "Checkout"
+msgstr "الدفع"
+
+#: .\pages\templates\pages\checkout.html:14 .\pages\views.py:389
+#, fuzzy
+#| msgid "Your cart is empty"
+msgid "Your cart is empty."
+msgstr "سلة التسوق فارغة"
+
+#: .\pages\templates\pages\checkout.html:17
+msgid "Start Shopping"
+msgstr "ابدأ التسوق"
+
+#: .\pages\templates\pages\checkout.html:108
+msgid "Place Order"
+msgstr "إتمام الطلب"
+
+#: .\pages\templates\pages\checkout.html:152
+msgid "Free"
+msgstr ""
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Cairo"
+msgstr "القاهرة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "15 May"
+msgstr "15 مايو"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Abaseya"
+msgstr "العباسية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Abou El Feda"
+msgstr "أبو الفدا"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Abu Talat"
+msgstr "أبو تلات"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Aghouza"
+msgstr "العجوزة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Ain Shams"
+msgstr "عين شمس"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Al Rehab"
+msgstr "الرحاب"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Almazah"
+msgstr "ألماظة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Amiriya"
+msgstr "الأميرية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Andalos"
+msgstr "الأندلس"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Azzam"
+msgstr "عزام"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Badr City"
+msgstr "مدينة بدر"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Basateen"
+msgstr "البساتين"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Bolkly"
+msgstr "بولكلي"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:176
+msgid "Borg El Arab"
+msgstr "برج العرب"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Boulaq"
+msgstr "بولاق"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:176
+msgid "Camp Caesar"
+msgstr "كامب شيزار"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:176
+msgid "Cleopatra"
+msgstr "كليوباترا"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Corniche"
+msgstr "الكورنيش"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:200
+msgid "Dar El Salam"
+msgstr "دار السلام"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:175
+msgid "Dokki"
+msgstr "الدقي"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Downtown Cairo"
+msgstr "وسط البلد"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:175
+msgid "El Haram"
+msgstr "الهرم"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:175
+msgid "El Hawamdeya"
+msgstr "الحوامدية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Katameya"
+msgstr "القطامية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Maadi"
+msgstr "المعادي"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Marg"
+msgstr "المرج"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Masara"
+msgstr "المعصرة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Mokattam"
+msgstr "المقطم"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Moqattam"
+msgstr "المقطم"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Nozha"
+msgstr "النزهة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Qobbah"
+msgstr "القبة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Rehab"
+msgstr "الرحاب"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Rowad"
+msgstr "الرواد"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Shaab"
+msgstr "الشعب"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Shorouk"
+msgstr "الشروق"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Tagamoaa El Khames"
+msgstr "التجمع الخامس"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Tagamoaa El Tani"
+msgstr "التجمع الثاني"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Tagamoaa El Talet"
+msgstr "التجمع الثالث"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Tagamoaa El Awal"
+msgstr "التجمع الأول"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Talbeya"
+msgstr "الطالبية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "El Zawya El Hamra"
+msgstr "الزاوية الحمراء"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Ezbet El Haggana"
+msgstr "عزبة الهجانة"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:187
+msgid "Faisal"
+msgstr "فيصل"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Garden City"
+msgstr "جاردن سيتي"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:175
+msgid "Giza"
+msgstr "الجيزة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Giza Square"
+msgstr "ميدان الجيزة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Hadaeq El Ahram"
+msgstr "حدائق الأهرام"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Hadaeq El Maadi"
+msgstr "حدائق المعادي"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Hadaeq El Qobbah"
+msgstr "حدائق القبة"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:175
+msgid "Haram"
+msgstr "الهرم"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Heliopolis"
+msgstr "مصر الجديدة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Helwan"
+msgstr "حلوان"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:175
+msgid "Imbaba"
+msgstr "إمبابة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Katameya"
+msgstr "القطامية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Maadi"
+msgstr "المعادي"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Madinaty"
+msgstr "مدينتي"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Manial"
+msgstr "المنيل"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Manshiyat Naser"
+msgstr "منشية ناصر"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:177
+msgid "Matareya"
+msgstr "المطرية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Mokattam"
+msgstr "المقطم"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:175
+msgid "Mohandeseen"
+msgstr "المهندسين"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Nasr City"
+msgstr "مدينة نصر"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "New Cairo"
+msgstr "القاهرة الجديدة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "New Capital"
+msgstr "العاصمة الإدارية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "New Heliopolis"
+msgstr "هيليوبوليس الجديدة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "New Nuzha"
+msgstr "النزهة الجديدة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Obour City"
+msgstr "مدينة العبور"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:185
+msgid "Qalyub"
+msgstr "قليوب"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Qasr El Nil"
+msgstr "قصر النيل"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Rod El Farag"
+msgstr "روض الفرج"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Sayeda Zeinab"
+msgstr "السيدة زينب"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Shoubra"
+msgstr "شبرا"
+
+#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:185
+msgid "Shoubra El Kheima"
+msgstr "شبرا الخيمة"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Smart Village"
+msgstr "القرية الذكية"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Zamalek"
+msgstr "الزمالك"
+
+#: .\pages\templates\pages\checkout.html:174
+msgid "Zeitoun"
+msgstr "الزيتون"
+
+#: .\pages\templates\pages\checkout.html:175
+#, fuzzy
+#| msgid "October"
+msgid "6th of October"
+msgstr "أكتوبر"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Abu Rawash"
+msgstr "أبو رواش"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Agouza"
+msgstr "العجوزة"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Al Ayayat"
+msgstr "العياط"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Al Badrashin"
+msgstr "البدرشين"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Al Haram"
+msgstr "الهرم"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Al Hawamdeya"
+msgstr "الحوامدية"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Al Wahat Al Baharia"
+msgstr "الواحات البحرية"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Awsim"
+msgstr "أوسيم"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Bulaq El Dakrour"
+msgstr "بولاق الدكرور"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "El Ayyat"
+msgstr "العياط"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "El Badrashin"
+msgstr "البدرشين"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "El Omraniya"
+msgstr "العمرانية"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "El Saff"
+msgstr "الصف"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "El Wahat El Bahariya"
+msgstr "الواحات البحرية"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Kerdasa"
+msgstr "كرداسة"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Omrania"
+msgstr "العمرانية"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Ousim"
+msgstr "أوسيم"
+
+#: .\pages\templates\pages\checkout.html:175
+#, fuzzy
+#| msgid "Sat"
+msgid "Saf"
+msgstr "سبت"
+
+#: .\pages\templates\pages\checkout.html:175
+msgid "Sheikh Zayed"
+msgstr "الشيخ زايد"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Alexandria"
+msgstr "الإسكندرية"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Abu Qir"
+msgstr "أبو قير"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Agami"
+msgstr "العجمي"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Al Amriya"
+msgstr "العامرية"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Al Attarin"
+msgstr "العطارين"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Al Dekheila"
+msgstr "الدخيلة"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Al Gomrok"
+msgstr "الجمرك"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Al Labban"
+msgstr "اللبان"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Al Manshiyah"
+msgstr "المنشية"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Al Montazah"
+msgstr "المنتزه"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Al Raml"
+msgstr "الرمل"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Amreya"
+msgstr "العامرية"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Anfoushi"
+msgstr "الأنفوشي"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Asafra"
+msgstr "العصافرة"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Attarine"
+msgstr "العطارين"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Bacchus"
+msgstr "باكوس"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Dekheila"
+msgstr "الدخيلة"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Agami"
+msgstr "العجمي"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Amriya"
+msgstr "العامرية"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Attarin"
+msgstr "العطارين"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Dekheila"
+msgstr "الدخيلة"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Gomrok"
+msgstr "الجمرك"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Labban"
+msgstr "اللبان"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Manshiyah"
+msgstr "المنشية"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Montazah"
+msgstr "المنتزه"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "El Raml"
+msgstr "الرمل"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Fleming"
+msgstr "فلمينج"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Glim"
+msgstr "جليم"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Gomrok"
+msgstr "الجمرك"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Kafr Abdou"
+msgstr "كفر عبده"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Karmouz"
+msgstr "كرموز"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Kom El Dikka"
+msgstr "كوم الدكة"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Labban"
+msgstr "اللبان"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Louran"
+msgstr "لوران"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Maamoura"
+msgstr "المعمورة"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Mandara"
+msgstr "المندرة"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Miami"
+msgstr "ميامي"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Minyet El Bassal"
+msgstr "مينا البصل"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Moharam Bek"
+msgstr "محرم بك"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Montaza"
+msgstr "المنتزه"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Raml"
+msgstr "الرمل"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Roushdy"
+msgstr "رشدي"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "San Stefano"
+msgstr "سان ستيفانو"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Shatby"
+msgstr "الشاطبي"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Sidi Beshr"
+msgstr "سيدي بشر"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Sidi Gaber"
+msgstr "سيدي جابر"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Smouha"
+msgstr "سموحة"
+
+#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:195
+msgid "Sporting"
+msgstr "سبورتنج"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Stanley"
+msgstr "ستانلي"
+
+#: .\pages\templates\pages\checkout.html:176
+msgid "Zezenia"
+msgstr "زيزينيا"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Dakahlia"
+msgstr "الدقهلية"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Aga"
+msgstr "أجا"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Bani Ebeid"
+msgstr "بني عبيد"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Belqas"
+msgstr "بلقاس"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Dakarneh"
+msgstr "دكرنس"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Dekernes"
+msgstr "دكرنس"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "El Gamaliya"
+msgstr "الجمالية"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "El Kurdi"
+msgstr "الكردي"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "El Manzala"
+msgstr "المنزلة"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "El Matareya"
+msgstr "المطرية"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "El Senbellawein"
+msgstr "السنبلاوين"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Gamalia"
+msgstr "الجمالية"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Gohina"
+msgstr "جهينة"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Kurdi"
+msgstr "الكردي"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Mahmoudia"
+msgstr "المحمودية"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Manzala"
+msgstr "المنزلة"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Mansoura"
+msgstr "المنصورة"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Minya El Nasr"
+msgstr "منية النصر"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Mit Ghamr"
+msgstr "ميت غمر"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Mit Salsil"
+msgstr "ميت سلسيل"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Nabaroh"
+msgstr "نبروه"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Senbellawein"
+msgstr "السنبلاوين"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Sherbin"
+msgstr "شربين"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Shorouk"
+msgstr "الشروق"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Talkha"
+msgstr "طلخا"
+
+#: .\pages\templates\pages\checkout.html:177
+msgid "Zaqaziq"
+msgstr "الزقازيق"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Red Sea"
+msgstr "البحر الأحمر"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Al Qusair"
+msgstr "القصير"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "El Gouna"
+msgstr "الجونة"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "El Qusair"
+msgstr "القصير"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Halayeb"
+msgstr "حلايب"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Hurghada"
+msgstr "الغردقة"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Marsa Alam"
+msgstr "مرسى علم"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Port Ghalib"
+msgstr "بورت غالب"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Ras Gharib"
+msgstr "رأس غارب"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Safaga"
+msgstr "سفاجا"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Shalateen"
+msgstr "شلاتين"
+
+#: .\pages\templates\pages\checkout.html:178
+msgid "Soma Bay"
+msgstr "سوما باي"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Beheira"
+msgstr "البحيرة"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Abu El Matamir"
+msgstr "أبو المطامير"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Abu Hummus"
+msgstr "أبو حمص"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Badr"
+msgstr "بدر"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Damanhour"
+msgstr "دمنهور"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Edku"
+msgstr "إدكو"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "El Delengat"
+msgstr "الدلنجات"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "El Mahmoudiya"
+msgstr "المحمودية"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "El Natroun"
+msgstr "وادي النطرون"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "El Rahmaniya"
+msgstr "الرحمانية"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Hosh Essa"
+msgstr "حوش عيسى"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Itay El Barud"
+msgstr "إيتاي البارود"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Kafr El Dawwar"
+msgstr "كفر الدوار"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Kom Hamada"
+msgstr "كوم حمادة"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Nubariya"
+msgstr "النوبارية"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Rashid (Rosetta)"
+msgstr "رشيد"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Rosetta"
+msgstr "رشيد"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Shubrakhit"
+msgstr "شبراخيت"
+
+#: .\pages\templates\pages\checkout.html:179
+msgid "Wadi El Natrun"
+msgstr "وادي النطرون"
+
+#: .\pages\templates\pages\checkout.html:180
+msgid "Fayoum"
+msgstr "الفيوم"
+
+#: .\pages\templates\pages\checkout.html:180
+msgid "Abshway"
+msgstr "إبشواي"
+
+#: .\pages\templates\pages\checkout.html:180
+msgid "Etsa"
+msgstr "إطسا"
+
+#: .\pages\templates\pages\checkout.html:180
+msgid "Itsa"
+msgstr "إطسا"
+
+#: .\pages\templates\pages\checkout.html:180
+msgid "Senoress"
+msgstr "سنورس"
+
+#: .\pages\templates\pages\checkout.html:180
+msgid "Sinnuris"
+msgstr "سنورس"
+
+#: .\pages\templates\pages\checkout.html:180
+msgid "Tamiya"
+msgstr "طامية"
+
+#: .\pages\templates\pages\checkout.html:180
+msgid "Yousef El Seddik"
+msgstr "يوسف الصديق"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Gharbia"
+msgstr "الغربية"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Basyoun"
+msgstr "بسيون"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "El Mahalla El Kubra"
+msgstr "المحلة الكبرى"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Kafr El Zayat"
+msgstr "كفر الزيات"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Kotour"
+msgstr "قطور"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Qutour"
+msgstr "قطور"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Samanoud"
+msgstr "سمنود"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Santa"
+msgstr "السنطة"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Tanta"
+msgstr "طنطا"
+
+#: .\pages\templates\pages\checkout.html:181
+msgid "Zefta"
+msgstr "زفتى"
+
+#: .\pages\templates\pages\checkout.html:182
+#, fuzzy
+#| msgid "Email"
+msgid "Ismailia"
+msgstr "البريد الإلكتروني"
+
+#: .\pages\templates\pages\checkout.html:182
+msgid "Abu Suwir"
+msgstr "أبو صوير"
+
+#: .\pages\templates\pages\checkout.html:182
+msgid "El Qantara El Gharbiya"
+msgstr "القنطرة غرب"
+
+#: .\pages\templates\pages\checkout.html:182
+msgid "El Qantara El Sharqiya"
+msgstr "القنطرة شرق"
+
+#: .\pages\templates\pages\checkout.html:182
+msgid "Fayed"
+msgstr "فايد"
+
+#: .\pages\templates\pages\checkout.html:182
+msgid "Kasassine"
+msgstr "القصاصين"
+
+#: .\pages\templates\pages\checkout.html:182
+msgid "Qantara Gharb"
+msgstr "القنطرة غرب"
+
+#: .\pages\templates\pages\checkout.html:182
+msgid "Qantara Sharq"
+msgstr "القنطرة شرق"
+
+#: .\pages\templates\pages\checkout.html:182
+msgid "Tall El Kebir"
+msgstr "التبل الكبير"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Menofia"
+msgstr "المنوفية"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Ashmoun"
+msgstr "أشمون"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Birket El Sab"
+msgstr "بركة السبع"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "El Bagour"
+msgstr "الباجور"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "El Shohada"
+msgstr "الشهداء"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Menouf"
+msgstr "منوف"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Quesna"
+msgstr "قويسنا"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Sadat City"
+msgstr "مدينة السادات"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Shibin El Kom"
+msgstr "شبين الكوم"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Tala"
+msgstr "تلا"
+
+#: .\pages\templates\pages\checkout.html:183
+msgid "Tersa"
+msgstr "طرسيا"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "Minya"
+msgstr "المنيا"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "Abu Qurqas"
+msgstr "أبو قرقاص"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "Beni Mazar"
+msgstr "بني مزار"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "Deir Mawas"
+msgstr "دير مواس"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "El Idwa"
+msgstr "العدوة"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "Maghagha"
+msgstr "مغاغة"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "Mallawi"
+msgstr "ملوي"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "Mataay"
+msgstr "مطاي"
+
+#: .\pages\templates\pages\checkout.html:184
+msgid "Samalut"
+msgstr "سمالوط"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "Qalyubia"
+msgstr "القليوبية"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "Abu Zaabal"
+msgstr "أبو زعبل"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "Banha"
+msgstr "بنها"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "El Kanater El Khayreya"
+msgstr "القناطر الخيرية"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "El Khanka"
+msgstr "الخانكة"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "El Obour"
+msgstr "العبور"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "Kafr Shukr"
+msgstr "كفر شكر"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "Khanka"
+msgstr "الخانكة"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "Qanater Khayriya"
+msgstr "القناطر الخيرية"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "Shibin El Qanater"
+msgstr "شبين القناطر"
+
+#: .\pages\templates\pages\checkout.html:185
+msgid "Tukh"
+msgstr "طوخ"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "New Valley"
+msgstr "الوادي الجديد"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "Balat"
+msgstr "بلاط"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "Baris"
+msgstr "باريس"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "Dakhla"
+msgstr "الداخلة"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "El Dakhla"
+msgstr "الداخلة"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "El Farafra"
+msgstr "الفرافرة"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "El Kharga"
+msgstr "الخارجة"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "Farafra"
+msgstr "الفرافرة"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "Kharga"
+msgstr "الخارجة"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "Mut"
+msgstr "موط"
+
+#: .\pages\templates\pages\checkout.html:186
+msgid "Paris"
+msgstr "باريس"
+
+#: .\pages\templates\pages\checkout.html:187
+msgid "Suez"
+msgstr "السويس"
+
+#: .\pages\templates\pages\checkout.html:187
+msgid "Al Arbaeen"
+msgstr "الأربعين"
+
+#: .\pages\templates\pages\checkout.html:187
+msgid "Al Ganayen"
+msgstr "الجناين"
+
+#: .\pages\templates\pages\checkout.html:187
+msgid "Arbaeen"
+msgstr "الأربعين"
+
+#: .\pages\templates\pages\checkout.html:187
+msgid "Ataqah"
+msgstr "عتاقة"
+
+#: .\pages\templates\pages\checkout.html:187
+msgid "El Ganayen"
+msgstr "الجناين"
+
+#: .\pages\templates\pages\checkout.html:187
+msgid "Zaitiyyah"
+msgstr "الزيتية"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Aswan"
+msgstr "أسوان"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Abu Simbel"
+msgstr "أبو سمبل"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Daraw"
+msgstr "دراو"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Edfu"
+msgstr "إدفو"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Kalabsha"
+msgstr "كلابشة"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Kom Ombo"
+msgstr "كوم أمبو"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Nasr Al Nuba"
+msgstr "نصر النوبة"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Sebaiya"
+msgstr "السباعية"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "Assiut"
+msgstr "أسيوط"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "Abnub"
+msgstr "أبنوب"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "Abu Tig"
+msgstr "أبو تيج"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "Badari"
+msgstr "البداري"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "Dairut"
+msgstr "ديروط"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "El Badari"
+msgstr "البداري"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "El Fateh"
+msgstr "الفتح"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "El Ghanayem"
+msgstr "الغنايم"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "El Qusiya"
+msgstr "القوصية"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "Manfalut"
+msgstr "منفلوط"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "Sahel Selim"
+msgstr "ساحل سليم"
+
+#: .\pages\templates\pages\checkout.html:189
+msgid "Sodfa"
+msgstr "صدفا"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Beni Suef"
+msgstr "بني سويف"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Al Fashn"
+msgstr "الفشن"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Al Wasta"
+msgstr "الواسطى"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Biba"
+msgstr "ببا"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Ehnasia"
+msgstr "إهناسيا"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Ihnasiya"
+msgstr "إهناسيا"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Nasser"
+msgstr "ناصر"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Samasta"
+msgstr "سمسطا"
+
+#: .\pages\templates\pages\checkout.html:190
+msgid "Wasta"
+msgstr "الواسطى"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "Port Said"
+msgstr "بورسعيد"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "Al Dawahi"
+msgstr "الضواحي"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "Al Manakh"
+msgstr "المناخ"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "Al Zohour"
+msgstr "الزهور"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "Bourfouad"
+msgstr "بورفؤاد"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "Dawahy"
+msgstr "الضواحي"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "East Port Said"
+msgstr "شرق بورسعيد"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "El Dawahy"
+msgstr "الضواحي"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "El Manakh"
+msgstr "المناخ"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "El Sharq"
+msgstr "الشرق"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "El Zohour"
+msgstr "الزهور"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "Port Fouad"
+msgstr "بورفؤاد"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "South Port Said"
+msgstr "جنوب بورسعيد"
+
+#: .\pages\templates\pages\checkout.html:191
+msgid "Zohour"
+msgstr "الزهور"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "Damietta"
+msgstr "دمياط"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "El Zarqa"
+msgstr "الزرقا"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "ESirw"
+msgstr "السرو"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "Faraskour"
+msgstr "فارسكور"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "Kafr El Battikh"
+msgstr "كفر البطيخ"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "Kafr Saad"
+msgstr "كفر سعد"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "New Damietta"
+msgstr "دمياط الجديدة"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "Ras El Bar"
+msgstr "رأس البر"
+
+#: .\pages\templates\pages\checkout.html:192
+msgid "Zarkah"
+msgstr "الزرقا"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Sharkia"
+msgstr "الشرقية"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "10th of Ramadan"
+msgstr "العاشر من رمضان"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Abu Hammad"
+msgstr "أبو حماد"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Abu Kebir"
+msgstr "أبو كبير"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Al Husseiniya"
+msgstr "الحسينية"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Al Qenayat"
+msgstr "القنايات"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Awlad Saqr"
+msgstr "أولاد صقر"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Belbeis"
+msgstr "بلبيس"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Diyarb Negm"
+msgstr "ديرب نجم"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "El Ibrahimiya"
+msgstr "الإبراهيمية"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "El Qurein"
+msgstr "القرين"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Faqous"
+msgstr "فاقوس"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Husseiniya"
+msgstr "الحسينية"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Ibrahimiya"
+msgstr "الإبراهيمية"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Kafr Saqr"
+msgstr "كفر صقر"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Mashtoul El Souq"
+msgstr "مشتول السوق"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Minya El Qamh"
+msgstr "منيا القمح"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Qenayat"
+msgstr "القنايات"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Qurein"
+msgstr "القرين"
+
+#: .\pages\templates\pages\checkout.html:193
+msgid "Zagazig"
+msgstr "الزقازيق"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "South Sinai"
+msgstr "جنوب سيناء"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Abu Radis"
+msgstr "أبو رديس"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Abu Zenima"
+msgstr "أبو زنيمة"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Dahab"
+msgstr "دهب"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "El Tor"
+msgstr "الطور"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Nuweiba"
+msgstr "نويبع"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Ras Sedr"
+msgstr "رأس سدر"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Ras Sudr"
+msgstr "رأس سدر"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Saint Catherine"
+msgstr "سانت كاترين"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Sharm El Sheikh"
+msgstr "شرم الشيخ"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Taba"
+msgstr "طابا"
+
+#: .\pages\templates\pages\checkout.html:194
+msgid "Tor Sinai"
+msgstr "طور سيناء"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Kafr El Sheikh"
+msgstr "كفر الشيخ"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Balteem"
+msgstr "بلطيم"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Bella"
+msgstr "بيلا"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Biyala"
+msgstr "بيلا"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Desouk"
+msgstr "دسوق"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Fouah"
+msgstr "فوه"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Hamoul"
+msgstr "الحامول"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Metobas"
+msgstr "مطوبس"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Motobas"
+msgstr "مطوبس"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Qallin"
+msgstr "قلين"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Riyadh"
+msgstr "الرياض"
+
+#: .\pages\templates\pages\checkout.html:195
+msgid "Sidi Salem"
+msgstr "سيدي سالم"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "Matrouh"
+msgstr "مطروح"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "Dabaa"
+msgstr "الضبعة"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "El Alamein"
+msgstr "العلمين"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "El Dabaa"
+msgstr "الضبعة"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "El Hamam"
+msgstr "الحمام"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "El Negaila"
+msgstr "النجيلة"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "Marsa Matrouh"
+msgstr "مرسى مطروح"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "Negaila"
+msgstr "النجيلة"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "Salum"
+msgstr "السلوم"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "Sidi Barrani"
+msgstr "سيدي براني"
+
+#: .\pages\templates\pages\checkout.html:196
+msgid "Siwa"
+msgstr "سيوة"
+
+#: .\pages\templates\pages\checkout.html:197
+msgid "Luxor"
+msgstr "الأقصر"
+
+#: .\pages\templates\pages\checkout.html:197
+msgid "Al Bayadiya"
+msgstr "البياضية"
+
+#: .\pages\templates\pages\checkout.html:197
+msgid "Al Qarnah"
+msgstr "القرنة"
+
+#: .\pages\templates\pages\checkout.html:197
+msgid "Al Tod"
+msgstr "الطود"
+
+#: .\pages\templates\pages\checkout.html:197
+msgid "Armant"
+msgstr "أرمنت"
+
+#: .\pages\templates\pages\checkout.html:197
+msgid "Esna"
+msgstr "إسنا"
+
+#: .\pages\templates\pages\checkout.html:197
+msgid "Karnak"
+msgstr "الكرنك"
+
+#: .\pages\templates\pages\checkout.html:197
+msgid "Tiba"
+msgstr "طيبة"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "Qena"
+msgstr "قنا"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "Abu Tesht"
+msgstr "أبو تشت"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "Deshna"
+msgstr "دشنا"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "El Waqf"
+msgstr "الوقف"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "Farshut"
+msgstr "فرشوط"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "Nagaa Hammadi"
+msgstr "نجع حمادي"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "Naqada"
+msgstr "نقادة"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "Qift"
+msgstr "قفط"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "Qous"
+msgstr "قوص"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "North Sinai"
+msgstr "شمال سيناء"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "Arish"
+msgstr "العريش"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "Bir al-Abed"
+msgstr "بئر العبد"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "El Arish"
+msgstr "العريش"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "El Hasana"
+msgstr "الحسنة"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "Hassana"
+msgstr "الحسنة"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "Nakhl"
+msgstr "نخل"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "Rafah"
+msgstr "رفح"
+
+#: .\pages\templates\pages\checkout.html:199
+msgid "Sheikh Zuweid"
+msgstr "الشيخ زويد"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Sohag"
+msgstr "سوهاج"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Akhmim"
+msgstr "أخميم"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Al Balyana"
+msgstr "البلينا"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Awlad Toq Sharq"
+msgstr "أولاد طوق شرق"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "El Maragha"
+msgstr "المراغة"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "El Monsha"
+msgstr "المنشأة"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "El Usayrat"
+msgstr "العسيرات"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Girga"
+msgstr "جرجا"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Juhayna"
+msgstr "جهينة"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Sakulta"
+msgstr "ساقلتة"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Tahta"
+msgstr "طهطا"
+
+#: .\pages\templates\pages\checkout.html:200
+msgid "Tima"
+msgstr "طما"
+
+#: .\pages\templates\pages\checkout.html:210
+msgid "Select a State"
+msgstr "اختر المحافظة"
+
+#: .\pages\templates\pages\checkout.html:233
+msgid "Select a City"
+msgstr "اختر المدينة"
+
+#: .\pages\templates\pages\checkout.html:233
+msgid "Select a State first"
+msgstr "اختر المحافظة أولاً"
+
+# =============================================
+# Hero Section
+# =============================================
+#: .\pages\templates\pages\home.html:67
+msgid "Curated Elegance"
+msgstr "أناقة مختارة"
+
+#: .\pages\templates\pages\home.html:73
+msgid "Timeless Antiques"
+msgstr "تحف خالدة"
+
+#: .\pages\templates\pages\home.html:76
+msgid "& Premium Decor"
+msgstr "وديكور فاخر"
+
+#: .\pages\templates\pages\home.html:81
+msgid ""
+"Discover handpicked treasures from around the world — vintage furniture, "
+"artisan crafts, and exquisite decorative pieces that tell a story."
+msgstr ""
+"اكتشف كنوزًا مختارة بعناية من حول العالم — أثاث عتيق، حِرف يدوية، وقطع ديكور "
+"رائعة تحكي قصة."
+
+#: .\pages\templates\pages\home.html:88
+msgid "Explore Collection"
+msgstr "استكشف المجموعة"
+
+#: .\pages\templates\pages\home.html:96
+msgid "View All Products"
+msgstr "عرض جميع المنتجات"
+
+#: .\pages\templates\pages\home.html:165
+msgid "Shop by Category"
+msgstr "تسوق حسب الفئة"
+
+#: .\pages\templates\pages\home.html:166
+msgid ""
+"Browse our wide range of categories to find exactly what you're looking for."
+msgstr "تصفح مجموعة واسعة من الفئات للعثور على ما تبحث عنه."
+
+#: .\pages\templates\pages\home.html:182
+msgid "No categories available yet."
+msgstr "لا توجد فئات متاحة حتى الآن."
+
+#: .\pages\templates\pages\home.html:193
+msgid "Trending Now"
+msgstr "الأكثر رواجًا"
+
+#: .\pages\templates\pages\home.html:195
+msgid "Our most popular products based on sales."
+msgstr "منتجاتنا الأكثر شعبية بناءً على المبيعات."
+
+#: .\pages\templates\pages\home.html:206
+msgid "No products available yet."
+msgstr "لا توجد منتجات متاحة حتى الآن."
+
+#: .\pages\templates\pages\home.html:218
+msgid "Hand Picked"
+msgstr ""
+
+#: .\pages\templates\pages\home.html:219
+#, fuzzy
+#| msgid "Products"
+msgid "Featured Products"
+msgstr "المنتجات"
+
+#: .\pages\templates\pages\home.html:220
+msgid "Our curated selection of premium products just for you."
+msgstr ""
+
+#: .\pages\templates\pages\home.html:239
+msgid "Special Offers"
+msgstr "عروض خاصة"
+
+#: .\pages\templates\pages\home.html:240
+msgid "Don't miss out on these amazing deals!"
+msgstr "لا تفوت هذه الصفقات الرائعة!"
+
+#: .\pages\templates\pages\order_success.html:4
+#, fuzzy
+#| msgid "Order Status"
+msgid "Order Success"
+msgstr "حالة الطلب"
+
+#: .\pages\templates\pages\order_success.html:17
+#, fuzzy
+#| msgid "Order #"
+msgid "Order Placed!"
+msgstr "رقم الطلب"
+
+#: .\pages\templates\pages\order_success.html:18
+#, fuzzy
+#| msgid "Order Summary"
+msgid "Order Number"
+msgstr "ملخص الطلب"
+
+#
+# Offer Card Partial Translations
+#
+#: .\pages\templates\pages\partials\_offer_card.html:7
+#: .\pages\templates\pages\partials\_offer_card.html:11
+#: .\pages\templates\pages\product_detail.html:79
+msgid "OFF"
+msgstr "خصم"
+
+#: .\pages\templates\pages\partials\_offer_card.html:20
+msgid "On all"
+msgstr "على جميع"
+
+#: .\pages\templates\pages\partials\_offer_card.html:22
+#, fuzzy
+#| msgid "Store-wide offer"
+msgid "Storewide offer"
+msgstr "عرض على جميع المنتجات"
+
+#: .\pages\templates\pages\partials\_product_card.html:10
+msgid "No image"
+msgstr "لا توجد صورة"
+
+#
+# Product Card Partial Translations
+#
+#: .\pages\templates\pages\partials\_product_card.html:16
+msgid "Best Seller"
+msgstr "الأكثر مبيعًا"
+
+#
+# Product Detail Page Translations
+#
+#: .\pages\templates\pages\partials\_product_card.html:20
+#: .\pages\templates\pages\product_detail.html:70
+msgid "Out of Stock"
+msgstr "غير متوفر"
+
+#: .\pages\templates\pages\partials\_product_card.html:24
+msgid "SALE"
+msgstr "تخفيض"
+
+#: .\pages\templates\pages\product_detail.html:127
+msgid "In Stock"
+msgstr "متوفر"
+
+#: .\pages\templates\pages\product_detail.html:127
+msgid "available"
+msgstr "متاح"
+
+#: .\pages\templates\pages\product_detail.html:135
+msgid "Color"
+msgstr "اللون"
+
+#: .\pages\templates\pages\product_detail.html:196
+msgid "Add to Cart"
+msgstr "أضف إلى السلة"
+
+#: .\pages\templates\pages\product_detail.html:213
+msgid "Buy Now"
+msgstr "اشتر الآن"
+
+#: .\pages\templates\pages\product_detail.html:227
+msgid "You May Also Like"
+msgstr "قد يعجبك أيضًا"
+
+#: .\pages\views.py:296
 #, python-format
 msgid "Order #%(order_number)s updated to %(status)s."
 msgstr "تم تحديث الطلب رقم %(order_number)s إلى %(status)s."
 
-#: .\pages\views.py:51
+#: .\pages\views.py:298
 msgid "Invalid status."
 msgstr "حالة غير صالحة."
+
+#: .\pages\views.py:339
+#, python-format
+msgid "%(product)s is out of stock."
+msgstr "%(product)s غير متوفر حالياً."
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
@@ -1444,506 +3788,119 @@ msgstr "مجتمع Django"
 msgid "Connect, get help, or contribute"
 msgstr "تواصل، احصل على مساعدة، أو ساهم"
 
-#
-# Home Page Translations
-#
-#: .\pages\templates\pages\home.html
-msgid "Home"
-msgstr "الرئيسية"
-
-#: .\pages\templates\pages\home.html
-msgid "Discover Premium Products"
-msgstr "اكتشف منتجات مميزة"
-
-#: .\pages\templates\pages\home.html
-msgid ""
-"Explore our curated collection of high-quality products at unbeatable prices."
-msgstr "استكشف مجموعتنا المختارة من المنتجات عالية الجودة بأسعار لا تُقاوم."
-
-#: .\pages\templates\pages\home.html
-msgid "Start Shopping"
-msgstr "ابدأ التسوق"
-
-#: .\pages\templates\pages\home.html
-msgid "Shop by Category"
-msgstr "تسوق حسب الفئة"
-
-#: .\pages\templates\pages\home.html
-msgid ""
-"Browse our wide range of categories to find exactly what you're looking for."
-msgstr "تصفح مجموعة واسعة من الفئات للعثور على ما تبحث عنه."
-
-#: .\pages\templates\pages\home.html
-msgid "No categories available yet."
-msgstr "لا توجد فئات متاحة حتى الآن."
-
-#: .\pages\templates\pages\home.html
-msgid "Trending Now"
-msgstr "الأكثر رواجًا"
-
-#: .\pages\templates\pages\home.html
-msgid "Our most popular products based on sales."
-msgstr "منتجاتنا الأكثر شعبية بناءً على المبيعات."
-
-#: .\pages\templates\pages\home.html
-msgid "No products available yet."
-msgstr "لا توجد منتجات متاحة حتى الآن."
-
-#: .\pages\templates\pages\home.html
-msgid "Limited Time"
-msgstr "لفترة محدودة"
-
-#: .\pages\templates\pages\home.html
-msgid "Special Offers"
-msgstr "عروض خاصة"
-
-#: .\pages\templates\pages\home.html
-msgid "Don't miss out on these amazing deals!"
-msgstr "لا تفوت هذه الصفقات الرائعة!"
-
-#
-# Base Template (Navbar & Footer) Translations
-#
-#: .\pages\templates\base.html
-msgid "Medium Online Store - Quality products at great prices"
-msgstr "متجر متوسط - منتجات ذات جودة بأسعار رائعة"
-
-#: .\pages\templates\base.html
-msgid "Categories"
-msgstr "الفئات"
-
-#: .\pages\templates\base.html
-msgid "Products"
-msgstr "المنتجات"
-
-#: .\pages\templates\base.html
-msgid "Offers"
-msgstr "العروض"
-
-#: .\pages\templates\base.html
-msgid "Dashboard"
-msgstr "لوحة التحكم"
-
-#: .\pages\templates\base.html
-msgid "Logout"
-msgstr "تسجيل الخروج"
-
-#: .\pages\templates\base.html
-msgid "Login"
-msgstr "تسجيل الدخول"
-
-#: .\pages\templates\base.html
-msgid "Your one-stop destination for quality products at unbeatable prices."
-msgstr "وجهتك الأولى للمنتجات عالية الجودة بأسعار لا تُقاوم."
-
-#: .\pages\templates\base.html
-msgid "Quick Links"
-msgstr "روابط سريعة"
-
-#: .\pages\templates\base.html
-msgid "About Us"
-msgstr "من نحن"
-
-#: .\pages\templates\base.html
-msgid "Contact"
-msgstr "اتصل بنا"
-
-#: .\pages\templates\base.html
-msgid "Contact Us"
-msgstr "اتصل بنا"
-
-#: .\pages\templates\base.html
-msgid "All rights reserved."
-msgstr "جميع الحقوق محفوظة."
-
-#
-# Product Card Partial Translations
-#
-#: .\pages\templates\pages\partials\_product_card.html
-msgid "Best Seller"
-msgstr "الأكثر مبيعًا"
-
-#: .\pages\templates\pages\partials\_product_card.html
-msgid "SALE"
-msgstr "تخفيض"
-
-#
-# Offer Card Partial Translations
-#
-#: .\pages\templates\pages\partials\_offer_card.html
-msgid "OFF"
-msgstr "خصم"
-
-#: .\pages\templates\pages\partials\_offer_card.html
-msgid "On"
-msgstr "على"
-
-#: .\pages\templates\pages\partials\_offer_card.html
-msgid "On all"
-msgstr "على جميع"
-
-#: .\pages\templates\pages\partials\_offer_card.html
-msgid "Store-wide offer"
-msgstr "عرض على جميع المنتجات"
-
-#: .\pages\templates\pages\partials\_offer_card.html
-msgid "Shop Now"
-msgstr "تسوق الآن"
-
-#
-# Category Page Translations
-#
-#: .\pages\templates\pages\category_products.html
-msgid "products found"
-msgstr "منتج"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Filters"
-msgstr "التصفية"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Search"
-msgstr "البحث"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Search products..."
-msgstr "البحث في المنتجات..."
-
-#: .\pages\templates\pages\category_products.html
-msgid "Price Range"
-msgstr "نطاق السعر"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Min"
-msgstr "الحد الأدنى"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Max"
-msgstr "الحد الأقصى"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Apply Filters"
-msgstr "تطبيق التصفية"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Clear Filters"
-msgstr "مسح التصفية"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Other Categories"
-msgstr "فئات أخرى"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Previous"
-msgstr "السابق"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Next"
-msgstr "التالي"
-
-#: .\pages\templates\pages\category_products.html
-msgid "No products found"
-msgstr "لم يتم العثور على منتجات"
-
-#: .\pages\templates\pages\category_products.html
-msgid "Try adjusting your search or filter criteria"
-msgstr "حاول تعديل معايير البحث أو التصفية"
-
-#
-# Product Detail Page Translations
-#
-#: .\pages\templates\pages\product_detail.html
-msgid "Out of Stock"
-msgstr "غير متوفر"
-
-#: .\pages\templates\pages\product_detail.html
-msgid "In Stock"
-msgstr "متوفر"
-
-#: .\pages\templates\pages\product_detail.html
-msgid "available"
-msgstr "متاح"
-
-#: .\pages\templates\pages\product_detail.html
-msgid "Quantity"
-msgstr "الكمية"
-
-#: .\pages\templates\pages\product_detail.html
-msgid "Add to Cart"
-msgstr "أضف إلى السلة"
-
-#: .\pages\templates\pages\product_detail.html
-msgid "Buy Now"
-msgstr "اشتر الآن"
-
-#: .\pages\templates\pages\product_detail.html
-msgid "You May Also Like"
-msgstr "قد يعجبك أيضًا"
-
-#: .\pages\templates\pages\partials\_product_card.html
-msgid "No image"
-msgstr "لا توجد صورة"
-
-#: .\pages\templates\pages\cart.html
-msgid "Shopping Cart"
-msgstr "سلة التسوق"
-
-#: .\pages\templates\pages\cart.html
-msgid "Your cart is empty"
-msgstr "سلة التسوق فارغة"
-
-#: .\pages\templates\pages\cart.html
-msgid "Looks like you haven't added any items to your cart yet."
-msgstr "يبدو أنك لم تضف أي منتجات إلى سلة التسوق بعد."
-
-#: .\pages\templates\pages\cart.html
-msgid "Continue Shopping"
-msgstr "مواصلة التسوق"
-
-#: .\pages\templates\pages\cart.html
-msgid "Qty"
-msgstr "الكمية"
-
-#: .\pages\templates\pages\cart.html
-msgid "Update"
-msgstr "تحديث"
-
-#: .\pages\templates\pages\cart.html
-msgid "Remove"
-msgstr "إزالة"
-
-#: .\pages\templates\pages\cart.html
-msgid "each"
-msgstr "لكل منتج"
-
-#: .\pages\templates\pages\cart.html
-msgid "Order Summary"
-msgstr "ملخص الطلب"
-
-#: .\pages\templates\pages\cart.html
-msgid "Subtotal"
-msgstr "المجموع الفرعي"
-
-#: .\pages\templates\pages\cart.html
-msgid "Shipping"
-msgstr "الشحن"
-
-#: .\pages\templates\pages\cart.html
-msgid "FREE"
-msgstr "مجاني"
-
-#: .\pages\templates\pages\cart.html
-msgid "Free shipping on orders over $50"
-msgstr "شحن مجاني للطلبات التي تزيد عن 50 دولار"
-
-#: .\pages\templates\pages\cart.html
-msgid "Proceed to Checkout"
-msgstr "المتابعة للدفع"
-
-#: .\pages\templates\pages\cart.html
-msgid "Secure Checkout"
-msgstr "دفع آمن"
-
-#: .\pages\templates\pages\checkout.html
-msgid "Checkout"
-msgstr "الدفع"
-
-#: .\pages\templates\pages\checkout.html
-msgid "Customer Information"
-msgstr "معلومات العميل"
-
-#: .\pages\templates\pages\checkout.html
-msgid "Full Name"
-msgstr "الاسم الكامل"
-
-#: .\pages\templates\pages\checkout.html
-msgid "Email"
-msgstr "البريد الإلكتروني"
-
-#: .\pages\templates\pages\checkout.html
-msgid "Phone"
-msgstr "رقم الهاتف"
-
-#: .\pages\templates\pages\checkout.html
-msgid "Shipping Address"
-msgstr "عنوان الشحن"
-
-#: .\pages\templates\pages\checkout.html
-msgid "Order Notes"
-msgstr "ملاحظات الطلب"
-
-#: .\pages\templates\pages\checkout.html
-msgid "optional"
-msgstr "اختياري"
-
-#: .\pages\templates\pages\checkout.html
-msgid "Place Order"
-msgstr "إتمام الطلب"
-
-#: .\pages\views.py
-msgid "%(product)s added to cart."
-msgstr "تمت إضافة %(product)s إلى السلة."
-
-#: .\pages\views.py
-msgid "%(product)s is out of stock."
-msgstr "%(product)s غير متوفر حالياً."
-
-#: .\pages\views.py
-msgid "Cart updated."
-msgstr "تم تحديث السلة."
-
-#: .\pages\views.py
-msgid "Item removed from cart."
-msgstr "تمت إزالة المنتج من السلة."
-
-#: manually added
-msgid "Successful Orders"
-msgstr "الطلبات الناجحة"
-
-#: manually added
-msgid "Pending"
-msgstr "قيد الانتظار"
-
-#: manually added
-msgid "Confirmed"
-msgstr "تم التأكيد"
-
-#: manually added
-msgid "Shipped"
-msgstr "تم الشحن"
-
-#: manually added
-msgid "Delivered"
-msgstr "تم التوصيل"
-
-#: manually added
-msgid "Cancelled"
-msgstr "ملغي"
-
-#: manually added for order detail
-msgid "Order Details"
-msgstr "تفاصيل الطلب"
-
-msgid "Back to Dashboard"
-msgstr "العودة للوحة التحكم"
-
-msgid "Order Items"
-msgstr "عناصر الطلب"
-
-msgid "Product"
-msgstr "المنتج"
-
-msgid "Price"
-msgstr "السعر"
-
-msgid "Customer Details"
-msgstr "تفاصيل العميل"
-
-msgid "Name"
-msgstr "الاسم"
-
-msgid "Address"
-msgstr "العنوان"
-
-msgid "Notes"
-msgstr "ملاحظات"
-
-msgid "Order Status"
-msgstr "حالة الطلب"
-
-msgid "Created"
-msgstr "تم الإنشاء"
-
-msgid "Update Status"
-msgstr "تحديث الحالة"
-
-msgid "View"
-msgstr "عرض"
-
-# =============================================
-# Navbar & Footer
-# =============================================
-msgid "Al-Serag Store"
-msgstr "متجر السراج"
-
-msgid "Register"
-msgstr "إنشاء حساب"
-
-# =============================================
-# Hero Section
-# =============================================
-msgid "Curated Elegance"
-msgstr "أناقة مختارة"
-
-msgid "Timeless Antiques"
-msgstr "تحف خالدة"
-
-msgid "& Premium Decor"
-msgstr "وديكور فاخر"
-
-msgid ""
-"Discover handpicked treasures from around the world — vintage furniture, "
-"artisan crafts, and exquisite decorative pieces that tell a story."
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:14
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:53
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:61
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:71
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:81
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:85
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:117
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:136
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:363
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:368
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:378
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:398
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:415
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:434
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:440
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:457
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:469
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:477
+msgid "title"
 msgstr ""
-"اكتشف كنوزًا مختارة بعناية من حول العالم — أثاث عتيق، حِرف يدوية، وقطع ديكور "
-"رائعة تحكي قصة."
 
-msgid "Explore Collection"
-msgstr "استكشف المجموعة"
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:18
+msgid "password"
+msgstr ""
 
-msgid "View All Products"
-msgstr "عرض جميع المنتجات"
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:244
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:263
+msgid "title a"
+msgstr ""
 
-msgid "Our most popular products loved by customers."
-msgstr "أكثر المنتجات شعبية لدى عملائنا."
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:248
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:274
+msgid "title b"
+msgstr ""
 
-msgid "No special offers at the moment."
-msgstr "لا توجد عروض خاصة حاليًا."
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:252
+msgid "title c"
+msgstr ""
 
-# =============================================
-# All Products Page
-# =============================================
-msgid "All Products"
-msgstr "جميع المنتجات"
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:256
+msgid "title d"
+msgstr ""
 
-msgid "Browse all our products"
-msgstr "تصفّح جميع منتجاتنا"
+#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:379
+msgid "visits"
+msgstr ""
 
-msgid "Category"
-msgstr "القسم"
+#: .\venv\Lib\site-packages\modeltranslation\tests\translation.py:62
+msgid "Sorry, translation is not available."
+msgstr ""
 
-msgid "All Categories"
-msgstr "جميع الأقسام"
+#: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
+msgid "None"
+msgstr ""
 
-msgid "Sort By"
-msgstr "ترتيب حسب"
+#~ msgid "Medium Store"
+#~ msgstr "متجر متوسط"
 
-msgid "Newest First"
-msgstr "الأحدث أولًا"
+#~ msgid "Discover Premium Products"
+#~ msgstr "اكتشف منتجات مميزة"
 
-msgid "Price: Low to High"
-msgstr "السعر: من الأقل للأعلى"
+#~ msgid ""
+#~ "Explore our curated collection of high-quality products at unbeatable "
+#~ "prices."
+#~ msgstr "استكشف مجموعتنا المختارة من المنتجات عالية الجودة بأسعار لا تُقاوم."
 
-msgid "Price: High to Low"
-msgstr "السعر: من الأعلى للأقل"
+#~ msgid "Limited Time"
+#~ msgstr "لفترة محدودة"
 
-msgid "Name: A to Z"
-msgstr "الاسم: أ - ي"
+#~ msgid "On"
+#~ msgstr "على"
 
-msgid "Active Filters"
-msgstr "التصفيات النشطة"
+#~ msgid "Shop Now"
+#~ msgstr "تسوق الآن"
 
-msgid "No products found matching your criteria."
-msgstr "لم يتم العثور على منتجات تطابق معاييرك."
+#~ msgid "Customer Information"
+#~ msgstr "معلومات العميل"
 
-msgid "Try adjusting your filters or search terms."
-msgstr "حاول تعديل التصفية أو مصطلحات البحث."
+#~ msgid "Shipping Address"
+#~ msgstr "عنوان الشحن"
 
-msgid "Sale"
-msgstr "تخفيض"
+#~ msgid "optional"
+#~ msgstr "اختياري"
 
-msgid "sold"
-msgstr "مباع"
+#~ msgid "%(product)s added to cart."
+#~ msgstr "تمت إضافة %(product)s إلى السلة."
 
-msgid "Color"
-msgstr "اللون"
+#~ msgid "Cart updated."
+#~ msgstr "تم تحديث السلة."
+
+#~ msgid "Item removed from cart."
+#~ msgstr "تمت إزالة المنتج من السلة."
+
+#~ msgid "Register"
+#~ msgstr "إنشاء حساب"
+
+#~ msgid "Our most popular products loved by customers."
+#~ msgstr "أكثر المنتجات شعبية لدى عملائنا."
+
+#~ msgid "No special offers at the moment."
+#~ msgstr "لا توجد عروض خاصة حاليًا."
+
+#~ msgid "Browse all our products"
+#~ msgstr "تصفّح جميع منتجاتنا"
+
+#~ msgid "Active Filters"
+#~ msgstr "التصفيات النشطة"
+
+#~ msgid "No products found matching your criteria."
+#~ msgstr "لم يتم العثور على منتجات تطابق معاييرك."
+
+#~ msgid "Try adjusting your filters or search terms."
+#~ msgstr "حاول تعديل التصفية أو مصطلحات البحث."
+
+#~ msgid "Sale"
+#~ msgstr "تخفيض"

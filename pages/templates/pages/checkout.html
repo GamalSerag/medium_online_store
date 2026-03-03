@@ -57,6 +57,30 @@
                             {% endif %}
                         </div>
 
+                        <!-- State -->
+                        <div>
+                            <label for="{{ form.state.id_for_label }}"
+                                class="block text-sm font-medium text-gray-700 mb-2">
+                                {{ form.state.label }}
+                            </label>
+                            {{ form.state }}
+                            {% if form.state.errors %}
+                            <p class="mt-1 text-sm text-red-600">{{ form.state.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+
+                        <!-- City -->
+                        <div>
+                            <label for="{{ form.city.id_for_label }}"
+                                class="block text-sm font-medium text-gray-700 mb-2">
+                                {{ form.city.label }}
+                            </label>
+                            {{ form.city }}
+                            {% if form.city.errors %}
+                            <p class="mt-1 text-sm text-red-600">{{ form.city.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+
                         <!-- Address -->
                         <div>
                             <label for="{{ form.address.id_for_label }}"
@@ -143,4 +167,82 @@
         {% endif %}
     </div>
 </section>
+
+<!-- JavaScript for Egyptian Governorates and Cities -->
+<script>
+    const egyptData = {
+        "{% trans 'Cairo' %}": ["{% trans '15 May' %}", "{% trans 'Abaseya' %}", "{% trans 'Abou El Feda' %}", "{% trans 'Abu Talat' %}", "{% trans 'Aghouza' %}", "{% trans 'Ain Shams' %}", "{% trans 'Al Rehab' %}", "{% trans 'Almazah' %}", "{% trans 'Amiriya' %}", "{% trans 'Andalos' %}", "{% trans 'Azzam' %}", "{% trans 'Badr City' %}", "{% trans 'Basateen' %}", "{% trans 'Bolkly' %}", "{% trans 'Borg El Arab' %}", "{% trans 'Boulaq' %}", "{% trans 'Camp Caesar' %}", "{% trans 'Cleopatra' %}", "{% trans 'Corniche' %}", "{% trans 'Dar El Salam' %}", "{% trans 'Dokki' %}", "{% trans 'Downtown Cairo' %}", "{% trans 'El Haram' %}", "{% trans 'El Hawamdeya' %}", "{% trans 'El Katameya' %}", "{% trans 'El Maadi' %}", "{% trans 'El Marg' %}", "{% trans 'El Masara' %}", "{% trans 'El Mokattam' %}", "{% trans 'El Moqattam' %}", "{% trans 'El Nozha' %}", "{% trans 'El Qobbah' %}", "{% trans 'El Rehab' %}", "{% trans 'El Rowad' %}", "{% trans 'El Shaab' %}", "{% trans 'El Shorouk' %}", "{% trans 'El Tagamoaa El Khames' %}", "{% trans 'El Tagamoaa El Tani' %}", "{% trans 'El Tagamoaa El Talet' %}", "{% trans 'El Tagamoaa El Awal' %}", "{% trans 'El Talbeya' %}", "{% trans 'El Zawya El Hamra' %}", "{% trans 'Ezbet El Haggana' %}", "{% trans 'Faisal' %}", "{% trans 'Garden City' %}", "{% trans 'Giza' %}", "{% trans 'Giza Square' %}", "{% trans 'Hadaeq El Ahram' %}", "{% trans 'Hadaeq El Maadi' %}", "{% trans 'Hadaeq El Qobbah' %}", "{% trans 'Haram' %}", "{% trans 'Heliopolis' %}", "{% trans 'Helwan' %}", "{% trans 'Imbaba' %}", "{% trans 'Katameya' %}", "{% trans 'Maadi' %}", "{% trans 'Madinaty' %}", "{% trans 'Manial' %}", "{% trans 'Manshiyat Naser' %}", "{% trans 'Matareya' %}", "{% trans 'Mokattam' %}", "{% trans 'Mohandeseen' %}", "{% trans 'Nasr City' %}", "{% trans 'New Cairo' %}", "{% trans 'New Capital' %}", "{% trans 'New Heliopolis' %}", "{% trans 'New Nuzha' %}", "{% trans 'Obour City' %}", "{% trans 'Qalyub' %}", "{% trans 'Qasr El Nil' %}", "{% trans 'Rod El Farag' %}", "{% trans 'Sayeda Zeinab' %}", "{% trans 'Shoubra' %}", "{% trans 'Shoubra El Kheima' %}", "{% trans 'Smart Village' %}", "{% trans 'Zamalek' %}", "{% trans 'Zeitoun' %}"],
+        "{% trans 'Giza' %}": ["{% trans '6th of October' %}", "{% trans 'Abu Rawash' %}", "{% trans 'Agouza' %}", "{% trans 'Al Ayayat' %}", "{% trans 'Al Badrashin' %}", "{% trans 'Al Haram' %}", "{% trans 'Al Hawamdeya' %}", "{% trans 'Al Wahat Al Baharia' %}", "{% trans 'Awsim' %}", "{% trans 'Bulaq El Dakrour' %}", "{% trans 'Dokki' %}", "{% trans 'El Ayyat' %}", "{% trans 'El Badrashin' %}", "{% trans 'El Haram' %}", "{% trans 'El Hawamdeya' %}", "{% trans 'El Omraniya' %}", "{% trans 'El Saff' %}", "{% trans 'El Wahat El Bahariya' %}", "{% trans 'Faisal' %}", "{% trans 'Giza' %}", "{% trans 'Haram' %}", "{% trans 'Imbaba' %}", "{% trans 'Kerdasa' %}", "{% trans 'Mohandeseen' %}", "{% trans 'Omrania' %}", "{% trans 'Ousim' %}", "{% trans 'Saf' %}", "{% trans 'Sheikh Zayed' %}"],
+        "{% trans 'Alexandria' %}": ["{% trans 'Abu Qir' %}", "{% trans 'Agami' %}", "{% trans 'Al Amriya' %}", "{% trans 'Al Attarin' %}", "{% trans 'Al Dekheila' %}", "{% trans 'Al Gomrok' %}", "{% trans 'Al Labban' %}", "{% trans 'Al Manshiyah' %}", "{% trans 'Al Montazah' %}", "{% trans 'Al Raml' %}", "{% trans 'Amreya' %}", "{% trans 'Anfoushi' %}", "{% trans 'Asafra' %}", "{% trans 'Attarine' %}", "{% trans 'Bacchus' %}", "{% trans 'Borg El Arab' %}", "{% trans 'Camp Caesar' %}", "{% trans 'Cleopatra' %}", "{% trans 'Dekheila' %}", "{% trans 'El Agami' %}", "{% trans 'El Amriya' %}", "{% trans 'El Attarin' %}", "{% trans 'El Dekheila' %}", "{% trans 'El Gomrok' %}", "{% trans 'El Labban' %}", "{% trans 'El Manshiyah' %}", "{% trans 'El Montazah' %}", "{% trans 'El Raml' %}", "{% trans 'Fleming' %}", "{% trans 'Glim' %}", "{% trans 'Gomrok' %}", "{% trans 'Kafr Abdou' %}", "{% trans 'Karmouz' %}", "{% trans 'Kom El Dikka' %}", "{% trans 'Labban' %}", "{% trans 'Louran' %}", "{% trans 'Maamoura' %}", "{% trans 'Mandara' %}", "{% trans 'Miami' %}", "{% trans 'Minyet El Bassal' %}", "{% trans 'Moharam Bek' %}", "{% trans 'Montaza' %}", "{% trans 'Raml' %}", "{% trans 'Roushdy' %}", "{% trans 'San Stefano' %}", "{% trans 'Shatby' %}", "{% trans 'Sidi Beshr' %}", "{% trans 'Sidi Gaber' %}", "{% trans 'Smouha' %}", "{% trans 'Sporting' %}", "{% trans 'Stanley' %}", "{% trans 'Zezenia' %}"],
+        "{% trans 'Dakahlia' %}": ["{% trans 'Aga' %}", "{% trans 'Bani Ebeid' %}", "{% trans 'Belqas' %}", "{% trans 'Dakarneh' %}", "{% trans 'Dekernes' %}", "{% trans 'El Gamaliya' %}", "{% trans 'El Kurdi' %}", "{% trans 'El Manzala' %}", "{% trans 'El Matareya' %}", "{% trans 'El Senbellawein' %}", "{% trans 'Gamalia' %}", "{% trans 'Gohina' %}", "{% trans 'Kurdi' %}", "{% trans 'Mahmoudia' %}", "{% trans 'Manzala' %}", "{% trans 'Matareya' %}", "{% trans 'Mansoura' %}", "{% trans 'Minya El Nasr' %}", "{% trans 'Mit Ghamr' %}", "{% trans 'Mit Salsil' %}", "{% trans 'Nabaroh' %}", "{% trans 'Senbellawein' %}", "{% trans 'Sherbin' %}", "{% trans 'Shorouk' %}", "{% trans 'Talkha' %}", "{% trans 'Zaqaziq' %}"],
+        "{% trans 'Red Sea' %}": ["{% trans 'Al Qusair' %}", "{% trans 'El Gouna' %}", "{% trans 'El Qusair' %}", "{% trans 'Halayeb' %}", "{% trans 'Hurghada' %}", "{% trans 'Marsa Alam' %}", "{% trans 'Port Ghalib' %}", "{% trans 'Ras Gharib' %}", "{% trans 'Safaga' %}", "{% trans 'Shalateen' %}", "{% trans 'Soma Bay' %}"],
+        "{% trans 'Beheira' %}": ["{% trans 'Abu El Matamir' %}", "{% trans 'Abu Hummus' %}", "{% trans 'Badr' %}", "{% trans 'Damanhour' %}", "{% trans 'Edku' %}", "{% trans 'El Delengat' %}", "{% trans 'El Mahmoudiya' %}", "{% trans 'El Natroun' %}", "{% trans 'El Rahmaniya' %}", "{% trans 'Hosh Essa' %}", "{% trans 'Itay El Barud' %}", "{% trans 'Kafr El Dawwar' %}", "{% trans 'Kom Hamada' %}", "{% trans 'Nubariya' %}", "{% trans 'Rashid (Rosetta)' %}", "{% trans 'Rosetta' %}", "{% trans 'Shubrakhit' %}", "{% trans 'Wadi El Natrun' %}"],
+        "{% trans 'Fayoum' %}": ["{% trans 'Abshway' %}", "{% trans 'Etsa' %}", "{% trans 'Fayoum' %}", "{% trans 'Itsa' %}", "{% trans 'Senoress' %}", "{% trans 'Sinnuris' %}", "{% trans 'Tamiya' %}", "{% trans 'Yousef El Seddik' %}"],
+        "{% trans 'Gharbia' %}": ["{% trans 'Basyoun' %}", "{% trans 'El Mahalla El Kubra' %}", "{% trans 'Kafr El Zayat' %}", "{% trans 'Kotour' %}", "{% trans 'Qutour' %}", "{% trans 'Samanoud' %}", "{% trans 'Santa' %}", "{% trans 'Tanta' %}", "{% trans 'Zefta' %}"],
+        "{% trans 'Ismailia' %}": ["{% trans 'Abu Suwir' %}", "{% trans 'El Qantara El Gharbiya' %}", "{% trans 'El Qantara El Sharqiya' %}", "{% trans 'Fayed' %}", "{% trans 'Ismailia' %}", "{% trans 'Kasassine' %}", "{% trans 'Qantara Gharb' %}", "{% trans 'Qantara Sharq' %}", "{% trans 'Tall El Kebir' %}"],
+        "{% trans 'Menofia' %}": ["{% trans 'Ashmoun' %}", "{% trans 'Birket El Sab' %}", "{% trans 'El Bagour' %}", "{% trans 'El Shohada' %}", "{% trans 'Menouf' %}", "{% trans 'Quesna' %}", "{% trans 'Sadat City' %}", "{% trans 'Shibin El Kom' %}", "{% trans 'Tala' %}", "{% trans 'Tersa' %}"],
+        "{% trans 'Minya' %}": ["{% trans 'Abu Qurqas' %}", "{% trans 'Beni Mazar' %}", "{% trans 'Deir Mawas' %}", "{% trans 'El Idwa' %}", "{% trans 'Maghagha' %}", "{% trans 'Mallawi' %}", "{% trans 'Mataay' %}", "{% trans 'Minya' %}", "{% trans 'Samalut' %}"],
+        "{% trans 'Qalyubia' %}": ["{% trans 'Abu Zaabal' %}", "{% trans 'Banha' %}", "{% trans 'El Kanater El Khayreya' %}", "{% trans 'El Khanka' %}", "{% trans 'El Obour' %}", "{% trans 'Kafr Shukr' %}", "{% trans 'Khanka' %}", "{% trans 'Qalyub' %}", "{% trans 'Qanater Khayriya' %}", "{% trans 'Shibin El Qanater' %}", "{% trans 'Shoubra El Kheima' %}", "{% trans 'Tukh' %}"],
+        "{% trans 'New Valley' %}": ["{% trans 'Balat' %}", "{% trans 'Baris' %}", "{% trans 'Dakhla' %}", "{% trans 'El Dakhla' %}", "{% trans 'El Farafra' %}", "{% trans 'El Kharga' %}", "{% trans 'Farafra' %}", "{% trans 'Kharga' %}", "{% trans 'Mut' %}", "{% trans 'Paris' %}"],
+        "{% trans 'Suez' %}": ["{% trans 'Al Arbaeen' %}", "{% trans 'Al Ganayen' %}", "{% trans 'Arbaeen' %}", "{% trans 'Ataqah' %}", "{% trans 'El Ganayen' %}", "{% trans 'Faisal' %}", "{% trans 'Suez' %}", "{% trans 'Zaitiyyah' %}"],
+        "{% trans 'Aswan' %}": ["{% trans 'Abu Simbel' %}", "{% trans 'Aswan' %}", "{% trans 'Daraw' %}", "{% trans 'Edfu' %}", "{% trans 'Kalabsha' %}", "{% trans 'Kom Ombo' %}", "{% trans 'Nasr Al Nuba' %}", "{% trans 'Sebaiya' %}"],
+        "{% trans 'Assiut' %}": ["{% trans 'Abnub' %}", "{% trans 'Abu Tig' %}", "{% trans 'Assiut' %}", "{% trans 'Badari' %}", "{% trans 'Dairut' %}", "{% trans 'El Badari' %}", "{% trans 'El Fateh' %}", "{% trans 'El Ghanayem' %}", "{% trans 'El Qusiya' %}", "{% trans 'Manfalut' %}", "{% trans 'Sahel Selim' %}", "{% trans 'Sodfa' %}"],
+        "{% trans 'Beni Suef' %}": ["{% trans 'Al Fashn' %}", "{% trans 'Al Wasta' %}", "{% trans 'Beni Suef' %}", "{% trans 'Biba' %}", "{% trans 'Ehnasia' %}", "{% trans 'Ihnasiya' %}", "{% trans 'Nasser' %}", "{% trans 'Samasta' %}", "{% trans 'Wasta' %}"],
+        "{% trans 'Port Said' %}": ["{% trans 'Al Dawahi' %}", "{% trans 'Al Manakh' %}", "{% trans 'Al Zohour' %}", "{% trans 'Bourfouad' %}", "{% trans 'Dawahy' %}", "{% trans 'East Port Said' %}", "{% trans 'El Dawahy' %}", "{% trans 'El Manakh' %}", "{% trans 'El Sharq' %}", "{% trans 'El Zohour' %}", "{% trans 'Port Fouad' %}", "{% trans 'Port Said' %}", "{% trans 'South Port Said' %}", "{% trans 'Zohour' %}"],
+        "{% trans 'Damietta' %}": ["{% trans 'Damietta' %}", "{% trans 'El Zarqa' %}", "{% trans 'ESirw' %}", "{% trans 'Faraskour' %}", "{% trans 'Kafr El Battikh' %}", "{% trans 'Kafr Saad' %}", "{% trans 'New Damietta' %}", "{% trans 'Ras El Bar' %}", "{% trans 'Zarkah' %}"],
+        "{% trans 'Sharkia' %}": ["{% trans '10th of Ramadan' %}", "{% trans 'Abu Hammad' %}", "{% trans 'Abu Kebir' %}", "{% trans 'Al Husseiniya' %}", "{% trans 'Al Qenayat' %}", "{% trans 'Awlad Saqr' %}", "{% trans 'Belbeis' %}", "{% trans 'Diyarb Negm' %}", "{% trans 'El Ibrahimiya' %}", "{% trans 'El Qurein' %}", "{% trans 'Faqous' %}", "{% trans 'Husseiniya' %}", "{% trans 'Ibrahimiya' %}", "{% trans 'Kafr Saqr' %}", "{% trans 'Mashtoul El Souq' %}", "{% trans 'Minya El Qamh' %}", "{% trans 'Qenayat' %}", "{% trans 'Qurein' %}", "{% trans 'Zagazig' %}"],
+        "{% trans 'South Sinai' %}": ["{% trans 'Abu Radis' %}", "{% trans 'Abu Zenima' %}", "{% trans 'Dahab' %}", "{% trans 'El Tor' %}", "{% trans 'Nuweiba' %}", "{% trans 'Ras Sedr' %}", "{% trans 'Ras Sudr' %}", "{% trans 'Saint Catherine' %}", "{% trans 'Sharm El Sheikh' %}", "{% trans 'Taba' %}", "{% trans 'Tor Sinai' %}"],
+        "{% trans 'Kafr El Sheikh' %}": ["{% trans 'Balteem' %}", "{% trans 'Bella' %}", "{% trans 'Biyala' %}", "{% trans 'Desouk' %}", "{% trans 'Fouah' %}", "{% trans 'Hamoul' %}", "{% trans 'Kafr El Sheikh' %}", "{% trans 'Metobas' %}", "{% trans 'Motobas' %}", "{% trans 'Qallin' %}", "{% trans 'Riyadh' %}", "{% trans 'Sidi Salem' %}", "{% trans 'Sporting' %}"],
+        "{% trans 'Matrouh' %}": ["{% trans 'Dabaa' %}", "{% trans 'El Alamein' %}", "{% trans 'El Dabaa' %}", "{% trans 'El Hamam' %}", "{% trans 'El Negaila' %}", "{% trans 'Marsa Matrouh' %}", "{% trans 'Matrouh' %}", "{% trans 'Negaila' %}", "{% trans 'Salum' %}", "{% trans 'Sidi Barrani' %}", "{% trans 'Siwa' %}"],
+        "{% trans 'Luxor' %}": ["{% trans 'Al Bayadiya' %}", "{% trans 'Al Qarnah' %}", "{% trans 'Al Tod' %}", "{% trans 'Armant' %}", "{% trans 'Esna' %}", "{% trans 'Karnak' %}", "{% trans 'Luxor' %}", "{% trans 'Tiba' %}"],
+        "{% trans 'Qena' %}": ["{% trans 'Abu Tesht' %}", "{% trans 'Deshna' %}", "{% trans 'El Waqf' %}", "{% trans 'Farshut' %}", "{% trans 'Nagaa Hammadi' %}", "{% trans 'Naqada' %}", "{% trans 'Qena' %}", "{% trans 'Qift' %}", "{% trans 'Qous' %}"],
+        "{% trans 'North Sinai' %}": ["{% trans 'Arish' %}", "{% trans 'Bir al-Abed' %}", "{% trans 'El Arish' %}", "{% trans 'El Hasana' %}", "{% trans 'Hassana' %}", "{% trans 'Nakhl' %}", "{% trans 'Rafah' %}", "{% trans 'Sheikh Zuweid' %}"],
+        "{% trans 'Sohag' %}": ["{% trans 'Akhmim' %}", "{% trans 'Al Balyana' %}", "{% trans 'Awlad Toq Sharq' %}", "{% trans 'Dar El Salam' %}", "{% trans 'El Maragha' %}", "{% trans 'El Monsha' %}", "{% trans 'El Usayrat' %}", "{% trans 'Girga' %}", "{% trans 'Juhayna' %}", "{% trans 'Sakulta' %}", "{% trans 'Sohag' %}", "{% trans 'Tahta' %}", "{% trans 'Tima' %}"]
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const stateSelect = document.getElementById("state-select");
+        const citySelect = document.getElementById("city-select");
+
+        // Populate State Dropdown
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.text = "{% trans 'Select a State' %}";
+        defaultOption.selected = true;
+        defaultOption.disabled = true;
+        stateSelect.appendChild(defaultOption);
+
+        for (const state in egyptData) {
+            const option = document.createElement("option");
+            option.value = state;
+            option.text = state;
+            stateSelect.appendChild(option);
+        }
+
+        // Handle State Change to Populate Cities
+        stateSelect.addEventListener("change", function () {
+            const selectedState = this.value;
+            const cities = egyptData[selectedState] || [];
+
+            // Clear current city options
+            citySelect.innerHTML = "";
+
+            // Add default city option
+            const cityDefaultOption = document.createElement("option");
+            cityDefaultOption.value = "";
+            cityDefaultOption.text = cities.length > 0 ? "{% trans 'Select a City' %}" : "{% trans 'Select a State first' %}";
+            cityDefaultOption.selected = true;
+            cityDefaultOption.disabled = true;
+            citySelect.appendChild(cityDefaultOption);
+
+            // Add new city options
+            cities.forEach(city => {
+                const option = document.createElement("option");
+                option.value = city;
+                option.text = city;
+                citySelect.appendChild(option);
+            });
+        });
+    });
+</script>
 {% endblock %}

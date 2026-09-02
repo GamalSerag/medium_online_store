@@ -3904,3 +3904,181 @@ msgstr ""
 
 #~ msgid "Sale"
 #~ msgstr "تخفيض"
+#
+# Home page refresh
+#
+#: .\pages\templates\pages\home.html
+msgid "Home essentials with character."
+msgstr "أساسيات للمنزل بطابع مميز."
+
+#: .\pages\templates\pages\home.html
+msgid "Furniture, decor, and useful pieces selected for everyday homes. No noise, just clear choices and simple ordering."
+msgstr "أثاث وديكور وقطع عملية مختارة للمنازل اليومية. اختيارات واضحة وطلب بسيط بدون تعقيد."
+
+#: .\pages\templates\pages\home.html
+msgid "Shop all products"
+msgstr "تسوق كل المنتجات"
+
+#: .\pages\templates\pages\home.html
+msgid "Choose a category"
+msgstr "اختر قسما"
+
+#: .\pages\templates\pages\home.html
+msgid "Featured"
+msgstr "مميز"
+
+#: .\pages\templates\pages\home.html
+msgid "Browse new products"
+msgstr "تصفح المنتجات الجديدة"
+
+#: .\pages\templates\pages\home.html
+msgid "See the full collection"
+msgstr "شاهد المجموعة كاملة"
+
+#: .\pages\templates\pages\home.html
+msgid "Available now"
+msgstr "متاح الآن"
+
+#: .\pages\templates\pages\home.html
+msgid "Shop by room or style"
+msgstr "تسوق حسب الغرفة أو النمط"
+
+#: .\pages\templates\pages\home.html
+msgid "Popular now"
+msgstr "الأكثر رواجا الآن"
+
+#: .\pages\templates\pages\home.html
+msgid "Best sellers"
+msgstr "الأكثر مبيعا"
+
+#: .\pages\templates\pages\home.html
+msgid "View all"
+msgstr "عرض الكل"
+
+#: .\pages\templates\pages\home.html
+msgid "Selected pieces"
+msgstr "قطع مختارة"
+
+#: .\pages\templates\pages\home.html
+msgid "Worth a closer look"
+msgstr "تستحق نظرة أقرب"
+
+#: .\pages\templates\pages\home.html
+msgid "Current discounts"
+msgstr "الخصومات الحالية"
+
+#: .\pages\templates\pages\home.html
+msgid "New showroom edit"
+msgstr "مختارات المعرض الجديدة"
+
+#: .\pages\templates\pages\home.html
+msgid "Pieces that make a room feel finished."
+msgstr "قطع تجعل الغرفة تبدو مكتملة."
+
+#: .\pages\templates\pages\home.html
+msgid "Explore practical furniture and decor chosen for texture, proportion, and everyday use."
+msgstr "اكتشف أثاثا وديكورا عمليا مختارا للخامة والتناسق والاستخدام اليومي."
+
+#: .\pages\templates\pages\home.html
+msgid "Shop the collection"
+msgstr "تسوق المجموعة"
+
+#: .\pages\templates\pages\home.html
+msgid "Start with categories"
+msgstr "ابدأ بالأقسام"
+
+#: .\pages\templates\pages\home.html
+msgid "Active categories"
+msgstr "الأقسام النشطة"
+
+#: .\pages\templates\pages\home.html
+msgid "Featured picks"
+msgstr "اختيارات مميزة"
+
+#: .\pages\templates\pages\home.html
+msgid "Live offers"
+msgstr "عروض متاحة"
+
+#: .\pages\templates\pages\home.html
+msgid "Featured piece"
+msgstr "قطعة مميزة"
+
+#: .\pages\templates\pages\home.html
+msgid "Browse latest arrivals"
+msgstr "تصفح أحدث المنتجات"
+
+#: .\pages\templates\pages\home.html
+msgid "Today at Al-Serag"
+msgstr "اليوم في السراج"
+
+#: .\pages\templates\pages\home.html
+msgid "Browse the shop"
+msgstr "تصفح المتجر"
+
+#: .\pages\templates\pages\home.html
+msgid "Find the right corner to start."
+msgstr "اختر القسم المناسب للبدء."
+
+#: .\pages\templates\pages\home.html
+msgid "All products"
+msgstr "كل المنتجات"
+
+#: .\pages\templates\pages\home.html
+msgid "Customer favorites"
+msgstr "مفضلات العملاء"
+
+#: .\pages\templates\pages\home.html
+msgid "The showroom shelf"
+msgstr "رف المعرض"
+
+#: .\pages\templates\pages\home.html
+msgid "Fresh pieces to consider."
+msgstr "قطع جديدة تستحق الاهتمام."
+
+#: .\pages\templates\pages\home.html
+msgid "Marked down"
+msgstr "خصومات مختارة"
+
+#: .\pages\templates\pages\home.html
+msgid "Hand-picked pieces"
+msgstr "قطع مختارة بعناية"
+
+#: .\pages\templates\pages\home.html
+msgid "Delivery across Egypt"
+msgstr "توصيل داخل مصر"
+
+#: .\pages\templates\pages\home.html
+msgid "Clear order follow-up"
+msgstr "متابعة واضحة للطلب"
+
+#: .\pages\templates\pages\home.html
+msgid "Mobile showroom"
+msgstr "معرض الهاتف"
+
+#: .\pages\templates\pages\home.html
+msgid "Shop all"
+msgstr "تسوق الكل"
+
+#: .\pages\templates\pages\home.html
+msgid "Pieces for real homes"
+msgstr "قطع لمنازل حقيقية"
+
+#: .\pages\templates\pages\home.html
+msgid "Browse the collection"
+msgstr "تصفح المجموعة"
+
+#: .\pages\templates\pages\home.html
+msgid "View piece"
+msgstr "عرض القطعة"
+
+#: .\pages\templates\pages\home.html
+msgid "Shop similar"
+msgstr "تسوق المشابه"
+
+#: .\pages\templates\pages\home.html
+msgid "Hand-picked pieces for everyday rooms"
+msgstr "قطع مختارة بعناية لغرف الاستخدام اليومي"
+
+#: .\pages\templates\pages\home.html
+msgid "Simple ordering with clear follow-up"
+msgstr "طلب بسيط مع متابعة واضحة"

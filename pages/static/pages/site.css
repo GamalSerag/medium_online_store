@@ -1,5 +1,17 @@
-﻿body {
+body {
     font-family: "Inter", sans-serif;
+    color: #171717;
+}
+
+.home-display {
+    font-family: "Fraunces", Georgia, serif;
+    letter-spacing: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #a64224;
+    outline-offset: 3px;
 }
 
 .line-clamp-2 {
@@ -13,4 +25,24 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }

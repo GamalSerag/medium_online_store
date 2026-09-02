@@ -1,40 +1,38 @@
 {% load i18n %}
 <a href="{% url 'product_detail' product.slug %}"
-    class="group block overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 bg-white">
-    <div class="aspect-square overflow-hidden bg-gray-100 relative">
+    class="group block overflow-hidden rounded-lg border border-black/10 bg-[#fdfbf7] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(20,20,20,0.10)]">
+    <div class="aspect-[4/5] overflow-hidden bg-[#ece7de] relative">
         {% with primary_image=product.images.first %}
         {% if primary_image %}
         <img src="{{ primary_image.image.url }}" alt="{{ product.name }}"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            class="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500">
         {% else %}
         <div class="w-full h-full flex items-center justify-center text-gray-400 text-sm">{% trans "No image" %}</div>
         {% endif %}
         {% endwith %}
 
-        <!-- Badges -->
         {% if show_badge %}
-        <span class="absolute top-2 right-2 px-1.5 py-0.5 bg-amber-500 text-white text-[10px] font-bold rounded-full shadow">🔥 {% trans "Best Seller" %}</span>
+        <span class="absolute top-2 right-2 rounded-full bg-gray-950 px-2 py-1 text-[9px] font-bold uppercase text-white shadow-sm sm:top-3 sm:right-3 sm:px-2.5 sm:text-[11px]">{% trans "Best Seller" %}</span>
         {% endif %}
 
         {% if product.stock == 0 %}
-        <span class="absolute top-2 left-2 px-1.5 py-0.5 bg-red-500 text-white text-[10px] font-bold rounded-full">{% trans "Out of Stock" %}</span>
+        <span class="absolute top-2 left-2 rounded-full bg-red-600 px-2 py-1 text-[9px] font-bold uppercase text-white sm:top-3 sm:left-3 sm:px-2.5 sm:text-[11px]">{% trans "Out of Stock" %}</span>
         {% elif product.discount_percentage > 0 %}
-        <span class="absolute top-2 left-2 px-1.5 py-0.5 bg-red-600 text-white text-[10px] font-bold rounded-full">-{{ product.discount_percentage }}%</span>
+        <span class="absolute top-2 left-2 rounded-full bg-[#a64224] px-2 py-1 text-[9px] font-bold uppercase text-white sm:top-3 sm:left-3 sm:px-2.5 sm:text-[11px]">-{{ product.discount_percentage }}%</span>
         {% elif product.on_sale %}
-        <span class="absolute top-2 left-2 px-1.5 py-0.5 bg-green-500 text-white text-[10px] font-bold rounded-full">{% trans "SALE" %}</span>
+        <span class="absolute top-2 left-2 rounded-full bg-[#47644a] px-2 py-1 text-[9px] font-bold uppercase text-white sm:top-3 sm:left-3 sm:px-2.5 sm:text-[11px]">{% trans "SALE" %}</span>
         {% endif %}
     </div>
 
-    <div class="p-4">
-        <p class="text-xs text-indigo-600 font-medium mb-1">{{ product.category.name }}</p>
-        <h3 class="text-lg font-semibold text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors">{{ product.name }}</h3>
-        <p class="text-sm text-gray-500 line-clamp-2 mb-3">{{ product.description }}</p>
+    <div class="p-3 sm:p-4">
+        <p class="mb-1 truncate text-[10px] font-bold uppercase text-[#7b563f] sm:text-[11px]">{{ product.category.name }}</p>
+        <h3 class="mb-2 text-sm font-bold leading-snug text-gray-950 group-hover:text-[#a64224] transition-colors sm:text-base">{{ product.name }}</h3>
+        <p class="hidden text-sm leading-6 text-gray-500 line-clamp-2 mb-3 sm:block">{{ product.description }}</p>
 
-        <!-- Color Dots -->
         {% if product.colors.all %}
-        <div class="flex items-center gap-1.5 mb-3">
+        <div class="flex items-center gap-1.5 mb-2 sm:mb-3">
             {% for color in product.colors.all|slice:":5" %}
-            <span class="w-4 h-4 rounded-full border border-gray-300 inline-block" style="background-color: {{ color.hex_code }};" title="{{ color.name }}"></span>
+            <span class="w-3.5 h-3.5 rounded-full border border-black/20 inline-block sm:h-4 sm:w-4" style="background-color: {{ color.hex_code }};" title="{{ color.name }}"></span>
             {% endfor %}
             {% if product.colors.count > 5 %}
             <span class="text-xs text-gray-400">+{{ product.colors.count|add:"-5" }}</span>
@@ -42,10 +40,10 @@
         </div>
         {% endif %}
 
-        <div class="flex items-center gap-2">
-            <span class="text-lg font-bold text-gray-900">EGP {{ product.price }}</span>
+        <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+            <span class="text-sm font-extrabold text-gray-950 sm:text-base">EGP {{ product.price }}</span>
             {% if product.discount_percentage > 0 or product.on_sale %}
-            <span class="text-sm text-gray-400 line-through">EGP {{ product.compare_at_price }}</span>
+            <span class="text-xs text-gray-400 line-through sm:text-sm">EGP {{ product.compare_at_price }}</span>
             {% endif %}
         </div>
     </div>

@@ -67,8 +67,7 @@
                         <div class="flex justify-between items-start mb-2">
                             <div>
                                 <a href="{% url 'product_detail' item.product.slug %}"
-                                    class="text-lg font-semibold text-gray-900 hover:text-indigo-600">{{
-                                    item.product.name }}</a>
+                                    class="text-lg font-semibold text-gray-900 hover:text-indigo-600">{{ item.product.name }}</a>
                                 <p class="text-sm text-gray-500">{{ item.product.category.name }}</p>
                             </div>
                             <span class="text-lg font-bold text-indigo-600">EGP {{ item.total_price }}</span>

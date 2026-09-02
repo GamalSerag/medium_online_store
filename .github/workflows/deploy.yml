@@ -1,39 +1,70 @@
-name: Deploy to VPS
+name: CI/CD
 
 on:
   push:
     branches:
       - main
       - develop
+  pull_request:
+    branches:
+      - main
+      - develop
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy via SSH
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Django tests
+        env:
+          DJANGO_SETTINGS_MODULE: config.settings.local
+        run: python manage.py test
+
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref_name == 'main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy production via SSH
         uses: appleboy/ssh-action@v1.0.3
+        env:
+          PROJECT_PATH: ${{ secrets.PROJECT_PATH }}
+          SERVICE_NAME: ${{ secrets.SERVICE_NAME }}
+          VENV_PATH: ${{ secrets.VENV_PATH }}
+          DEPLOY_BRANCH: ${{ github.ref_name }}
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
+          envs: PROJECT_PATH,SERVICE_NAME,VENV_PATH,DEPLOY_BRANCH
           script: |
-            if [ "${{ github.ref_name }}" = "main" ]; then
-              echo "Deploying Production..."
-              cd /srv/django/alserag/prod/app
-              git pull origin main
-              /srv/django/alserag/prod/venv/bin/pip install -r requirements.txt
-              /srv/django/alserag/prod/venv/bin/python manage.py migrate --noinput
-              /srv/django/alserag/prod/venv/bin/python manage.py collectstatic --noinput
-              sudo systemctl restart alserag-prod
-            fi
+            set -euo pipefail
 
-            if [ "${{ github.ref_name }}" = "develop" ]; then
-              echo "Deploying Staging..."
-              cd /srv/django/alserag/dev/app
-              git pull origin develop
-              /srv/django/alserag/dev/venv/bin/pip install -r requirements.txt
-              /srv/django/alserag/dev/venv/bin/python manage.py migrate --noinput
-              /srv/django/alserag/dev/venv/bin/python manage.py collectstatic --noinput
-              sudo systemctl restart alserag-dev
-            fi
+            cd "$PROJECT_PATH"
+            git fetch origin "$DEPLOY_BRANCH"
+            git reset --hard "origin/$DEPLOY_BRANCH"
+
+            "$VENV_PATH/bin/python" -m pip install --upgrade pip
+            "$VENV_PATH/bin/pip" install -r requirements.txt
+
+            export ENV_FILE=.env.production
+            export DJANGO_SETTINGS_MODULE=config.settings.production
+            "$VENV_PATH/bin/python" manage.py migrate --noinput
+            "$VENV_PATH/bin/python" manage.py collectstatic --noinput
+
+            sudo systemctl restart "$SERVICE_NAME"

@@ -36,6 +36,41 @@ button:focus-visible {
     display: none;
 }
 
+.login-form p {
+    margin: 0;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background: #fff;
+    padding: 0.75rem 1rem;
+    color: #171717;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-color: #a64224;
+    box-shadow: 0 0 0 3px rgba(166, 66, 36, 0.16);
+}
+
+.login-form .errorlist {
+    margin-bottom: 0.75rem;
+    color: #b91c1c;
+    font-size: 0.875rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

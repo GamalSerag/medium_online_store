@@ -84,7 +84,6 @@
                     <div class="hidden md:flex items-center gap-2">
                         {% if user.is_authenticated %}
                         {% if user.is_staff %}
-                        <!-- <a href="{% url 'admin_dashboard' %}" class="text-sm font-medium text-indigo-600 hover:text-indigo-700">{% trans "Dashboard" %}</a> -->
                         {% endif %}
                         <a href="{% url 'logout' %}" class="text-sm font-semibold text-gray-700 hover:text-gray-950">{% trans "Logout" %}</a>
                         {% else %}
@@ -122,10 +121,10 @@
                     <input type="hidden" name="next" value="{{ request.path }}">
                     {% if LANGUAGE_CODE == 'ar' %}
                     <input type="hidden" name="language" value="en">
-                    <button type="submit" class="w-full min-h-11 text-left px-3 py-2.5 rounded-lg text-gray-800 hover:bg-white font-semibold transition-colors">🌐 English</button>
+                    <button type="submit" class="w-full min-h-11 text-left px-3 py-2.5 rounded-lg text-gray-800 hover:bg-white font-semibold transition-colors">English</button>
                     {% else %}
                     <input type="hidden" name="language" value="ar">
-                    <button type="submit" class="w-full min-h-11 text-left px-3 py-2.5 rounded-lg text-gray-800 hover:bg-white font-semibold transition-colors">🌐 العربية</button>
+                    <button type="submit" class="w-full min-h-11 text-left px-3 py-2.5 rounded-lg text-gray-800 hover:bg-white font-semibold transition-colors">العربية</button>
                     {% endif %}
                 </form>
 
@@ -166,9 +165,9 @@
                     <h4 class="text-white font-semibold mb-4">{% trans "Quick Links" %}</h4>
                     <ul class="space-y-2">
                         <li><a href="{% url 'home' %}" class="hover:text-white transition-colors">{% trans "Home" %}</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">{% trans "Products" %}</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">{% trans "About Us" %}</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">{% trans "Contact" %}</a></li>
+                        <li><a href="{% url 'all_products' %}" class="hover:text-white transition-colors">{% trans "Products" %}</a></li>
+                        <li><a href="{% url 'home' %}#categories" class="hover:text-white transition-colors">{% trans "Categories" %}</a></li>
+                        <li><a href="{% url 'home' %}#offers" class="hover:text-white transition-colors">{% trans "Offers" %}</a></li>
                     </ul>
                 </div>
 
@@ -176,8 +175,8 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4">{% trans "Contact Us" %}</h4>
                     <ul class="space-y-2">
-                        <li>📧 support@alseragshop.com</li>
-                        <li>📞 +201099628684</li>
+                        <li><span class="font-semibold text-gray-300">Email:</span> support@alseragshop.com</li>
+                        <li><span class="font-semibold text-gray-300">Phone:</span> +201099628684</li>
                     </ul>
                 </div>
             </div>

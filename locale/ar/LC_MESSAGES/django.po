@@ -4082,3 +4082,19 @@ msgstr "قطع مختارة بعناية لغرف الاستخدام اليوم�
 #: .\pages\templates\pages\home.html
 msgid "Simple ordering with clear follow-up"
 msgstr "طلب بسيط مع متابعة واضحة"
+
+#: .\pages\templates\accounts\login.html
+msgid "Staff access"
+msgstr "دخول فريق العمل"
+
+#: .\pages\templates\pages\all_products.html
+msgid "Catalog"
+msgstr "الكتالوج"
+
+#: .\pages\templates\pages\order_success.html
+msgid "Order confirmed"
+msgstr "تم تأكيد الطلب"
+
+#: .\pages\templates\pages\admin_order_detail.html
+msgid "Staff order"
+msgstr "طلب فريق العمل"

@@ -3,7 +3,7 @@ from .views import (
     AdminDashboardView, UpdateOrderStatusView, HomePageView, 
     CategoryProductsView, ProductDetailView, CartDetailView,
     cart_add, cart_update, cart_remove, CheckoutView, OrderSuccessView,
-    AdminOrderDetailView, AllProductsView
+    AdminOrderDetailView, AllProductsView, analytics_track
 )
 
 urlpatterns = [
@@ -21,6 +21,7 @@ urlpatterns = [
     # Checkout URL
     path('checkout/', CheckoutView.as_view(), name='checkout'),
     path('order-success/', OrderSuccessView.as_view(), name='order_success'),
+    path('analytics/track/', analytics_track, name='analytics_track'),
     
     # Admin URLs
     path('admin-dashboard/', AdminDashboardView.as_view(), name='admin_dashboard'),

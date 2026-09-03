@@ -6,9 +6,11 @@ from django.urls import reverse
 from django.utils import timezone
 from datetime import timedelta
 from django.contrib import messages
+import json
 from orders.models import Order, OrderItem
 from catalog.models import Product, Category, Offer
 from pages.forms import CheckoutForm
+from pages.middleware import WebsiteAnalyticsMiddleware
 
 
 class HomePageView(TemplateView):
@@ -306,6 +308,7 @@ class UpdateOrderStatusView(StaffRequiredMixin, View):
 from cart.cart import Cart
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
 class CartDetailView(TemplateView):
@@ -447,3 +450,14 @@ class AdminOrderDetailView(StaffRequiredMixin, DetailView):
         context = super().get_context_data(**kwargs)
         context['status_choices'] = Order.STATUS_CHOICES
         return context
+
+
+@csrf_exempt
+@require_POST
+def analytics_track(request):
+    try:
+        payload = json.loads(request.body.decode('utf-8') or '{}')
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        payload = {}
+    WebsiteAnalyticsMiddleware(lambda inner_request: None).record_client_visit(request, payload)
+    return JsonResponse({'ok': True})

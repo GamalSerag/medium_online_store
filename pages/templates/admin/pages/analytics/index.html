@@ -1,0 +1,22 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+<div class="module" style="margin-bottom: 20px;">
+  <table>
+    <caption>
+      <a href="{% url 'admin:analytics_dashboard' %}" class="section">Website Analytics</a>
+    </caption>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <a href="{% url 'admin:analytics_dashboard' %}">Visitor analytics dashboard</a>
+        </th>
+        <td>
+          <a href="{% url 'admin:analytics_dashboard' %}" class="addlink">Open dashboard</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{ block.super }}
+{% endblock %}

@@ -11,8 +11,14 @@ jobs:
       - name: SSH Deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            bash /srv/django/deploy_prod.sh
+            cd /srv/django/alserag/prod/app
+            git fetch origin
+            git reset --hard origin/main
+            /srv/django/alserag/prod/venv/bin/pip install -r requirements.txt
+            ENV_FILE=/srv/django/alserag/prod/.env.production DJANGO_SETTINGS_MODULE=config.settings.production /srv/django/alserag/prod/venv/bin/python manage.py migrate --noinput
+            ENV_FILE=/srv/django/alserag/prod/.env.production DJANGO_SETTINGS_MODULE=config.settings.production /srv/django/alserag/prod/venv/bin/python manage.py collectstatic --noinput
+            sudo systemctl restart alserag-prod

@@ -23,8 +23,8 @@ jobs:
               cd /srv/django/alserag/prod/app
               git pull origin main
               /srv/django/alserag/prod/venv/bin/pip install -r requirements.txt
-              /srv/django/alserag/prod/venv/bin/python manage.py migrate --noinput
-              /srv/django/alserag/prod/venv/bin/python manage.py collectstatic --noinput
+              ENV_FILE=/srv/django/alserag/prod/.env.production DJANGO_SETTINGS_MODULE=config.settings.production /srv/django/alserag/prod/venv/bin/python manage.py migrate --noinput
+              ENV_FILE=/srv/django/alserag/prod/.env.production DJANGO_SETTINGS_MODULE=config.settings.production /srv/django/alserag/prod/venv/bin/python manage.py collectstatic --noinput
               sudo systemctl restart alserag-prod
             fi
 
@@ -33,7 +33,7 @@ jobs:
               cd /srv/django/alserag/dev/app
               git pull origin develop
               /srv/django/alserag/dev/venv/bin/pip install -r requirements.txt
-              /srv/django/alserag/dev/venv/bin/python manage.py migrate --noinput
-              /srv/django/alserag/dev/venv/bin/python manage.py collectstatic --noinput
+              ENV_FILE=/srv/django/alserag/dev/.env.staging DJANGO_SETTINGS_MODULE=config.settings.staging /srv/django/alserag/dev/venv/bin/python manage.py migrate --noinput
+              ENV_FILE=/srv/django/alserag/dev/.env.staging DJANGO_SETTINGS_MODULE=config.settings.staging /srv/django/alserag/dev/venv/bin/python manage.py collectstatic --noinput
               sudo systemctl restart alserag-dev
             fi

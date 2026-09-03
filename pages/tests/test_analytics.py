@@ -214,3 +214,30 @@ class WebsiteAnalyticsTests(TestCase):
         self.assertEqual(visit.country_name, 'United States')
         self.assertEqual(visit.city, 'Mountain View')
         self.assertTrue(visit.is_verified_browser)
+
+    @override_settings(ANALYTICS_GEOIP_ENABLED=False)
+    def test_analytics_can_disable_geoip_lookup(self):
+        with patch('pages.middleware.WebsiteAnalyticsMiddleware.lookup_ip_country') as lookup:
+            self.client.get(
+                reverse('home'),
+                HTTP_USER_AGENT=BROWSER_USER_AGENT,
+                HTTP_X_FORWARDED_FOR='8.8.8.8',
+            )
+            token = self.client.cookies[ANALYTICS_COOKIE_NAME].value
+            self.client.post(
+                reverse('analytics_track'),
+                data=json.dumps({
+                    'token': token,
+                    'path': '/',
+                    'full_path': '/',
+                    'title': 'Home',
+                }),
+                content_type='application/json',
+                HTTP_USER_AGENT=BROWSER_USER_AGENT,
+                HTTP_X_FORWARDED_FOR='8.8.8.8',
+            )
+
+        lookup.assert_not_called()
+        visit = PageVisit.objects.latest('visited_at')
+        self.assertEqual(visit.country_code, '')
+        self.assertEqual(visit.city, '')

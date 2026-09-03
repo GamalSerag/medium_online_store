@@ -141,6 +141,11 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
 
+# Visitor analytics
+ANALYTICS_GEOIP_ENABLED = env.bool('ANALYTICS_GEOIP_ENABLED', default=True)
+ANALYTICS_GEOIP_ENDPOINT = env('ANALYTICS_GEOIP_ENDPOINT', default='')
+ANALYTICS_GEOIP_TIMEOUT = env.float('ANALYTICS_GEOIP_TIMEOUT', default=0.8)
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 

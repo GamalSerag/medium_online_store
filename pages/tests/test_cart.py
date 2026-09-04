@@ -103,16 +103,16 @@ class CartClassTests(TestCase):
         self.assertContains(response, 'Test Product')
         self.assertContains(response, 'Test Product 2')
     
-    def test_free_shipping_over_50(self):
-        """Test that shipping is free for orders over $50."""
-        # Add enough to exceed $50
+    def test_flat_delivery_fee_for_non_empty_cart(self):
+        """Test that non-empty carts use the flat EGP 100 delivery fee."""
         self.client.post(
             reverse('cart_add', args=[self.product2.id]),
-            {'quantity': 2}  # 2 x $49.99 = $99.98
+            {'quantity': 2}
         )
         
         response = self.client.get(reverse('cart'))
-        self.assertContains(response, 'FREE')
+        self.assertContains(response, 'Delivery fee')
+        self.assertContains(response, 'EGP 100.00')
 
 
 class CheckoutViewTests(TestCase):

@@ -122,12 +122,11 @@ class Cart:
     
     def get_shipping(self):
         """
-        Return the shipping cost (placeholder - free shipping over $50).
+        Return the flat delivery fee for non-empty carts.
         """
-        subtotal = self.get_subtotal()
-        if subtotal >= Decimal('50.00'):
+        if self.is_empty():
             return Decimal('0.00')
-        return Decimal('5.99')
+        return Decimal('100.00')
     
     def get_total(self):
         """

@@ -482,6 +482,11 @@ msgstr "المجموع الفرعي"
 msgid "Shipping"
 msgstr "الشحن"
 
+#: .\pages\templates\pages\cart.html
+#: .\pages\templates\pages\checkout.html
+msgid "Delivery fee"
+msgstr "رسوم التوصيل"
+
 #: .\pages\templates\pages\cart.html:152
 msgid "FREE"
 msgstr "مجاني"

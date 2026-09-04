@@ -95,16 +95,9 @@
                             <span class="font-bold text-gray-950">EGP {{ subtotal }}</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-600">{% trans "Shipping" %}</span>
-                            {% if shipping == 0 %}
-                            <span class="font-bold text-[#47644a]">{% trans "FREE" %}</span>
-                            {% else %}
+                            <span class="text-gray-600">{% trans "Delivery fee" %}</span>
                             <span class="font-bold text-gray-950">EGP {{ shipping }}</span>
-                            {% endif %}
                         </div>
-                        {% if shipping != 0 %}
-                        <p class="text-xs text-gray-500">{% trans "Free shipping on orders over EGP 50" %}</p>
-                        {% endif %}
                         <div class="flex justify-between border-t border-black/10 pt-4 text-lg">
                             <span class="font-bold text-gray-950">{% trans "Total" %}</span>
                             <span class="font-extrabold text-[#a64224]">EGP {{ total }}</span>

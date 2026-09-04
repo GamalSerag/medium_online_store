@@ -77,6 +77,50 @@ msgstr "ملاحظات الطلب (اختياري)"
 msgid "Any special instructions?"
 msgstr "أي تعليمات خاصة؟"
 
+#: .\pages\forms.py
+msgid "Please enter your full name."
+msgstr "من فضلك أدخل اسمك بالكامل."
+
+#: .\pages\forms.py
+msgid "Name must be 80 characters or less."
+msgstr "يجب ألا يزيد الاسم عن 80 حرفًا."
+
+#: .\pages\forms.py
+msgid "Name can only contain letters, spaces, apostrophes, hyphens, or dots."
+msgstr "يمكن أن يحتوي الاسم على حروف ومسافات وفواصل عليا وشرطات ونقاط فقط."
+
+#: .\pages\forms.py
+msgid "Enter a valid Egyptian mobile number."
+msgstr "أدخل رقم موبايل مصري صحيح."
+
+#: .\pages\forms.py
+msgid "Please select a governorate."
+msgstr "من فضلك اختر المحافظة."
+
+#: .\pages\forms.py
+msgid "Please select a city."
+msgstr "من فضلك اختر المدينة."
+
+#: .\pages\forms.py
+msgid "Governorate name is too long."
+msgstr "اسم المحافظة طويل جدًا."
+
+#: .\pages\forms.py
+msgid "City name is too long."
+msgstr "اسم المدينة طويل جدًا."
+
+#: .\pages\forms.py
+msgid "Please enter a detailed address."
+msgstr "من فضلك أدخل عنوانًا تفصيليًا."
+
+#: .\pages\forms.py
+msgid "Address must be 500 characters or less."
+msgstr "يجب ألا يزيد العنوان عن 500 حرف."
+
+#: .\pages\forms.py
+msgid "Order notes must be 500 characters or less."
+msgstr "يجب ألا تزيد ملاحظات الطلب عن 500 حرف."
+
 #: .\pages\templates\accounts\login.html:7
 #: .\pages\templates\accounts\login.html:16 .\pages\templates\base.html:91
 #: .\pages\templates\base.html:139
@@ -481,6 +525,11 @@ msgstr "المجموع الفرعي"
 #: .\pages\templates\pages\checkout.html:149
 msgid "Shipping"
 msgstr "الشحن"
+
+#: .\pages\templates\pages\cart.html
+#: .\pages\templates\pages\checkout.html
+msgid "Delivery fee"
+msgstr "رسوم التوصيل"
 
 #: .\pages\templates\pages\cart.html:152
 msgid "FREE"

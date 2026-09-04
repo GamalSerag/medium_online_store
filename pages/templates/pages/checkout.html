@@ -147,14 +147,8 @@
                             <span>EGP {{ subtotal }}</span>
                         </div>
                         <div class="flex justify-between text-gray-600">
-                            <span>{% trans "Shipping" %}</span>
-                            <span>
-                                {% if shipping == 0 %}
-                                <span class="text-green-600">{% trans "Free" %}</span>
-                                {% else %}
-                                EGP {{ shipping }}
-                                {% endif %}
-                            </span>
+                            <span>{% trans "Delivery fee" %}</span>
+                            <span>EGP {{ shipping }}</span>
                         </div>
                         <div class="flex justify-between text-xl font-bold text-gray-950 mt-4 pt-4 border-t border-black/10">
                             <span>{% trans "Total" %}</span>

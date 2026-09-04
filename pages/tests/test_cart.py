@@ -213,3 +213,37 @@ class CheckoutViewTests(TestCase):
         self.assertContains(response, 'Enter a valid Egyptian mobile number')
         self.assertContains(response, 'Please enter a detailed address')
         self.assertEqual(Order.objects.count(), 0)
+
+    def test_product_detail_shows_trust_and_whatsapp(self):
+        """Test product detail includes the conversion trust helpers."""
+        response = self.client.get(reverse('product_detail', args=[self.product.slug]))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Delivery across Egypt')
+        self.assertContains(response, 'Cash on delivery')
+        self.assertContains(response, 'Ask about this product on WhatsApp')
+        self.assertContains(response, 'https://wa.me/201099628684')
+
+    def test_purchase_pixel_only_fires_once_after_real_order(self):
+        """Test Purchase event renders once after checkout and not on refresh."""
+        self.client.post(
+            reverse('cart_add', args=[self.product.id]),
+            {'quantity': 1}
+        )
+
+        checkout_response = self.client.post(reverse('checkout'), {
+            'customer_name': 'Gamal Serag',
+            'phone': '01012345678',
+            'state': 'Cairo',
+            'city': 'Nasr City',
+            'address': '12 Test Street, Building 4, Floor 2',
+            'notes': '',
+        })
+        self.assertEqual(checkout_response.status_code, 302)
+
+        first_success = self.client.get(reverse('order_success'))
+        self.assertContains(first_success, "fbq('track', 'Purchase'")
+        self.assertContains(first_success, 'EGP 119.99')
+
+        second_success = self.client.get(reverse('order_success'))
+        self.assertNotContains(second_success, "fbq('track', 'Purchase'")

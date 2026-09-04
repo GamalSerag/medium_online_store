@@ -6,6 +6,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from catalog.models import Category, Product
 from cart.cart import Cart
+from orders.models import Order
 
 
 class CartClassTests(TestCase):
@@ -151,3 +152,64 @@ class CheckoutViewTests(TestCase):
         response = self.client.get(reverse('checkout'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Checkout Product')
+
+    def test_checkout_creates_order_with_valid_fields(self):
+        """Test that valid checkout data creates an order."""
+        self.client.post(
+            reverse('cart_add', args=[self.product.id]),
+            {'quantity': 1}
+        )
+
+        response = self.client.post(reverse('checkout'), {
+            'customer_name': 'Gamal Serag',
+            'phone': '01012345678',
+            'state': 'Cairo',
+            'city': 'Nasr City',
+            'address': '12 Test Street, Building 4, Floor 2',
+            'notes': 'Call before delivery',
+        })
+
+        self.assertEqual(response.status_code, 302)
+        order = Order.objects.get()
+        self.assertEqual(order.customer_name, 'Gamal Serag')
+        self.assertEqual(order.phone, '01012345678')
+
+    def test_checkout_normalizes_international_egyptian_phone(self):
+        """Test that +20 mobile numbers are saved in local Egyptian format."""
+        self.client.post(
+            reverse('cart_add', args=[self.product.id]),
+            {'quantity': 1}
+        )
+
+        self.client.post(reverse('checkout'), {
+            'customer_name': 'Gamal Serag',
+            'phone': '+20 101 234 5678',
+            'state': 'Cairo',
+            'city': 'Nasr City',
+            'address': '12 Test Street, Building 4, Floor 2',
+            'notes': '',
+        })
+
+        self.assertEqual(Order.objects.get().phone, '01012345678')
+
+    def test_checkout_rejects_invalid_fields(self):
+        """Test checkout validation rejects unusable customer data."""
+        self.client.post(
+            reverse('cart_add', args=[self.product.id]),
+            {'quantity': 1}
+        )
+
+        response = self.client.post(reverse('checkout'), {
+            'customer_name': 'Gamal 123',
+            'phone': '12345',
+            'state': '',
+            'city': '',
+            'address': 'short',
+            'notes': 'x' * 501,
+        })
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Name can only contain letters')
+        self.assertContains(response, 'Enter a valid Egyptian mobile number')
+        self.assertContains(response, 'Please enter a detailed address')
+        self.assertEqual(Order.objects.count(), 0)

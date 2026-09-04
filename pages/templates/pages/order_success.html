@@ -5,7 +5,7 @@
 
 {% block content %}
 <section class="min-h-screen bg-[#fdfbf7] px-4 py-12 sm:px-6 flex items-center justify-center">
-    <div class="w-full max-w-lg rounded-lg border border-black/10 bg-[#f7f4ee] p-6 text-center sm:p-8">
+    <div class="w-full max-w-2xl rounded-lg border border-black/10 bg-[#f7f4ee] p-5 text-center sm:p-8">
         <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#47644a] text-white">
             <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -13,28 +13,58 @@
         </div>
 
         <p class="text-xs font-bold uppercase tracking-[0.22em] text-[#7b563f]">{% trans "Order confirmed" %}</p>
-        <h1 class="home-display mt-2 text-4xl font-bold text-gray-950">{% trans "Order Placed!" %}</h1>
-        <p class="mt-4 text-gray-600">
-            {% trans "Order Number" %}:
-            <span class="font-mono font-bold text-gray-950">{{ order.order_number }}</span>
-        </p>
+        <h1 class="home-display mt-2 text-3xl font-bold text-gray-950 sm:text-4xl">{% trans "Your order was received successfully" %}</h1>
 
-        <a href="{% url 'home' %}" class="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-gray-950 px-6 text-sm font-bold text-white hover:bg-[#a64224]">
-            {% trans "Continue Shopping" %}
-        </a>
+        {% if order %}
+        <div class="mt-6 grid gap-3 rounded-lg border border-black/10 bg-[#fdfbf7] p-4 text-left sm:grid-cols-2">
+            <div>
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-gray-500">{% trans "Order number" %}</p>
+                <p class="mt-1 font-mono text-base font-extrabold text-gray-950">{{ order.order_number }}</p>
+            </div>
+            <div>
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-gray-500">{% trans "Order total" %}</p>
+                <p class="mt-1 text-base font-extrabold text-[#a64224]">EGP {{ order.totals }}</p>
+            </div>
+            <div>
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-gray-500">{% trans "Phone" %}</p>
+                <p class="mt-1 font-bold text-gray-950">{{ order.phone }}</p>
+            </div>
+            <div>
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-gray-500">{% trans "Next step" %}</p>
+                <p class="mt-1 text-sm leading-6 text-gray-600">{{ order_next_step_text }}</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            {% if success_whatsapp_url %}
+            <a href="{{ success_whatsapp_url }}" target="_blank" rel="noopener"
+                class="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#47644a]/40 bg-[#47644a]/10 px-6 text-sm font-bold text-[#28442b] hover:bg-[#47644a] hover:text-white">
+                {% trans "Contact us on WhatsApp" %}
+            </a>
+            {% endif %}
+            <a href="{% url 'home' %}" class="inline-flex min-h-12 items-center justify-center rounded-lg bg-gray-950 px-6 text-sm font-bold text-white hover:bg-[#a64224]">
+                {% trans "Continue Shopping" %}
+            </a>
+        </div>
     </div>
 </section>
 
+{% if order and fire_purchase_event %}
 <script>
-fbq('track', 'Purchase', {
-  value: {{ order.total|floatformat:2 }},
-  currency: "EGP",
-  contents: [
-    {% for item in order.items.all %}
-    {id: "{{ item.product.id }}", quantity: {{ item.quantity }} }{% if not forloop.last %},{% endif %}
-    {% endfor %}
-  ],
-  content_type: "product"
-});
+if (typeof fbq === "function") {
+  fbq('track', 'Purchase', {
+    value: {{ order.totals|floatformat:2 }},
+    currency: "EGP",
+    contents: [
+      {% for item in purchase_items %}
+      {id: "{{ item.product_id }}", quantity: {{ item.quantity }} }{% if not forloop.last %},{% endif %}
+      {% endfor %}
+    ],
+    content_ids: [{% for product_id in product_ids %}"{{ product_id }}"{% if not forloop.last %},{% endif %}{% endfor %}],
+    content_type: "product"
+  });
+}
 </script>
+{% endif %}
 {% endblock %}

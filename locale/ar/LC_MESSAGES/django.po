@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Medium Store 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-03 10:01+0200\n"
+"POT-Creation-Date: 2026-09-05 02:41+0300\n"
 "PO-Revision-Date: 2026-02-09 08:30+0200\n"
 "Last-Translator: Auto\n"
 "Language-Team: Arabic\n"
@@ -37,91 +37,95 @@ msgstr "تم التوصيل"
 msgid "Cancelled"
 msgstr "ملغي"
 
-#: .\pages\forms.py:7
+#: .\pages\forms.py:15
 msgid "Full Name"
 msgstr "الاسم الكامل"
 
-#: .\pages\forms.py:10
+#: .\pages\forms.py:18
 msgid "Enter your full name"
 msgstr "أدخل اسمك بالكامل"
 
-#: .\pages\forms.py:14
+#: .\pages\forms.py:22
 msgid "Phone Number"
 msgstr "رقم الهاتف"
 
-#: .\pages\forms.py:17
+#: .\pages\forms.py:25
 msgid "Enter your phone number"
 msgstr "أدخل رقم هاتفك"
 
-#: .\pages\forms.py:21
+#: .\pages\forms.py:29
 msgid "State / Governorate"
 msgstr "المحافظة"
 
-#: .\pages\forms.py:28
+#: .\pages\forms.py:36
 msgid "City"
 msgstr "المدينة"
 
-#: .\pages\forms.py:35 .\pages\templates\pages\admin_order_detail.html:77
+#: .\pages\forms.py:43 .\pages\templates\pages\admin_order_detail.html:82
 msgid "Address"
 msgstr "العنوان"
 
-#: .\pages\forms.py:38
+#: .\pages\forms.py:46
 msgid "Street address, City, etc."
 msgstr "اسم الشارع، المنطقة، إلخ."
 
-#: .\pages\forms.py:43
+#: .\pages\forms.py:51
 msgid "Order Notes (Optional) "
 msgstr "ملاحظات الطلب (اختياري)"
 
-#: .\pages\forms.py:47
+#: .\pages\forms.py:55
 msgid "Any special instructions?"
 msgstr "أي تعليمات خاصة؟"
 
-#: .\pages\forms.py
+#: .\pages\forms.py:67
 msgid "Please enter your full name."
 msgstr "من فضلك أدخل اسمك بالكامل."
 
-#: .\pages\forms.py
+#: .\pages\forms.py:69
 msgid "Name must be 80 characters or less."
 msgstr "يجب ألا يزيد الاسم عن 80 حرفًا."
 
-#: .\pages\forms.py
+#: .\pages\forms.py:71
 msgid "Name can only contain letters, spaces, apostrophes, hyphens, or dots."
 msgstr "يمكن أن يحتوي الاسم على حروف ومسافات وفواصل عليا وشرطات ونقاط فقط."
 
-#: .\pages\forms.py
+#: .\pages\forms.py:84
 msgid "Enter a valid Egyptian mobile number."
 msgstr "أدخل رقم موبايل مصري صحيح."
 
-#: .\pages\forms.py
+#: .\pages\forms.py:90
 msgid "Please select a governorate."
 msgstr "من فضلك اختر المحافظة."
 
-#: .\pages\forms.py
-msgid "Please select a city."
-msgstr "من فضلك اختر المدينة."
-
-#: .\pages\forms.py
+#: .\pages\forms.py:92
 msgid "Governorate name is too long."
 msgstr "اسم المحافظة طويل جدًا."
 
-#: .\pages\forms.py
+#: .\pages\forms.py:98
+msgid "Please select a city."
+msgstr "من فضلك اختر المدينة."
+
+#: .\pages\forms.py:100
 msgid "City name is too long."
 msgstr "اسم المدينة طويل جدًا."
 
-#: .\pages\forms.py
+#: .\pages\forms.py:106
 msgid "Please enter a detailed address."
 msgstr "من فضلك أدخل عنوانًا تفصيليًا."
 
-#: .\pages\forms.py
+#: .\pages\forms.py:108
 msgid "Address must be 500 characters or less."
 msgstr "يجب ألا يزيد العنوان عن 500 حرف."
 
-#: .\pages\forms.py
+#: .\pages\forms.py:114
 msgid "Order notes must be 500 characters or less."
 msgstr "يجب ألا تزيد ملاحظات الطلب عن 500 حرف."
 
 #: .\pages\templates\accounts\login.html:7
+msgid "Staff access"
+msgstr "دخول فريق العمل"
+
+#: .\pages\templates\accounts\login.html:8
 #: .\pages\templates\accounts\login.html:16 .\pages\templates\base.html:91
 #: .\pages\templates\base.html:139
 msgid "Login"
@@ -139,9 +143,10 @@ msgstr "متجر متوسط - منتجات ذات جودة بأسعار رائع
 # =============================================
 # Navbar & Footer
 # =============================================
-#: .\pages\templates\base.html:9 .\pages\templates\base.html:49
+#: .\pages\templates\base.html:9 .\pages\templates\base.html:50
 #: .\pages\templates\base.html:159 .\pages\templates\base.html:186
 #: .\pages\templates\pages\admin_dashboard.html:8
+#: .\pages\templates\pages\admin_order_detail.html:4
 #: .\pages\templates\pages\all_products.html:4
 #: .\pages\templates\pages\cart.html:4
 #: .\pages\templates\pages\category_products.html:4
@@ -154,35 +159,37 @@ msgstr "متجر السراج"
 #
 # Home Page Translations
 #
-#: .\pages\templates\base.html:54 .\pages\templates\base.html:112
-#: .\pages\templates\base.html:168 .\pages\templates\pages\all_products.html:11
-#: .\pages\templates\pages\cart.html:11
-#: .\pages\templates\pages\category_products.html:11
+#: .\pages\templates\base.html:55 .\pages\templates\base.html:112
+#: .\pages\templates\base.html:168 .\pages\templates\pages\all_products.html:10
+#: .\pages\templates\pages\cart.html:10
+#: .\pages\templates\pages\category_products.html:10
 #: .\pages\templates\pages\home.html:4
 #: .\pages\templates\pages\product_detail.html:11
 msgid "Home"
 msgstr "الرئيسية"
 
-#: .\pages\templates\base.html:55 .\pages\templates\base.html:113
+#: .\pages\templates\base.html:56 .\pages\templates\base.html:113
+#: .\pages\templates\base.html:170
 msgid "Categories"
 msgstr "الفئات"
 
-#: .\pages\templates\base.html:56 .\pages\templates\base.html:114
+#: .\pages\templates\base.html:57 .\pages\templates\base.html:114
 #: .\pages\templates\base.html:169
 msgid "Products"
 msgstr "المنتجات"
 
-#: .\pages\templates\base.html:57 .\pages\templates\base.html:115
+#: .\pages\templates\base.html:58 .\pages\templates\base.html:115
+#: .\pages\templates\base.html:171
 msgid "Offers"
 msgstr "العروض"
-
-#: .\pages\templates\base.html:87 .\pages\templates\base.html:135
-msgid "Dashboard"
-msgstr "لوحة التحكم"
 
 #: .\pages\templates\base.html:89 .\pages\templates\base.html:137
 msgid "Logout"
 msgstr "تسجيل الخروج"
+
+#: .\pages\templates\base.html:135
+msgid "Dashboard"
+msgstr "لوحة التحكم"
 
 #: .\pages\templates\base.html:161
 msgid "Your one-stop destination for quality products at unbeatable prices."
@@ -191,14 +198,6 @@ msgstr "وجهتك الأولى للمنتجات عالية الجودة بأس�
 #: .\pages\templates\base.html:166
 msgid "Quick Links"
 msgstr "روابط سريعة"
-
-#: .\pages\templates\base.html:170
-msgid "About Us"
-msgstr "من نحن"
-
-#: .\pages\templates\base.html:171
-msgid "Contact"
-msgstr "اتصل بنا"
 
 #: .\pages\templates\base.html:177
 msgid "Contact Us"
@@ -212,161 +211,170 @@ msgstr "جميع الحقوق محفوظة."
 msgid "Admin Dashboard"
 msgstr "لوحة تحكم المسؤول"
 
-#: .\pages\templates\pages\admin_dashboard.html:24
+#: .\pages\templates\pages\admin_dashboard.html:22
 msgid "Store Admin"
 msgstr "مسؤول المتجر"
 
-#: .\pages\templates\pages\admin_dashboard.html:25
+#: .\pages\templates\pages\admin_dashboard.html:23
 msgid "Staff Area"
 msgstr ""
 
-#: .\pages\templates\pages\admin_dashboard.html:28
+#: .\pages\templates\pages\admin_dashboard.html:26
 msgid "Logged in as"
 msgstr "تم تسجيل الدخول باسم"
 
-#: .\pages\templates\pages\admin_dashboard.html:45
+#: .\pages\templates\pages\admin_dashboard.html:43
 #, fuzzy
 #| msgid "Django Community"
 msgid "Django Admin"
 msgstr "مجتمع Django"
 
-#: .\pages\templates\pages\admin_dashboard.html:46
+#: .\pages\templates\pages\admin_dashboard.html:44
 msgid "View Site"
 msgstr "عرض الموقع"
 
-#: .\pages\templates\pages\admin_dashboard.html:63
+#: .\pages\templates\pages\admin_dashboard.html:61
 msgid "Dashboard Overview"
 msgstr "نظرة عامة على لوحة التحكم"
 
-#: .\pages\templates\pages\admin_dashboard.html:69
+#: .\pages\templates\pages\admin_dashboard.html:67
 msgid "Orders Today"
 msgstr "طلبات اليوم"
 
-#: .\pages\templates\pages\admin_dashboard.html:75
+#: .\pages\templates\pages\admin_dashboard.html:73
 msgid "Orders This Week"
 msgstr "طلبات هذا الأسبوع"
 
-#: .\pages\templates\pages\admin_dashboard.html:81
+#: .\pages\templates\pages\admin_dashboard.html:79
 msgid "Total Revenue"
 msgstr "إجمالي الإيرادات"
 
-#: .\pages\templates\pages\admin_dashboard.html:87
+#: .\pages\templates\pages\admin_dashboard.html:85
 msgid "Pending Orders"
 msgstr "الطلبات المعلّقة"
 
-#: .\pages\templates\pages\admin_dashboard.html:93
+#: .\pages\templates\pages\admin_dashboard.html:91
 msgid "Successful Orders"
 msgstr "الطلبات الناجحة"
 
-#: .\pages\templates\pages\admin_dashboard.html:103
+#: .\pages\templates\pages\admin_dashboard.html:101
 msgid "Recent Orders"
 msgstr "أحدث الطلبات"
 
-#: .\pages\templates\pages\admin_dashboard.html:104
+#: .\pages\templates\pages\admin_dashboard.html:102
 #, fuzzy
 #| msgid "View"
 msgid "View All"
 msgstr "عرض"
 
-#: .\pages\templates\pages\admin_dashboard.html:110
+#: .\pages\templates\pages\admin_dashboard.html:108
 msgid "Order #"
 msgstr "رقم الطلب"
 
-#: .\pages\templates\pages\admin_dashboard.html:111
+#: .\pages\templates\pages\admin_dashboard.html:109
 msgid "Customer"
 msgstr "العميل"
 
-#: .\pages\templates\pages\admin_dashboard.html:112
+#: .\pages\templates\pages\admin_dashboard.html:110
 msgid "Status"
 msgstr "الحالة"
 
-#: .\pages\templates\pages\admin_dashboard.html:113
-#: .\pages\templates\pages\admin_order_detail.html:29
-#: .\pages\templates\pages\admin_order_detail.html:49
-#: .\pages\templates\pages\cart.html:165
-#: .\pages\templates\pages\checkout.html:159
+#: .\pages\templates\pages\admin_dashboard.html:111
+#: .\pages\templates\pages\admin_order_detail.html:36
+#: .\pages\templates\pages\admin_order_detail.html:56
+#: .\pages\templates\pages\cart.html:102
+#: .\pages\templates\pages\checkout.html:192
 msgid "Total"
 msgstr "الإجمالي"
 
-#: .\pages\templates\pages\admin_dashboard.html:114
+#: .\pages\templates\pages\admin_dashboard.html:112
 msgid "Action"
 msgstr "إجراء"
 
-#: .\pages\templates\pages\admin_dashboard.html:140
+#: .\pages\templates\pages\admin_dashboard.html:138
+#: .\pages\templates\pages\partials\_category_card.html:18
 msgid "View"
 msgstr "عرض"
 
-#: .\pages\templates\pages\admin_dashboard.html:152
-#: .\pages\templates\pages\admin_order_detail.html:122
-#: .\pages\templates\pages\cart.html:104
+#: .\pages\templates\pages\admin_dashboard.html:150
+#: .\pages\templates\pages\admin_order_detail.html:121
+#: .\pages\templates\pages\cart.html:66
 msgid "Update"
 msgstr "تحديث"
 
-#: .\pages\templates\pages\admin_dashboard.html:170
-#: .\pages\templates\pages\home.html:194
+#: .\pages\templates\pages\admin_dashboard.html:168
 msgid "Best Sellers"
 msgstr "الأكثر مبيعًا"
 
-#: .\pages\templates\pages\admin_dashboard.html:185
+#: .\pages\templates\pages\admin_dashboard.html:183
 msgid "sold"
 msgstr "مباع"
 
-#: .\pages\templates\pages\admin_dashboard.html:188
+#: .\pages\templates\pages\admin_dashboard.html:186
 msgid "No sales data yet."
 msgstr "لا توجد بيانات مبيعات بعد."
 
-#: .\pages\templates\pages\admin_order_detail.html:7
+#: .\pages\templates\pages\admin_order_detail.html:4
 msgid "Order Details"
 msgstr "تفاصيل الطلب"
 
-#: .\pages\templates\pages\admin_order_detail.html:10
+#: .\pages\templates\pages\admin_order_detail.html:11
+msgid "Staff order"
+msgstr "طلب فريق العمل"
+
+#: .\pages\templates\pages\admin_order_detail.html:13
+msgid "Order"
+msgstr "ترتيب"
+
+#: .\pages\templates\pages\admin_order_detail.html:15
+msgid "Created"
+msgstr "تم الإنشاء"
+
+#: .\pages\templates\pages\admin_order_detail.html:19
 msgid "Back to Dashboard"
 msgstr "العودة للوحة التحكم"
 
-#: .\pages\templates\pages\admin_order_detail.html:20
+#: .\pages\templates\pages\admin_order_detail.html:27
 msgid "Order Items"
 msgstr "عناصر الطلب"
 
-#: .\pages\templates\pages\admin_order_detail.html:26
+#: .\pages\templates\pages\admin_order_detail.html:33
 msgid "Product"
 msgstr "المنتج"
 
-#: .\pages\templates\pages\admin_order_detail.html:27
+#: .\pages\templates\pages\admin_order_detail.html:34
 msgid "Price"
 msgstr "السعر"
 
-#: .\pages\templates\pages\admin_order_detail.html:28
-#: .\pages\templates\pages\product_detail.html:155
+#: .\pages\templates\pages\admin_order_detail.html:35
+#: .\pages\templates\pages\product_detail.html:198
 msgid "Quantity"
 msgstr "الكمية"
 
-#: .\pages\templates\pages\admin_order_detail.html:62
+#: .\pages\templates\pages\admin_order_detail.html:67
 msgid "Customer Details"
 msgstr "تفاصيل العميل"
 
-#: .\pages\templates\pages\admin_order_detail.html:65
+#: .\pages\templates\pages\admin_order_detail.html:70
 msgid "Name"
 msgstr "الاسم"
 
-#: .\pages\templates\pages\admin_order_detail.html:69
+#: .\pages\templates\pages\admin_order_detail.html:74
+#: .\pages\templates\pages\order_success.html:29
 msgid "Phone"
 msgstr "رقم الهاتف"
 
-#: .\pages\templates\pages\admin_order_detail.html:73
+#: .\pages\templates\pages\admin_order_detail.html:78
 msgid "State / City"
 msgstr ""
 
-#: .\pages\templates\pages\admin_order_detail.html:82
+#: .\pages\templates\pages\admin_order_detail.html:87
 msgid "Notes"
 msgstr "ملاحظات"
 
-#: .\pages\templates\pages\admin_order_detail.html:93
+#: .\pages\templates\pages\admin_order_detail.html:97
 msgid "Order Status"
 msgstr "حالة الطلب"
-
-#: .\pages\templates\pages\admin_order_detail.html:105
-msgid "Created"
-msgstr "تم الإنشاء"
 
 #: .\pages\templates\pages\admin_order_detail.html:111
 msgid "Update Status"
@@ -376,180 +384,183 @@ msgstr "تحديث الحالة"
 # All Products Page
 # =============================================
 #: .\pages\templates\pages\all_products.html:4
-#: .\pages\templates\pages\all_products.html:13
-#: .\pages\templates\pages\all_products.html:15
+#: .\pages\templates\pages\all_products.html:12
+#: .\pages\templates\pages\all_products.html:17
 msgid "All Products"
 msgstr "جميع المنتجات"
+
+#: .\pages\templates\pages\all_products.html:16
+msgid "Catalog"
+msgstr "الكتالوج"
 
 #
 # Category Page Translations
 #
-#: .\pages\templates\pages\all_products.html:17
-#: .\pages\templates\pages\category_products.html:17
+#: .\pages\templates\pages\all_products.html:20
+#: .\pages\templates\pages\category_products.html:18
 msgid "products found"
 msgstr "منتج"
 
-#: .\pages\templates\pages\all_products.html:36
-#: .\pages\templates\pages\all_products.html:43
-#: .\pages\templates\pages\category_products.html:30
+#: .\pages\templates\pages\all_products.html:33
+#: .\pages\templates\pages\all_products.html:39
+#: .\pages\templates\pages\category_products.html:36
+#: .\pages\templates\pages\category_products.html:42
 msgid "Filters"
 msgstr "التصفية"
 
-#: .\pages\templates\pages\all_products.html:50
-#: .\pages\templates\pages\category_products.html:35
+#: .\pages\templates\pages\all_products.html:44
+#: .\pages\templates\pages\category_products.html:47
 msgid "Search"
 msgstr "البحث"
 
-#: .\pages\templates\pages\all_products.html:53
-#: .\pages\templates\pages\category_products.html:38
+#: .\pages\templates\pages\all_products.html:45
+#: .\pages\templates\pages\category_products.html:48
 msgid "Search products..."
 msgstr "البحث في المنتجات..."
 
-#: .\pages\templates\pages\all_products.html:65
+#: .\pages\templates\pages\all_products.html:50
+#: .\pages\templates\pages\category_products.html:16
+#: .\pages\templates\pages\home.html:158
+#: .\pages\templates\pages\partials\_category_card.html:10
+#: .\pages\templates\pages\product_detail.html:282
 msgid "Category"
 msgstr "القسم"
 
-#: .\pages\templates\pages\all_products.html:68
+#: .\pages\templates\pages\all_products.html:52
 msgid "All Categories"
 msgstr "جميع الأقسام"
 
-#: .\pages\templates\pages\all_products.html:77
-#: .\pages\templates\pages\category_products.html:50
+#: .\pages\templates\pages\all_products.html:60
+#: .\pages\templates\pages\category_products.html:53
 msgid "Price Range"
 msgstr "نطاق السعر"
 
-#: .\pages\templates\pages\all_products.html:80
-#: .\pages\templates\pages\category_products.html:53
+#: .\pages\templates\pages\all_products.html:62
+#: .\pages\templates\pages\category_products.html:55
 msgid "Min"
 msgstr "الحد الأدنى"
 
-#: .\pages\templates\pages\all_products.html:83
-#: .\pages\templates\pages\category_products.html:56
+#: .\pages\templates\pages\all_products.html:64
+#: .\pages\templates\pages\category_products.html:57
 msgid "Max"
 msgstr "الحد الأقصى"
 
-#: .\pages\templates\pages\all_products.html:90
+#: .\pages\templates\pages\all_products.html:70
 msgid "Sort By"
 msgstr "ترتيب حسب"
 
-#: .\pages\templates\pages\all_products.html:93
+#: .\pages\templates\pages\all_products.html:72
 msgid "Newest First"
 msgstr "الأحدث أولًا"
 
-#: .\pages\templates\pages\all_products.html:94
+#: .\pages\templates\pages\all_products.html:73
 msgid "Price: Low to High"
 msgstr "السعر: من الأقل للأعلى"
 
-#: .\pages\templates\pages\all_products.html:95
+#: .\pages\templates\pages\all_products.html:74
 msgid "Price: High to Low"
 msgstr "السعر: من الأعلى للأقل"
 
-#: .\pages\templates\pages\all_products.html:96
+#: .\pages\templates\pages\all_products.html:75
 msgid "Name: A to Z"
 msgstr "الاسم: أ - ي"
 
-#: .\pages\templates\pages\all_products.html:103
-#: .\pages\templates\pages\category_products.html:64
+#: .\pages\templates\pages\all_products.html:80
+#: .\pages\templates\pages\category_products.html:63
 msgid "Apply Filters"
 msgstr "تطبيق التصفية"
 
-#: .\pages\templates\pages\all_products.html:109
-#: .\pages\templates\pages\all_products.html:187
-#: .\pages\templates\pages\category_products.html:70
-#: .\pages\templates\pages\category_products.html:153
+#: .\pages\templates\pages\all_products.html:85
+#: .\pages\templates\pages\all_products.html:124
+#: .\pages\templates\pages\category_products.html:68
+#: .\pages\templates\pages\category_products.html:120
 msgid "Clear Filters"
 msgstr "مسح التصفية"
 
-#: .\pages\templates\pages\all_products.html:143
-#: .\pages\templates\pages\category_products.html:110
+#: .\pages\templates\pages\all_products.html:105
+#: .\pages\templates\pages\category_products.html:101
 msgid "Previous"
 msgstr "السابق"
 
-#: .\pages\templates\pages\all_products.html:167
-#: .\pages\templates\pages\category_products.html:133
+#: .\pages\templates\pages\all_products.html:115
+#: .\pages\templates\pages\category_products.html:111
 msgid "Next"
 msgstr "التالي"
 
-#: .\pages\templates\pages\all_products.html:183
-#: .\pages\templates\pages\category_products.html:149
+#: .\pages\templates\pages\all_products.html:122
+#: .\pages\templates\pages\category_products.html:118
 msgid "No products found"
 msgstr "لم يتم العثور على منتجات"
 
-#: .\pages\templates\pages\all_products.html:184
-#: .\pages\templates\pages\category_products.html:150
+#: .\pages\templates\pages\all_products.html:123
+#: .\pages\templates\pages\category_products.html:119
 msgid "Try adjusting your search or filter criteria"
 msgstr "حاول تعديل معايير البحث أو التصفية"
 
-#: .\pages\templates\pages\cart.html:4 .\pages\templates\pages\cart.html:13
-#: .\pages\templates\pages\cart.html:21
+#: .\pages\templates\pages\cart.html:4 .\pages\templates\pages\cart.html:12
+#: .\pages\templates\pages\cart.html:14
 msgid "Shopping Cart"
 msgstr "سلة التسوق"
 
-#: .\pages\templates\pages\cart.html:32
+#: .\pages\templates\pages\cart.html:27
 msgid "Your cart is empty"
 msgstr "سلة التسوق فارغة"
 
-#: .\pages\templates\pages\cart.html:33
+#: .\pages\templates\pages\cart.html:28
 msgid "Looks like you haven't added any items to your cart yet."
 msgstr "يبدو أنك لم تضف أي منتجات إلى سلة التسوق بعد."
 
-#: .\pages\templates\pages\cart.html:40 .\pages\templates\pages\cart.html:134
-#: .\pages\templates\pages\order_success.html:24
+#: .\pages\templates\pages\cart.html:30 .\pages\templates\pages\cart.html:85
+#: .\pages\templates\pages\order_success.html:47
 msgid "Continue Shopping"
 msgstr "مواصلة التسوق"
 
-#: .\pages\templates\pages\cart.html:82
-#: .\pages\templates\pages\checkout.html:135
+#: .\pages\templates\pages\cart.html:43 .\pages\templates\pages\home.html:25
+#: .\pages\templates\pages\home.html:136
+#: .\pages\templates\pages\partials\_product_card.html:10
+msgid "No image"
+msgstr "لا توجد صورة"
+
+#: .\pages\templates\pages\cart.html:59
+#: .\pages\templates\pages\checkout.html:170
 msgid "Qty"
 msgstr "الكمية"
 
-#: .\pages\templates\pages\cart.html:117
+#: .\pages\templates\pages\cart.html:73
 msgid "Remove"
 msgstr "إزالة"
 
-#: .\pages\templates\pages\cart.html:122
+#: .\pages\templates\pages\cart.html:78
 msgid "each"
 msgstr "لكل منتج"
 
-#: .\pages\templates\pages\cart.html:141
-#: .\pages\templates\pages\checkout.html:118
+#: .\pages\templates\pages\cart.html:91
+#: .\pages\templates\pages\checkout.html:152
 msgid "Order Summary"
 msgstr "ملخص الطلب"
 
-#: .\pages\templates\pages\cart.html:145
-#: .\pages\templates\pages\checkout.html:145
+#: .\pages\templates\pages\cart.html:94
+#: .\pages\templates\pages\checkout.html:180
 msgid "Subtotal"
 msgstr "المجموع الفرعي"
 
-#: .\pages\templates\pages\cart.html:150
-#: .\pages\templates\pages\checkout.html:149
-msgid "Shipping"
-msgstr "الشحن"
-
-#: .\pages\templates\pages\cart.html
-#: .\pages\templates\pages\checkout.html
+#: .\pages\templates\pages\cart.html:98
+#: .\pages\templates\pages\checkout.html:50
+#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\product_detail.html:109
+#: .\pages\templates\pages\product_detail.html:307
 msgid "Delivery fee"
 msgstr "رسوم التوصيل"
 
-#: .\pages\templates\pages\cart.html:152
-msgid "FREE"
-msgstr "مجاني"
-
-#: .\pages\templates\pages\cart.html:159
-#, fuzzy
-#| msgid "Free shipping on orders over $50"
-msgid "Free shipping on orders over EGP 50"
-msgstr "شحن مجاني للطلبات التي تزيد عن 50 دولار"
-
-#: .\pages\templates\pages\cart.html:176
+#: .\pages\templates\pages\cart.html:108
 msgid "Proceed to Checkout"
 msgstr "المتابعة للدفع"
 
-#: .\pages\templates\pages\cart.html:186
+#: .\pages\templates\pages\cart.html:110
 msgid "Secure Checkout"
 msgstr "دفع آمن"
 
-#: .\pages\templates\pages\category_products.html:77
+#: .\pages\templates\pages\category_products.html:74
 msgid "Other Categories"
 msgstr "فئات أخرى"
 
@@ -558,7 +569,7 @@ msgstr "فئات أخرى"
 msgid "Checkout"
 msgstr "الدفع"
 
-#: .\pages\templates\pages\checkout.html:14 .\pages\views.py:389
+#: .\pages\templates\pages\checkout.html:14 .\pages\views.py:440
 #, fuzzy
 #| msgid "Your cart is empty"
 msgid "Your cart is empty."
@@ -568,1830 +579,1920 @@ msgstr "سلة التسوق فارغة"
 msgid "Start Shopping"
 msgstr "ابدأ التسوق"
 
-#: .\pages\templates\pages\checkout.html:108
+#: .\pages\templates\pages\checkout.html:42
+msgid "Pay when your order is delivered."
+msgstr "ادفع عند استلام طلبك."
+
+#: .\pages\templates\pages\checkout.html:51
+msgid "Shown before you place the order."
+msgstr "تظهر بوضوح قبل تأكيد الطلب."
+
+#: .\pages\templates\pages\checkout.html:60
+msgid "Private details"
+msgstr "بياناتك خاصة"
+
+#: .\pages\templates\pages\checkout.html:139
 msgid "Place Order"
 msgstr "إتمام الطلب"
 
-#: .\pages\templates\pages\checkout.html:152
-msgid "Free"
-msgstr ""
+#: .\pages\templates\pages\checkout.html:143
+msgid "No hidden fees will be added to the order total shown here."
+msgstr "لن يتم إضافة أي رسوم غير موضحة في إجمالي الطلب هنا."
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:163
+#, fuzzy
+#| msgid "No image"
+msgid "No img"
+msgstr "لا توجد صورة"
+
+#: .\pages\templates\pages\checkout.html:188
+msgid "Payment"
+msgstr "الدفع"
+
+#: .\pages\templates\pages\checkout.html:198
+msgid "After ordering"
+msgstr "بعد الطلب"
+
+#: .\pages\templates\pages\checkout.html:212
 msgid "Cairo"
 msgstr "القاهرة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "15 May"
 msgstr "15 مايو"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Abaseya"
 msgstr "العباسية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Abou El Feda"
 msgstr "أبو الفدا"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Abu Talat"
 msgstr "أبو تلات"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Aghouza"
 msgstr "العجوزة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Ain Shams"
 msgstr "عين شمس"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Al Rehab"
 msgstr "الرحاب"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Almazah"
 msgstr "ألماظة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Amiriya"
 msgstr "الأميرية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Andalos"
 msgstr "الأندلس"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Azzam"
 msgstr "عزام"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Badr City"
 msgstr "مدينة بدر"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Basateen"
 msgstr "البساتين"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Bolkly"
 msgstr "بولكلي"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:214
 msgid "Borg El Arab"
 msgstr "برج العرب"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Boulaq"
 msgstr "بولاق"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:214
 msgid "Camp Caesar"
 msgstr "كامب شيزار"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:214
 msgid "Cleopatra"
 msgstr "كليوباترا"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Corniche"
 msgstr "الكورنيش"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:238
 msgid "Dar El Salam"
 msgstr "دار السلام"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:213
 msgid "Dokki"
 msgstr "الدقي"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Downtown Cairo"
 msgstr "وسط البلد"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:213
 msgid "El Haram"
 msgstr "الهرم"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:213
 msgid "El Hawamdeya"
 msgstr "الحوامدية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Katameya"
 msgstr "القطامية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Maadi"
 msgstr "المعادي"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Marg"
 msgstr "المرج"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Masara"
 msgstr "المعصرة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Mokattam"
 msgstr "المقطم"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Moqattam"
 msgstr "المقطم"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Nozha"
 msgstr "النزهة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Qobbah"
 msgstr "القبة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Rehab"
 msgstr "الرحاب"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Rowad"
 msgstr "الرواد"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Shaab"
 msgstr "الشعب"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Shorouk"
 msgstr "الشروق"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Tagamoaa El Khames"
 msgstr "التجمع الخامس"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Tagamoaa El Tani"
 msgstr "التجمع الثاني"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Tagamoaa El Talet"
 msgstr "التجمع الثالث"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Tagamoaa El Awal"
 msgstr "التجمع الأول"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Talbeya"
 msgstr "الطالبية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "El Zawya El Hamra"
 msgstr "الزاوية الحمراء"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Ezbet El Haggana"
 msgstr "عزبة الهجانة"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:175
-#: .\pages\templates\pages\checkout.html:187
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:213
+#: .\pages\templates\pages\checkout.html:225
 msgid "Faisal"
 msgstr "فيصل"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Garden City"
 msgstr "جاردن سيتي"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:213
 msgid "Giza"
 msgstr "الجيزة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Giza Square"
 msgstr "ميدان الجيزة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Hadaeq El Ahram"
 msgstr "حدائق الأهرام"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Hadaeq El Maadi"
 msgstr "حدائق المعادي"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Hadaeq El Qobbah"
 msgstr "حدائق القبة"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:213
 msgid "Haram"
 msgstr "الهرم"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Heliopolis"
 msgstr "مصر الجديدة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Helwan"
 msgstr "حلوان"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:213
 msgid "Imbaba"
 msgstr "إمبابة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Katameya"
 msgstr "القطامية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Maadi"
 msgstr "المعادي"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Madinaty"
 msgstr "مدينتي"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Manial"
 msgstr "المنيل"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Manshiyat Naser"
 msgstr "منشية ناصر"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:215
 msgid "Matareya"
 msgstr "المطرية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Mokattam"
 msgstr "المقطم"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:213
 msgid "Mohandeseen"
 msgstr "المهندسين"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Nasr City"
 msgstr "مدينة نصر"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "New Cairo"
 msgstr "القاهرة الجديدة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "New Capital"
 msgstr "العاصمة الإدارية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "New Heliopolis"
 msgstr "هيليوبوليس الجديدة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "New Nuzha"
 msgstr "النزهة الجديدة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Obour City"
 msgstr "مدينة العبور"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:223
 msgid "Qalyub"
 msgstr "قليوب"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Qasr El Nil"
 msgstr "قصر النيل"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Rod El Farag"
 msgstr "روض الفرج"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Sayeda Zeinab"
 msgstr "السيدة زينب"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Shoubra"
 msgstr "شبرا"
 
-#: .\pages\templates\pages\checkout.html:174
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:212
+#: .\pages\templates\pages\checkout.html:223
 msgid "Shoubra El Kheima"
 msgstr "شبرا الخيمة"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Smart Village"
 msgstr "القرية الذكية"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Zamalek"
 msgstr "الزمالك"
 
-#: .\pages\templates\pages\checkout.html:174
+#: .\pages\templates\pages\checkout.html:212
 msgid "Zeitoun"
 msgstr "الزيتون"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 #, fuzzy
 #| msgid "October"
 msgid "6th of October"
 msgstr "أكتوبر"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Abu Rawash"
 msgstr "أبو رواش"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Agouza"
 msgstr "العجوزة"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Al Ayayat"
 msgstr "العياط"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Al Badrashin"
 msgstr "البدرشين"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Al Haram"
 msgstr "الهرم"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Al Hawamdeya"
 msgstr "الحوامدية"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Al Wahat Al Baharia"
 msgstr "الواحات البحرية"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Awsim"
 msgstr "أوسيم"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Bulaq El Dakrour"
 msgstr "بولاق الدكرور"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "El Ayyat"
 msgstr "العياط"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "El Badrashin"
 msgstr "البدرشين"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "El Omraniya"
 msgstr "العمرانية"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "El Saff"
 msgstr "الصف"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "El Wahat El Bahariya"
 msgstr "الواحات البحرية"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Kerdasa"
 msgstr "كرداسة"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Omrania"
 msgstr "العمرانية"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Ousim"
 msgstr "أوسيم"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 #, fuzzy
 #| msgid "Sat"
 msgid "Saf"
 msgstr "سبت"
 
-#: .\pages\templates\pages\checkout.html:175
+#: .\pages\templates\pages\checkout.html:213
 msgid "Sheikh Zayed"
 msgstr "الشيخ زايد"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Alexandria"
 msgstr "الإسكندرية"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Abu Qir"
 msgstr "أبو قير"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Agami"
 msgstr "العجمي"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Al Amriya"
 msgstr "العامرية"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Al Attarin"
 msgstr "العطارين"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Al Dekheila"
 msgstr "الدخيلة"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Al Gomrok"
 msgstr "الجمرك"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Al Labban"
 msgstr "اللبان"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Al Manshiyah"
 msgstr "المنشية"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Al Montazah"
 msgstr "المنتزه"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Al Raml"
 msgstr "الرمل"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Amreya"
 msgstr "العامرية"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Anfoushi"
 msgstr "الأنفوشي"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Asafra"
 msgstr "العصافرة"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Attarine"
 msgstr "العطارين"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Bacchus"
 msgstr "باكوس"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Dekheila"
 msgstr "الدخيلة"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Agami"
 msgstr "العجمي"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Amriya"
 msgstr "العامرية"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Attarin"
 msgstr "العطارين"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Dekheila"
 msgstr "الدخيلة"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Gomrok"
 msgstr "الجمرك"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Labban"
 msgstr "اللبان"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Manshiyah"
 msgstr "المنشية"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Montazah"
 msgstr "المنتزه"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "El Raml"
 msgstr "الرمل"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Fleming"
 msgstr "فلمينج"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Glim"
 msgstr "جليم"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Gomrok"
 msgstr "الجمرك"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Kafr Abdou"
 msgstr "كفر عبده"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Karmouz"
 msgstr "كرموز"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Kom El Dikka"
 msgstr "كوم الدكة"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Labban"
 msgstr "اللبان"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Louran"
 msgstr "لوران"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Maamoura"
 msgstr "المعمورة"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Mandara"
 msgstr "المندرة"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Miami"
 msgstr "ميامي"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Minyet El Bassal"
 msgstr "مينا البصل"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Moharam Bek"
 msgstr "محرم بك"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Montaza"
 msgstr "المنتزه"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Raml"
 msgstr "الرمل"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Roushdy"
 msgstr "رشدي"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "San Stefano"
 msgstr "سان ستيفانو"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Shatby"
 msgstr "الشاطبي"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Sidi Beshr"
 msgstr "سيدي بشر"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Sidi Gaber"
 msgstr "سيدي جابر"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Smouha"
 msgstr "سموحة"
 
-#: .\pages\templates\pages\checkout.html:176
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:214
+#: .\pages\templates\pages\checkout.html:233
 msgid "Sporting"
 msgstr "سبورتنج"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Stanley"
 msgstr "ستانلي"
 
-#: .\pages\templates\pages\checkout.html:176
+#: .\pages\templates\pages\checkout.html:214
 msgid "Zezenia"
 msgstr "زيزينيا"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Dakahlia"
 msgstr "الدقهلية"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Aga"
 msgstr "أجا"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Bani Ebeid"
 msgstr "بني عبيد"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Belqas"
 msgstr "بلقاس"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Dakarneh"
 msgstr "دكرنس"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Dekernes"
 msgstr "دكرنس"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "El Gamaliya"
 msgstr "الجمالية"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "El Kurdi"
 msgstr "الكردي"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "El Manzala"
 msgstr "المنزلة"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "El Matareya"
 msgstr "المطرية"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "El Senbellawein"
 msgstr "السنبلاوين"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Gamalia"
 msgstr "الجمالية"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Gohina"
 msgstr "جهينة"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Kurdi"
 msgstr "الكردي"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Mahmoudia"
 msgstr "المحمودية"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Manzala"
 msgstr "المنزلة"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Mansoura"
 msgstr "المنصورة"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Minya El Nasr"
 msgstr "منية النصر"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Mit Ghamr"
 msgstr "ميت غمر"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Mit Salsil"
 msgstr "ميت سلسيل"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Nabaroh"
 msgstr "نبروه"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Senbellawein"
 msgstr "السنبلاوين"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Sherbin"
 msgstr "شربين"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Shorouk"
 msgstr "الشروق"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Talkha"
 msgstr "طلخا"
 
-#: .\pages\templates\pages\checkout.html:177
+#: .\pages\templates\pages\checkout.html:215
 msgid "Zaqaziq"
 msgstr "الزقازيق"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Red Sea"
 msgstr "البحر الأحمر"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Al Qusair"
 msgstr "القصير"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "El Gouna"
 msgstr "الجونة"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "El Qusair"
 msgstr "القصير"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Halayeb"
 msgstr "حلايب"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Hurghada"
 msgstr "الغردقة"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Marsa Alam"
 msgstr "مرسى علم"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Port Ghalib"
 msgstr "بورت غالب"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Ras Gharib"
 msgstr "رأس غارب"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Safaga"
 msgstr "سفاجا"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Shalateen"
 msgstr "شلاتين"
 
-#: .\pages\templates\pages\checkout.html:178
+#: .\pages\templates\pages\checkout.html:216
 msgid "Soma Bay"
 msgstr "سوما باي"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Beheira"
 msgstr "البحيرة"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Abu El Matamir"
 msgstr "أبو المطامير"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Abu Hummus"
 msgstr "أبو حمص"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Badr"
 msgstr "بدر"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Damanhour"
 msgstr "دمنهور"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Edku"
 msgstr "إدكو"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "El Delengat"
 msgstr "الدلنجات"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "El Mahmoudiya"
 msgstr "المحمودية"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "El Natroun"
 msgstr "وادي النطرون"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "El Rahmaniya"
 msgstr "الرحمانية"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Hosh Essa"
 msgstr "حوش عيسى"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Itay El Barud"
 msgstr "إيتاي البارود"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Kafr El Dawwar"
 msgstr "كفر الدوار"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Kom Hamada"
 msgstr "كوم حمادة"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Nubariya"
 msgstr "النوبارية"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Rashid (Rosetta)"
 msgstr "رشيد"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Rosetta"
 msgstr "رشيد"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Shubrakhit"
 msgstr "شبراخيت"
 
-#: .\pages\templates\pages\checkout.html:179
+#: .\pages\templates\pages\checkout.html:217
 msgid "Wadi El Natrun"
 msgstr "وادي النطرون"
 
-#: .\pages\templates\pages\checkout.html:180
+#: .\pages\templates\pages\checkout.html:218
 msgid "Fayoum"
 msgstr "الفيوم"
 
-#: .\pages\templates\pages\checkout.html:180
+#: .\pages\templates\pages\checkout.html:218
 msgid "Abshway"
 msgstr "إبشواي"
 
-#: .\pages\templates\pages\checkout.html:180
+#: .\pages\templates\pages\checkout.html:218
 msgid "Etsa"
 msgstr "إطسا"
 
-#: .\pages\templates\pages\checkout.html:180
+#: .\pages\templates\pages\checkout.html:218
 msgid "Itsa"
 msgstr "إطسا"
 
-#: .\pages\templates\pages\checkout.html:180
+#: .\pages\templates\pages\checkout.html:218
 msgid "Senoress"
 msgstr "سنورس"
 
-#: .\pages\templates\pages\checkout.html:180
+#: .\pages\templates\pages\checkout.html:218
 msgid "Sinnuris"
 msgstr "سنورس"
 
-#: .\pages\templates\pages\checkout.html:180
+#: .\pages\templates\pages\checkout.html:218
 msgid "Tamiya"
 msgstr "طامية"
 
-#: .\pages\templates\pages\checkout.html:180
+#: .\pages\templates\pages\checkout.html:218
 msgid "Yousef El Seddik"
 msgstr "يوسف الصديق"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Gharbia"
 msgstr "الغربية"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Basyoun"
 msgstr "بسيون"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "El Mahalla El Kubra"
 msgstr "المحلة الكبرى"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Kafr El Zayat"
 msgstr "كفر الزيات"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Kotour"
 msgstr "قطور"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Qutour"
 msgstr "قطور"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Samanoud"
 msgstr "سمنود"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Santa"
 msgstr "السنطة"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Tanta"
 msgstr "طنطا"
 
-#: .\pages\templates\pages\checkout.html:181
+#: .\pages\templates\pages\checkout.html:219
 msgid "Zefta"
 msgstr "زفتى"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 #, fuzzy
 #| msgid "Email"
 msgid "Ismailia"
 msgstr "البريد الإلكتروني"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 msgid "Abu Suwir"
 msgstr "أبو صوير"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 msgid "El Qantara El Gharbiya"
 msgstr "القنطرة غرب"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 msgid "El Qantara El Sharqiya"
 msgstr "القنطرة شرق"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 msgid "Fayed"
 msgstr "فايد"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 msgid "Kasassine"
 msgstr "القصاصين"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 msgid "Qantara Gharb"
 msgstr "القنطرة غرب"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 msgid "Qantara Sharq"
 msgstr "القنطرة شرق"
 
-#: .\pages\templates\pages\checkout.html:182
+#: .\pages\templates\pages\checkout.html:220
 msgid "Tall El Kebir"
 msgstr "التبل الكبير"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Menofia"
 msgstr "المنوفية"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Ashmoun"
 msgstr "أشمون"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Birket El Sab"
 msgstr "بركة السبع"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "El Bagour"
 msgstr "الباجور"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "El Shohada"
 msgstr "الشهداء"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Menouf"
 msgstr "منوف"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Quesna"
 msgstr "قويسنا"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Sadat City"
 msgstr "مدينة السادات"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Shibin El Kom"
 msgstr "شبين الكوم"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Tala"
 msgstr "تلا"
 
-#: .\pages\templates\pages\checkout.html:183
+#: .\pages\templates\pages\checkout.html:221
 msgid "Tersa"
 msgstr "طرسيا"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "Minya"
 msgstr "المنيا"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "Abu Qurqas"
 msgstr "أبو قرقاص"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "Beni Mazar"
 msgstr "بني مزار"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "Deir Mawas"
 msgstr "دير مواس"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "El Idwa"
 msgstr "العدوة"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "Maghagha"
 msgstr "مغاغة"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "Mallawi"
 msgstr "ملوي"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "Mataay"
 msgstr "مطاي"
 
-#: .\pages\templates\pages\checkout.html:184
+#: .\pages\templates\pages\checkout.html:222
 msgid "Samalut"
 msgstr "سمالوط"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "Qalyubia"
 msgstr "القليوبية"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "Abu Zaabal"
 msgstr "أبو زعبل"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "Banha"
 msgstr "بنها"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "El Kanater El Khayreya"
 msgstr "القناطر الخيرية"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "El Khanka"
 msgstr "الخانكة"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "El Obour"
 msgstr "العبور"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "Kafr Shukr"
 msgstr "كفر شكر"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "Khanka"
 msgstr "الخانكة"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "Qanater Khayriya"
 msgstr "القناطر الخيرية"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "Shibin El Qanater"
 msgstr "شبين القناطر"
 
-#: .\pages\templates\pages\checkout.html:185
+#: .\pages\templates\pages\checkout.html:223
 msgid "Tukh"
 msgstr "طوخ"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "New Valley"
 msgstr "الوادي الجديد"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "Balat"
 msgstr "بلاط"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "Baris"
 msgstr "باريس"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "Dakhla"
 msgstr "الداخلة"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "El Dakhla"
 msgstr "الداخلة"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "El Farafra"
 msgstr "الفرافرة"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "El Kharga"
 msgstr "الخارجة"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "Farafra"
 msgstr "الفرافرة"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "Kharga"
 msgstr "الخارجة"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "Mut"
 msgstr "موط"
 
-#: .\pages\templates\pages\checkout.html:186
+#: .\pages\templates\pages\checkout.html:224
 msgid "Paris"
 msgstr "باريس"
 
-#: .\pages\templates\pages\checkout.html:187
+#: .\pages\templates\pages\checkout.html:225
 msgid "Suez"
 msgstr "السويس"
 
-#: .\pages\templates\pages\checkout.html:187
+#: .\pages\templates\pages\checkout.html:225
 msgid "Al Arbaeen"
 msgstr "الأربعين"
 
-#: .\pages\templates\pages\checkout.html:187
+#: .\pages\templates\pages\checkout.html:225
 msgid "Al Ganayen"
 msgstr "الجناين"
 
-#: .\pages\templates\pages\checkout.html:187
+#: .\pages\templates\pages\checkout.html:225
 msgid "Arbaeen"
 msgstr "الأربعين"
 
-#: .\pages\templates\pages\checkout.html:187
+#: .\pages\templates\pages\checkout.html:225
 msgid "Ataqah"
 msgstr "عتاقة"
 
-#: .\pages\templates\pages\checkout.html:187
+#: .\pages\templates\pages\checkout.html:225
 msgid "El Ganayen"
 msgstr "الجناين"
 
-#: .\pages\templates\pages\checkout.html:187
+#: .\pages\templates\pages\checkout.html:225
 msgid "Zaitiyyah"
 msgstr "الزيتية"
 
-#: .\pages\templates\pages\checkout.html:188
+#: .\pages\templates\pages\checkout.html:226
 msgid "Aswan"
 msgstr "أسوان"
 
-#: .\pages\templates\pages\checkout.html:188
+#: .\pages\templates\pages\checkout.html:226
 msgid "Abu Simbel"
 msgstr "أبو سمبل"
 
-#: .\pages\templates\pages\checkout.html:188
+#: .\pages\templates\pages\checkout.html:226
 msgid "Daraw"
 msgstr "دراو"
 
-#: .\pages\templates\pages\checkout.html:188
+#: .\pages\templates\pages\checkout.html:226
 msgid "Edfu"
 msgstr "إدفو"
 
-#: .\pages\templates\pages\checkout.html:188
+#: .\pages\templates\pages\checkout.html:226
 msgid "Kalabsha"
 msgstr "كلابشة"
 
-#: .\pages\templates\pages\checkout.html:188
+#: .\pages\templates\pages\checkout.html:226
 msgid "Kom Ombo"
 msgstr "كوم أمبو"
 
-#: .\pages\templates\pages\checkout.html:188
+#: .\pages\templates\pages\checkout.html:226
 msgid "Nasr Al Nuba"
 msgstr "نصر النوبة"
 
-#: .\pages\templates\pages\checkout.html:188
+#: .\pages\templates\pages\checkout.html:226
 msgid "Sebaiya"
 msgstr "السباعية"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "Assiut"
 msgstr "أسيوط"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "Abnub"
 msgstr "أبنوب"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "Abu Tig"
 msgstr "أبو تيج"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "Badari"
 msgstr "البداري"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "Dairut"
 msgstr "ديروط"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "El Badari"
 msgstr "البداري"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "El Fateh"
 msgstr "الفتح"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "El Ghanayem"
 msgstr "الغنايم"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "El Qusiya"
 msgstr "القوصية"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "Manfalut"
 msgstr "منفلوط"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "Sahel Selim"
 msgstr "ساحل سليم"
 
-#: .\pages\templates\pages\checkout.html:189
+#: .\pages\templates\pages\checkout.html:227
 msgid "Sodfa"
 msgstr "صدفا"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Beni Suef"
 msgstr "بني سويف"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Al Fashn"
 msgstr "الفشن"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Al Wasta"
 msgstr "الواسطى"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Biba"
 msgstr "ببا"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Ehnasia"
 msgstr "إهناسيا"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Ihnasiya"
 msgstr "إهناسيا"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Nasser"
 msgstr "ناصر"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Samasta"
 msgstr "سمسطا"
 
-#: .\pages\templates\pages\checkout.html:190
+#: .\pages\templates\pages\checkout.html:228
 msgid "Wasta"
 msgstr "الواسطى"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "Port Said"
 msgstr "بورسعيد"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "Al Dawahi"
 msgstr "الضواحي"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "Al Manakh"
 msgstr "المناخ"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "Al Zohour"
 msgstr "الزهور"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "Bourfouad"
 msgstr "بورفؤاد"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "Dawahy"
 msgstr "الضواحي"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "East Port Said"
 msgstr "شرق بورسعيد"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "El Dawahy"
 msgstr "الضواحي"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "El Manakh"
 msgstr "المناخ"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "El Sharq"
 msgstr "الشرق"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "El Zohour"
 msgstr "الزهور"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "Port Fouad"
 msgstr "بورفؤاد"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "South Port Said"
 msgstr "جنوب بورسعيد"
 
-#: .\pages\templates\pages\checkout.html:191
+#: .\pages\templates\pages\checkout.html:229
 msgid "Zohour"
 msgstr "الزهور"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "Damietta"
 msgstr "دمياط"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "El Zarqa"
 msgstr "الزرقا"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "ESirw"
 msgstr "السرو"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "Faraskour"
 msgstr "فارسكور"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "Kafr El Battikh"
 msgstr "كفر البطيخ"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "Kafr Saad"
 msgstr "كفر سعد"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "New Damietta"
 msgstr "دمياط الجديدة"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "Ras El Bar"
 msgstr "رأس البر"
 
-#: .\pages\templates\pages\checkout.html:192
+#: .\pages\templates\pages\checkout.html:230
 msgid "Zarkah"
 msgstr "الزرقا"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Sharkia"
 msgstr "الشرقية"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "10th of Ramadan"
 msgstr "العاشر من رمضان"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Abu Hammad"
 msgstr "أبو حماد"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Abu Kebir"
 msgstr "أبو كبير"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Al Husseiniya"
 msgstr "الحسينية"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Al Qenayat"
 msgstr "القنايات"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Awlad Saqr"
 msgstr "أولاد صقر"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Belbeis"
 msgstr "بلبيس"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Diyarb Negm"
 msgstr "ديرب نجم"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "El Ibrahimiya"
 msgstr "الإبراهيمية"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "El Qurein"
 msgstr "القرين"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Faqous"
 msgstr "فاقوس"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Husseiniya"
 msgstr "الحسينية"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Ibrahimiya"
 msgstr "الإبراهيمية"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Kafr Saqr"
 msgstr "كفر صقر"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Mashtoul El Souq"
 msgstr "مشتول السوق"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Minya El Qamh"
 msgstr "منيا القمح"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Qenayat"
 msgstr "القنايات"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Qurein"
 msgstr "القرين"
 
-#: .\pages\templates\pages\checkout.html:193
+#: .\pages\templates\pages\checkout.html:231
 msgid "Zagazig"
 msgstr "الزقازيق"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "South Sinai"
 msgstr "جنوب سيناء"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Abu Radis"
 msgstr "أبو رديس"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Abu Zenima"
 msgstr "أبو زنيمة"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Dahab"
 msgstr "دهب"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "El Tor"
 msgstr "الطور"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Nuweiba"
 msgstr "نويبع"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Ras Sedr"
 msgstr "رأس سدر"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Ras Sudr"
 msgstr "رأس سدر"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Saint Catherine"
 msgstr "سانت كاترين"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Sharm El Sheikh"
 msgstr "شرم الشيخ"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Taba"
 msgstr "طابا"
 
-#: .\pages\templates\pages\checkout.html:194
+#: .\pages\templates\pages\checkout.html:232
 msgid "Tor Sinai"
 msgstr "طور سيناء"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Kafr El Sheikh"
 msgstr "كفر الشيخ"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Balteem"
 msgstr "بلطيم"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Bella"
 msgstr "بيلا"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Biyala"
 msgstr "بيلا"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Desouk"
 msgstr "دسوق"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Fouah"
 msgstr "فوه"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Hamoul"
 msgstr "الحامول"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Metobas"
 msgstr "مطوبس"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Motobas"
 msgstr "مطوبس"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Qallin"
 msgstr "قلين"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Riyadh"
 msgstr "الرياض"
 
-#: .\pages\templates\pages\checkout.html:195
+#: .\pages\templates\pages\checkout.html:233
 msgid "Sidi Salem"
 msgstr "سيدي سالم"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "Matrouh"
 msgstr "مطروح"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "Dabaa"
 msgstr "الضبعة"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "El Alamein"
 msgstr "العلمين"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "El Dabaa"
 msgstr "الضبعة"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "El Hamam"
 msgstr "الحمام"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "El Negaila"
 msgstr "النجيلة"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "Marsa Matrouh"
 msgstr "مرسى مطروح"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "Negaila"
 msgstr "النجيلة"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "Salum"
 msgstr "السلوم"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "Sidi Barrani"
 msgstr "سيدي براني"
 
-#: .\pages\templates\pages\checkout.html:196
+#: .\pages\templates\pages\checkout.html:234
 msgid "Siwa"
 msgstr "سيوة"
 
-#: .\pages\templates\pages\checkout.html:197
+#: .\pages\templates\pages\checkout.html:235
 msgid "Luxor"
 msgstr "الأقصر"
 
-#: .\pages\templates\pages\checkout.html:197
+#: .\pages\templates\pages\checkout.html:235
 msgid "Al Bayadiya"
 msgstr "البياضية"
 
-#: .\pages\templates\pages\checkout.html:197
+#: .\pages\templates\pages\checkout.html:235
 msgid "Al Qarnah"
 msgstr "القرنة"
 
-#: .\pages\templates\pages\checkout.html:197
+#: .\pages\templates\pages\checkout.html:235
 msgid "Al Tod"
 msgstr "الطود"
 
-#: .\pages\templates\pages\checkout.html:197
+#: .\pages\templates\pages\checkout.html:235
 msgid "Armant"
 msgstr "أرمنت"
 
-#: .\pages\templates\pages\checkout.html:197
+#: .\pages\templates\pages\checkout.html:235
 msgid "Esna"
 msgstr "إسنا"
 
-#: .\pages\templates\pages\checkout.html:197
+#: .\pages\templates\pages\checkout.html:235
 msgid "Karnak"
 msgstr "الكرنك"
 
-#: .\pages\templates\pages\checkout.html:197
+#: .\pages\templates\pages\checkout.html:235
 msgid "Tiba"
 msgstr "طيبة"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "Qena"
 msgstr "قنا"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "Abu Tesht"
 msgstr "أبو تشت"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "Deshna"
 msgstr "دشنا"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "El Waqf"
 msgstr "الوقف"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "Farshut"
 msgstr "فرشوط"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "Nagaa Hammadi"
 msgstr "نجع حمادي"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "Naqada"
 msgstr "نقادة"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "Qift"
 msgstr "قفط"
 
-#: .\pages\templates\pages\checkout.html:198
+#: .\pages\templates\pages\checkout.html:236
 msgid "Qous"
 msgstr "قوص"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "North Sinai"
 msgstr "شمال سيناء"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "Arish"
 msgstr "العريش"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "Bir al-Abed"
 msgstr "بئر العبد"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "El Arish"
 msgstr "العريش"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "El Hasana"
 msgstr "الحسنة"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "Hassana"
 msgstr "الحسنة"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "Nakhl"
 msgstr "نخل"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "Rafah"
 msgstr "رفح"
 
-#: .\pages\templates\pages\checkout.html:199
+#: .\pages\templates\pages\checkout.html:237
 msgid "Sheikh Zuweid"
 msgstr "الشيخ زويد"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Sohag"
 msgstr "سوهاج"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Akhmim"
 msgstr "أخميم"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Al Balyana"
 msgstr "البلينا"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Awlad Toq Sharq"
 msgstr "أولاد طوق شرق"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "El Maragha"
 msgstr "المراغة"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "El Monsha"
 msgstr "المنشأة"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "El Usayrat"
 msgstr "العسيرات"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Girga"
 msgstr "جرجا"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Juhayna"
 msgstr "جهينة"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Sakulta"
 msgstr "ساقلتة"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Tahta"
 msgstr "طهطا"
 
-#: .\pages\templates\pages\checkout.html:200
+#: .\pages\templates\pages\checkout.html:238
 msgid "Tima"
 msgstr "طما"
 
-#: .\pages\templates\pages\checkout.html:210
+#: .\pages\templates\pages\checkout.html:248
 msgid "Select a State"
 msgstr "اختر المحافظة"
 
-#: .\pages\templates\pages\checkout.html:233
+#: .\pages\templates\pages\checkout.html:271
 msgid "Select a City"
 msgstr "اختر المدينة"
 
-#: .\pages\templates\pages\checkout.html:233
+#: .\pages\templates\pages\checkout.html:271
 msgid "Select a State first"
 msgstr "اختر المحافظة أولاً"
 
-# =============================================
-# Hero Section
-# =============================================
-#: .\pages\templates\pages\home.html:67
-msgid "Curated Elegance"
-msgstr "أناقة مختارة"
+#: .\pages\templates\pages\home.html:11
+msgid "Mobile showroom"
+msgstr "معرض الهاتف"
+
+#: .\pages\templates\pages\home.html:12
+msgid "Shop all"
+msgstr "تسوق الكل"
+
+#: .\pages\templates\pages\home.html:28 .\pages\templates\pages\home.html:140
+msgid "Featured piece"
+msgstr "قطعة مميزة"
+
+#: .\pages\templates\pages\home.html:30
+msgid "Pieces for real homes"
+msgstr "قطع لمنازل حقيقية"
+
+#: .\pages\templates\pages\home.html:33
+msgid "Browse the collection"
+msgstr "تصفح المجموعة"
+
+#: .\pages\templates\pages\home.html:38
+msgid "View piece"
+msgstr "عرض القطعة"
+
+#: .\pages\templates\pages\home.html:39
+msgid "Shop similar"
+msgstr "تسوق المشابه"
+
+#: .\pages\templates\pages\home.html:57
+msgid "Hand-picked pieces for everyday rooms"
+msgstr "قطع مختارة بعناية لغرف الاستخدام اليومي"
+
+#: .\pages\templates\pages\home.html:61
+msgid "Simple ordering with clear follow-up"
+msgstr "طلب بسيط مع متابعة واضحة"
 
 #: .\pages\templates\pages\home.html:73
-msgid "Timeless Antiques"
-msgstr "تحف خالدة"
+msgid "New showroom edit"
+msgstr "مختارات المعرض الجديدة"
 
-#: .\pages\templates\pages\home.html:76
-msgid "& Premium Decor"
-msgstr "وديكور فاخر"
+#: .\pages\templates\pages\home.html:77
+msgid "Pieces that make a room feel finished."
+msgstr "قطع تجعل الغرفة تبدو مكتملة."
 
-#: .\pages\templates\pages\home.html:81
+#: .\pages\templates\pages\home.html:80
 msgid ""
-"Discover handpicked treasures from around the world — vintage furniture, "
-"artisan crafts, and exquisite decorative pieces that tell a story."
-msgstr ""
-"اكتشف كنوزًا مختارة بعناية من حول العالم — أثاث عتيق، حِرف يدوية، وقطع ديكور "
-"رائعة تحكي قصة."
+"Explore practical furniture and decor chosen for texture, proportion, and "
+"everyday use."
+msgstr "اكتشف أثاثا وديكورا عمليا مختارا للخامة والتناسق والاستخدام اليومي."
 
-#: .\pages\templates\pages\home.html:88
-msgid "Explore Collection"
-msgstr "استكشف المجموعة"
+#: .\pages\templates\pages\home.html:86
+msgid "Shop the collection"
+msgstr "تسوق المجموعة"
 
-#: .\pages\templates\pages\home.html:96
-msgid "View All Products"
-msgstr "عرض جميع المنتجات"
+#: .\pages\templates\pages\home.html:90
+msgid "Start with categories"
+msgstr "ابدأ بالأقسام"
 
-#: .\pages\templates\pages\home.html:165
-msgid "Shop by Category"
-msgstr "تسوق حسب الفئة"
+#: .\pages\templates\pages\home.html:102
+msgid "Hand-picked pieces"
+msgstr "قطع مختارة بعناية"
 
-#: .\pages\templates\pages\home.html:166
-msgid ""
-"Browse our wide range of categories to find exactly what you're looking for."
-msgstr "تصفح مجموعة واسعة من الفئات للعثور على ما تبحث عنه."
+#: .\pages\templates\pages\home.html:111
+#: .\pages\templates\pages\product_detail.html:107
+msgid "Delivery across Egypt"
+msgstr "توصيل داخل مصر"
 
-#: .\pages\templates\pages\home.html:182
+#: .\pages\templates\pages\home.html:120
+#: .\pages\templates\pages\product_detail.html:325
+msgid "Clear order follow-up"
+msgstr "متابعة واضحة للطلب"
+
+#: .\pages\templates\pages\home.html:142
+msgid "Browse latest arrivals"
+msgstr "تصفح أحدث المنتجات"
+
+#: .\pages\templates\pages\home.html:145
+#, fuzzy
+#| msgid "Shop all products"
+msgid "See all products"
+msgstr "تسوق كل المنتجات"
+
+#: .\pages\templates\pages\home.html:167
+#, fuzzy
+#| msgid "Browse new products"
+msgid "Browse products"
+msgstr "تصفح المنتجات الجديدة"
+
+#: .\pages\templates\pages\home.html:181
+msgid "Today at Al-Serag"
+msgstr "اليوم في السراج"
+
+#: .\pages\templates\pages\home.html:203
+msgid "Browse the shop"
+msgstr "تصفح المتجر"
+
+#: .\pages\templates\pages\home.html:204
+msgid "Find the right corner to start."
+msgstr "اختر القسم المناسب للبدء."
+
+#: .\pages\templates\pages\home.html:206
+msgid "All products"
+msgstr "كل المنتجات"
+
+#: .\pages\templates\pages\home.html:219
 msgid "No categories available yet."
 msgstr "لا توجد فئات متاحة حتى الآن."
 
-#: .\pages\templates\pages\home.html:193
-msgid "Trending Now"
-msgstr "الأكثر رواجًا"
+#: .\pages\templates\pages\home.html:229
+msgid "Customer favorites"
+msgstr "مفضلات العملاء"
 
-#: .\pages\templates\pages\home.html:195
-msgid "Our most popular products based on sales."
-msgstr "منتجاتنا الأكثر شعبية بناءً على المبيعات."
+#: .\pages\templates\pages\home.html:230
+msgid "Best sellers"
+msgstr "الأكثر مبيعا"
 
-#: .\pages\templates\pages\home.html:206
+#: .\pages\templates\pages\home.html:232
+msgid "View all"
+msgstr "عرض الكل"
+
+#: .\pages\templates\pages\home.html:245
 msgid "No products available yet."
 msgstr "لا توجد منتجات متاحة حتى الآن."
 
-#: .\pages\templates\pages\home.html:218
-msgid "Hand Picked"
-msgstr ""
+#: .\pages\templates\pages\home.html:255
+msgid "The showroom shelf"
+msgstr "رف المعرض"
 
-#: .\pages\templates\pages\home.html:219
+#: .\pages\templates\pages\home.html:256
+msgid "Fresh pieces to consider."
+msgstr "قطع جديدة تستحق الاهتمام."
+
+#: .\pages\templates\pages\home.html:274
+msgid "Marked down"
+msgstr "خصومات مختارة"
+
+#: .\pages\templates\pages\home.html:275
 #, fuzzy
-#| msgid "Products"
-msgid "Featured Products"
-msgstr "المنتجات"
-
-#: .\pages\templates\pages\home.html:220
-msgid "Our curated selection of premium products just for you."
-msgstr ""
-
-#: .\pages\templates\pages\home.html:239
-msgid "Special Offers"
-msgstr "عروض خاصة"
-
-#: .\pages\templates\pages\home.html:240
-msgid "Don't miss out on these amazing deals!"
-msgstr "لا تفوت هذه الصفقات الرائعة!"
+#| msgid "Current discounts"
+msgid "Current offers"
+msgstr "الخصومات الحالية"
 
 #: .\pages\templates\pages\order_success.html:4
 #, fuzzy
@@ -2399,1498 +2500,1370 @@ msgstr "لا تفوت هذه الصفقات الرائعة!"
 msgid "Order Success"
 msgstr "حالة الطلب"
 
-#: .\pages\templates\pages\order_success.html:17
-#, fuzzy
-#| msgid "Order #"
-msgid "Order Placed!"
+#: .\pages\templates\pages\order_success.html:15
+msgid "Order confirmed"
+msgstr "تم تأكيد الطلب"
+
+#: .\pages\templates\pages\order_success.html:16
+msgid "Your order was received successfully"
+msgstr "تم استلام طلبك بنجاح"
+
+#: .\pages\templates\pages\order_success.html:21
+msgid "Order number"
 msgstr "رقم الطلب"
 
-#: .\pages\templates\pages\order_success.html:18
+#: .\pages\templates\pages\order_success.html:25
+msgid "Order total"
+msgstr "إجمالي الطلب"
+
+#: .\pages\templates\pages\order_success.html:33
+msgid "Next step"
+msgstr "الخطوة التالية"
+
+#: .\pages\templates\pages\order_success.html:43
+msgid "Contact us on WhatsApp"
+msgstr "تواصل معنا على واتساب"
+
+#: .\pages\templates\pages\partials\_offer_card.html:5
 #, fuzzy
-#| msgid "Order Summary"
-msgid "Order Number"
-msgstr "ملخص الطلب"
+#| msgid "Offers"
+msgid "Offer"
+msgstr "العروض"
 
 #
 # Offer Card Partial Translations
 #
-#: .\pages\templates\pages\partials\_offer_card.html:7
-#: .\pages\templates\pages\partials\_offer_card.html:11
+#: .\pages\templates\pages\partials\_offer_card.html:10
+#: .\pages\templates\pages\partials\_offer_card.html:14
 #: .\pages\templates\pages\product_detail.html:79
 msgid "OFF"
 msgstr "خصم"
 
-#: .\pages\templates\pages\partials\_offer_card.html:20
+#: .\pages\templates\pages\partials\_offer_card.html:23
 msgid "On all"
 msgstr "على جميع"
 
-#: .\pages\templates\pages\partials\_offer_card.html:22
+#: .\pages\templates\pages\partials\_offer_card.html:25
 #, fuzzy
 #| msgid "Store-wide offer"
 msgid "Storewide offer"
 msgstr "عرض على جميع المنتجات"
 
-#: .\pages\templates\pages\partials\_product_card.html:10
-msgid "No image"
-msgstr "لا توجد صورة"
-
 #
 # Product Card Partial Translations
 #
-#: .\pages\templates\pages\partials\_product_card.html:16
+#: .\pages\templates\pages\partials\_product_card.html:15
 msgid "Best Seller"
 msgstr "الأكثر مبيعًا"
 
 #
 # Product Detail Page Translations
 #
-#: .\pages\templates\pages\partials\_product_card.html:20
+#: .\pages\templates\pages\partials\_product_card.html:19
 #: .\pages\templates\pages\product_detail.html:70
+#: .\pages\templates\pages\product_detail.html:288
 msgid "Out of Stock"
 msgstr "غير متوفر"
 
-#: .\pages\templates\pages\partials\_product_card.html:24
+#: .\pages\templates\pages\partials\_product_card.html:23
 msgid "SALE"
 msgstr "تخفيض"
 
-#: .\pages\templates\pages\product_detail.html:127
+#: .\pages\templates\pages\product_detail.html:119
+msgid "No online payment is required on this checkout."
+msgstr "لا تحتاج إلى دفع إلكتروني في هذه الصفحة."
+
+#: .\pages\templates\pages\product_detail.html:128
+msgid "Secure checkout"
+msgstr "طلب آمن"
+
+#: .\pages\templates\pages\product_detail.html:137
+msgid "WhatsApp support"
+msgstr "دعم عبر واتساب"
+
+#: .\pages\templates\pages\product_detail.html:138
+msgid "Ask before you order if you need help."
+msgstr "اسألنا قبل الطلب إذا احتجت أي مساعدة."
+
+#: .\pages\templates\pages\product_detail.html:170
 msgid "In Stock"
 msgstr "متوفر"
 
-#: .\pages\templates\pages\product_detail.html:127
+#: .\pages\templates\pages\product_detail.html:170
 msgid "available"
 msgstr "متاح"
 
-#: .\pages\templates\pages\product_detail.html:135
+#: .\pages\templates\pages\product_detail.html:178
 msgid "Color"
 msgstr "اللون"
 
-#: .\pages\templates\pages\product_detail.html:196
+#: .\pages\templates\pages\product_detail.html:239
 msgid "Add to Cart"
 msgstr "أضف إلى السلة"
 
-#: .\pages\templates\pages\product_detail.html:213
+#: .\pages\templates\pages\product_detail.html:256
+#: .\pages\templates\pages\product_detail.html:359
 msgid "Buy Now"
 msgstr "اشتر الآن"
 
-#: .\pages\templates\pages\product_detail.html:227
+#: .\pages\templates\pages\product_detail.html:268
+msgid "Ask about this product on WhatsApp"
+msgstr "اسأل عن المنتج على واتساب"
+
+#: .\pages\templates\pages\product_detail.html:279
+msgid "Product information"
+msgstr "معلومات المنتج"
+
+#: .\pages\templates\pages\product_detail.html:286
+msgid "Stock status"
+msgstr "حالة التوفر"
+
+#: .\pages\templates\pages\product_detail.html:288
+msgid "In stock"
+msgstr "متوفر"
+
+#: .\pages\templates\pages\product_detail.html:293
+msgid "Available colors"
+msgstr "الألوان المتاحة"
+
+#: .\pages\templates\pages\product_detail.html:304
+msgid "Shipping and delivery"
+msgstr "الشحن والتوصيل"
+
+#: .\pages\templates\pages\product_detail.html:306
+msgid "Areas served"
+msgstr "مناطق التوصيل"
+
+#: .\pages\templates\pages\product_detail.html:308
+msgid "Estimated delivery"
+msgstr "مدة التوصيل المتوقعة"
+
+#: .\pages\templates\pages\product_detail.html:313
+msgid "Exchange and returns"
+msgstr "الاستبدال والاسترجاع"
+
+#: .\pages\templates\pages\product_detail.html:320
+msgid "Why buy from Al-Serag?"
+msgstr "لماذا تشتري من السراج؟"
+
+#: .\pages\templates\pages\product_detail.html:322
+msgid "Hand-picked products"
+msgstr "منتجات مختارة بعناية"
+
+#: .\pages\templates\pages\product_detail.html:323
+msgid "WhatsApp customer support"
+msgstr "خدمة عملاء عبر واتساب"
+
+#: .\pages\templates\pages\product_detail.html:324
+#, fuzzy
+#| msgid "Delivery across Egypt"
+msgid "Delivery inside Egypt"
+msgstr "توصيل داخل مصر"
+
+#: .\pages\templates\pages\product_detail.html:332
 msgid "You May Also Like"
 msgstr "قد يعجبك أيضًا"
 
-#: .\pages\views.py:296
+#: .\pages\views.py:38
+msgid "Egypt"
+msgstr "مصر"
+
+#: .\pages\views.py:39
+msgid "Cash on delivery"
+msgstr "الدفع عند الاستلام"
+
+#: .\pages\views.py:40
+msgid ""
+"Contact us on WhatsApp before ordering if you need exchange or return "
+"details."
+msgstr ""
+"تواصل معنا على واتساب قبل الطلب إذا كنت تحتاج تفاصيل الاستبدال أو الاسترجاع."
+
+#: .\pages\views.py:41
+msgid "We will contact you by phone or WhatsApp to confirm the order details."
+msgstr "سنتواصل معك عبر الهاتف أو واتساب لتأكيد تفاصيل الطلب."
+
+#: .\pages\views.py:42
+msgid "Your details are used only to complete your order."
+msgstr "تُستخدم بياناتك فقط لإتمام طلبك."
+
+#: .\pages\views.py:291
+#, python-format
+msgid ""
+"Hello, I want to ask about this product:\n"
+"%(name)s\n"
+"Price: EGP %(price)s\n"
+"%(url)s"
+msgstr ""
+"مرحباً، أريد الاستفسار عن هذا المنتج:\n"
+"%(name)s\n"
+"السعر: %(price)s جنيه\n"
+"%(url)s"
+
+#: .\pages\views.py:343
 #, python-format
 msgid "Order #%(order_number)s updated to %(status)s."
 msgstr "تم تحديث الطلب رقم %(order_number)s إلى %(status)s."
 
-#: .\pages\views.py:298
+#: .\pages\views.py:345
 msgid "Invalid status."
 msgstr "حالة غير صالحة."
 
-#: .\pages\views.py:339
+#: .\pages\views.py:387
 #, python-format
 msgid "%(product)s is out of stock."
 msgstr "%(product)s غير متوفر حالياً."
 
-#: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
-msgid "Messages"
-msgstr "الرسائل"
-
-#: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
-msgid "Site Maps"
-msgstr "خرائط الموقع"
-
-#: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
-msgid "Static Files"
-msgstr "الملفات الثابتة"
-
-#: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
-msgid "Syndication"
-msgstr "التلقيم"
-
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: .\venv\Lib\site-packages\django\core\paginator.py:30
-msgid "…"
-msgstr "…"
-
-#: .\venv\Lib\site-packages\django\core\paginator.py:32
-msgid "That page number is not an integer"
-msgstr "رقم الصفحة ليس عددًا صحيحًا"
-
-#: .\venv\Lib\site-packages\django\core\paginator.py:33
-msgid "That page number is less than 1"
-msgstr "رقم الصفحة أقل من 1"
-
-#: .\venv\Lib\site-packages\django\core\paginator.py:34
-msgid "That page contains no results"
-msgstr "هذه الصفحة لا تحتوي على نتائج"
-
-#: .\venv\Lib\site-packages\django\core\validators.py:22
-msgid "Enter a valid value."
-msgstr "أدخل قيمة صالحة."
-
-#: .\venv\Lib\site-packages\django\core\validators.py:70
-msgid "Enter a valid domain name."
-msgstr "أدخل اسم نطاق صالحًا."
-
-#: .\venv\Lib\site-packages\django\core\validators.py:153
-#: .\venv\Lib\site-packages\django\forms\fields.py:775
-msgid "Enter a valid URL."
-msgstr "أدخل رابط URL صالحًا."
-
-#: .\venv\Lib\site-packages\django\core\validators.py:200
-msgid "Enter a valid integer."
-msgstr "أدخل عددًا صحيحًا صالحًا."
-
-#: .\venv\Lib\site-packages\django\core\validators.py:211
-msgid "Enter a valid email address."
-msgstr "أدخل عنوان بريد إلكتروني صالحًا."
-
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: .\venv\Lib\site-packages\django\core\validators.py:289
-msgid ""
-"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr "أدخل “slug” صالحًا يتكوّن من حروف وأرقام وشرطة سفلية أو شرطة."
-
-#: .\venv\Lib\site-packages\django\core\validators.py:297
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr "أدخل “slug” صالحًا يتكوّن من حروف Unicode وأرقام وشرطة سفلية أو شرطة."
-
-#: .\venv\Lib\site-packages\django\core\validators.py:309
-#: .\venv\Lib\site-packages\django\core\validators.py:318
-#: .\venv\Lib\site-packages\django\core\validators.py:332
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2220
+#: .\pages\views.py:500
 #, python-format
-msgid "Enter a valid %(protocol)s address."
-msgstr "أدخل عنوان %(protocol)s صالحًا."
+msgid "Hello, I want to follow up on order %(order_number)s."
+msgstr "مرحباً، أريد متابعة الطلب رقم %(order_number)s."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:311
-msgid "IPv4"
-msgstr "IPv4"
+#~ msgid "Messages"
+#~ msgstr "الرسائل"
 
-#: .\venv\Lib\site-packages\django\core\validators.py:320
-#: .\venv\Lib\site-packages\django\utils\ipv6.py:43
-msgid "IPv6"
-msgstr "IPv6"
+#~ msgid "Site Maps"
+#~ msgstr "خرائط الموقع"
 
-#: .\venv\Lib\site-packages\django\core\validators.py:334
-msgid "IPv4 or IPv6"
-msgstr "IPv4 أو IPv6"
+#~ msgid "Static Files"
+#~ msgstr "الملفات الثابتة"
 
-#: .\venv\Lib\site-packages\django\core\validators.py:375
-msgid "Enter only digits separated by commas."
-msgstr "أدخل أرقامًا فقط مفصولة بفواصل."
+#~ msgid "Syndication"
+#~ msgstr "التلقيم"
 
-#: .\venv\Lib\site-packages\django\core\validators.py:381
+#~ msgid "…"
+#~ msgstr "…"
+
+#~ msgid "That page number is not an integer"
+#~ msgstr "رقم الصفحة ليس عددًا صحيحًا"
+
+#~ msgid "That page number is less than 1"
+#~ msgstr "رقم الصفحة أقل من 1"
+
+#~ msgid "That page contains no results"
+#~ msgstr "هذه الصفحة لا تحتوي على نتائج"
+
+#~ msgid "Enter a valid value."
+#~ msgstr "أدخل قيمة صالحة."
+
+#~ msgid "Enter a valid domain name."
+#~ msgstr "أدخل اسم نطاق صالحًا."
+
+#~ msgid "Enter a valid URL."
+#~ msgstr "أدخل رابط URL صالحًا."
+
+#~ msgid "Enter a valid integer."
+#~ msgstr "أدخل عددًا صحيحًا صالحًا."
+
+#~ msgid "Enter a valid email address."
+#~ msgstr "أدخل عنوان بريد إلكتروني صالحًا."
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of letters, numbers, underscores or "
+#~ "hyphens."
+#~ msgstr "أدخل “slug” صالحًا يتكوّن من حروف وأرقام وشرطة سفلية أو شرطة."
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, "
+#~ "or hyphens."
+#~ msgstr "أدخل “slug” صالحًا يتكوّن من حروف Unicode وأرقام وشرطة سفلية أو شرطة."
+
 #, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr "تأكد أن هذه القيمة هي %(limit_value)s (إنها %(show_value)s)."
+#~ msgid "Enter a valid %(protocol)s address."
+#~ msgstr "أدخل عنوان %(protocol)s صالحًا."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:416
+#~ msgid "IPv4"
+#~ msgstr "IPv4"
+
+#~ msgid "IPv6"
+#~ msgstr "IPv6"
+
+#~ msgid "IPv4 or IPv6"
+#~ msgstr "IPv4 أو IPv6"
+
+#~ msgid "Enter only digits separated by commas."
+#~ msgstr "أدخل أرقامًا فقط مفصولة بفواصل."
+
 #, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr "تأكد أن هذه القيمة أقل من أو تساوي %(limit_value)s."
+#~ msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+#~ msgstr "تأكد أن هذه القيمة هي %(limit_value)s (إنها %(show_value)s)."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:425
 #, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr "تأكد أن هذه القيمة أكبر من أو تساوي %(limit_value)s."
+#~ msgid "Ensure this value is less than or equal to %(limit_value)s."
+#~ msgstr "تأكد أن هذه القيمة أقل من أو تساوي %(limit_value)s."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:434
 #, python-format
-msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr "تأكد أن هذه القيمة من مضاعفات قيمة الخطوة %(limit_value)s."
+#~ msgid "Ensure this value is greater than or equal to %(limit_value)s."
+#~ msgstr "تأكد أن هذه القيمة أكبر من أو تساوي %(limit_value)s."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:441
 #, python-format
-msgid ""
-"Ensure this value is a multiple of step size %(limit_value)s, starting from "
-"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
-msgstr ""
-"تأكد أن هذه القيمة من مضاعفات قيمة الخطوة %(limit_value)s بدءًا من "
-"%(offset)s، مثل: %(offset)s و%(valid_value1)s و%(valid_value2)s ... إلخ."
+#~ msgid "Ensure this value is a multiple of step size %(limit_value)s."
+#~ msgstr "تأكد أن هذه القيمة من مضاعفات قيمة الخطوة %(limit_value)s."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:473
 #, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-"تأكد أن هذه القيمة تحتوي على %(limit_value)d حرف على الأقل (تحتوي على "
-"%(show_value)d)."
-msgstr[1] ""
-"تأكد أن هذه القيمة تحتوي على حرف واحد على الأقل (تحتوي على %(show_value)d)."
-msgstr[2] ""
-"تأكد أن هذه القيمة تحتوي على حرفين على الأقل (تحتوي على %(show_value)d)."
-msgstr[3] ""
-"تأكد أن هذه القيمة تحتوي على %(limit_value)d أحرف على الأقل (تحتوي على "
-"%(show_value)d)."
-msgstr[4] ""
-"تأكد أن هذه القيمة تحتوي على %(limit_value)d حرفًا على الأقل (تحتوي على "
-"%(show_value)d)."
-msgstr[5] ""
-"تأكد أن هذه القيمة تحتوي على %(limit_value)d حرف على الأقل (تحتوي على "
-"%(show_value)d)."
+#~ msgid ""
+#~ "Ensure this value is a multiple of step size %(limit_value)s, starting "
+#~ "from %(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and "
+#~ "so on."
+#~ msgstr ""
+#~ "تأكد أن هذه القيمة من مضاعفات قيمة الخطوة %(limit_value)s بدءًا من "
+#~ "%(offset)s، مثل: %(offset)s و%(valid_value1)s و%(valid_value2)s ... إلخ."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:491
 #, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-"تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرف (تحتوي على "
-"%(show_value)d)."
-msgstr[1] ""
-"تأكد أن هذه القيمة لا تحتوي على أكثر من حرف واحد (تحتوي على %(show_value)d)."
-msgstr[2] ""
-"تأكد أن هذه القيمة لا تحتوي على أكثر من حرفين (تحتوي على %(show_value)d)."
-msgstr[3] ""
-"تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d أحرف (تحتوي على "
-"%(show_value)d)."
-msgstr[4] ""
-"تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرفًا (تحتوي على "
-"%(show_value)d)."
-msgstr[5] ""
-"تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرف (تحتوي على "
-"%(show_value)d)."
+#~ msgid ""
+#~ "Ensure this value has at least %(limit_value)d character (it has "
+#~ "%(show_value)d)."
+#~ msgid_plural ""
+#~ "Ensure this value has at least %(limit_value)d characters (it has "
+#~ "%(show_value)d)."
+#~ msgstr[0] ""
+#~ "تأكد أن هذه القيمة تحتوي على %(limit_value)d حرف على الأقل (تحتوي على "
+#~ "%(show_value)d)."
+#~ msgstr[1] ""
+#~ "تأكد أن هذه القيمة تحتوي على حرف واحد على الأقل (تحتوي على "
+#~ "%(show_value)d)."
+#~ msgstr[2] ""
+#~ "تأكد أن هذه القيمة تحتوي على حرفين على الأقل (تحتوي على %(show_value)d)."
+#~ msgstr[3] ""
+#~ "تأكد أن هذه القيمة تحتوي على %(limit_value)d أحرف على الأقل (تحتوي على "
+#~ "%(show_value)d)."
+#~ msgstr[4] ""
+#~ "تأكد أن هذه القيمة تحتوي على %(limit_value)d حرفًا على الأقل (تحتوي على "
+#~ "%(show_value)d)."
+#~ msgstr[5] ""
+#~ "تأكد أن هذه القيمة تحتوي على %(limit_value)d حرف على الأقل (تحتوي على "
+#~ "%(show_value)d)."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:514
-#: .\venv\Lib\site-packages\django\forms\fields.py:366
-#: .\venv\Lib\site-packages\django\forms\fields.py:405
-msgid "Enter a number."
-msgstr "أدخل رقمًا."
-
-#: .\venv\Lib\site-packages\django\core\validators.py:516
 #, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] "تأكد ألا يزيد إجمالي عدد الأرقام عن %(max)s."
-msgstr[1] "تأكد ألا يزيد إجمالي عدد الأرقام عن رقم واحد."
-msgstr[2] "تأكد ألا يزيد إجمالي عدد الأرقام عن رقمين."
-msgstr[3] "تأكد ألا يزيد إجمالي عدد الأرقام عن %(max)s أرقام."
-msgstr[4] "تأكد ألا يزيد إجمالي عدد الأرقام عن %(max)s رقمًا."
-msgstr[5] "تأكد ألا يزيد إجمالي عدد الأرقام عن %(max)s رقم."
+#~ msgid ""
+#~ "Ensure this value has at most %(limit_value)d character (it has "
+#~ "%(show_value)d)."
+#~ msgid_plural ""
+#~ "Ensure this value has at most %(limit_value)d characters (it has "
+#~ "%(show_value)d)."
+#~ msgstr[0] ""
+#~ "تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرف (تحتوي على "
+#~ "%(show_value)d)."
+#~ msgstr[1] ""
+#~ "تأكد أن هذه القيمة لا تحتوي على أكثر من حرف واحد (تحتوي على "
+#~ "%(show_value)d)."
+#~ msgstr[2] ""
+#~ "تأكد أن هذه القيمة لا تحتوي على أكثر من حرفين (تحتوي على %(show_value)d)."
+#~ msgstr[3] ""
+#~ "تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d أحرف (تحتوي على "
+#~ "%(show_value)d)."
+#~ msgstr[4] ""
+#~ "تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرفًا (تحتوي على "
+#~ "%(show_value)d)."
+#~ msgstr[5] ""
+#~ "تأكد أن هذه القيمة لا تحتوي على أكثر من %(limit_value)d حرف (تحتوي على "
+#~ "%(show_value)d)."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:521
+#~ msgid "Enter a number."
+#~ msgstr "أدخل رقمًا."
+
 #, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] "تأكد ألا يزيد عدد المنازل العشرية عن %(max)s."
-msgstr[1] "تأكد ألا يزيد عدد المنازل العشرية عن منزلة واحدة."
-msgstr[2] "تأكد ألا يزيد عدد المنازل العشرية عن منزلتين."
-msgstr[3] "تأكد ألا يزيد عدد المنازل العشرية عن %(max)s منازل."
-msgstr[4] "تأكد ألا يزيد عدد المنازل العشرية عن %(max)s منزلةً."
-msgstr[5] "تأكد ألا يزيد عدد المنازل العشرية عن %(max)s منزلة."
+#~ msgid "Ensure that there are no more than %(max)s digit in total."
+#~ msgid_plural "Ensure that there are no more than %(max)s digits in total."
+#~ msgstr[0] "تأكد ألا يزيد إجمالي عدد الأرقام عن %(max)s."
+#~ msgstr[1] "تأكد ألا يزيد إجمالي عدد الأرقام عن رقم واحد."
+#~ msgstr[2] "تأكد ألا يزيد إجمالي عدد الأرقام عن رقمين."
+#~ msgstr[3] "تأكد ألا يزيد إجمالي عدد الأرقام عن %(max)s أرقام."
+#~ msgstr[4] "تأكد ألا يزيد إجمالي عدد الأرقام عن %(max)s رقمًا."
+#~ msgstr[5] "تأكد ألا يزيد إجمالي عدد الأرقام عن %(max)s رقم."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:526
 #, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن %(max)s."
-msgstr[1] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن رقم واحد."
-msgstr[2] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن رقمين."
-msgstr[3] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن %(max)s أرقام."
-msgstr[4] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن %(max)s رقمًا."
-msgstr[5] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن %(max)s رقم."
+#~ msgid "Ensure that there are no more than %(max)s decimal place."
+#~ msgid_plural "Ensure that there are no more than %(max)s decimal places."
+#~ msgstr[0] "تأكد ألا يزيد عدد المنازل العشرية عن %(max)s."
+#~ msgstr[1] "تأكد ألا يزيد عدد المنازل العشرية عن منزلة واحدة."
+#~ msgstr[2] "تأكد ألا يزيد عدد المنازل العشرية عن منزلتين."
+#~ msgstr[3] "تأكد ألا يزيد عدد المنازل العشرية عن %(max)s منازل."
+#~ msgstr[4] "تأكد ألا يزيد عدد المنازل العشرية عن %(max)s منزلةً."
+#~ msgstr[5] "تأكد ألا يزيد عدد المنازل العشرية عن %(max)s منزلة."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:597
 #, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr ""
-"امتداد الملف “%(extension)s” غير مسموح به. الامتدادات المسموح بها هي: "
-"%(allowed_extensions)s."
+#~ msgid ""
+#~ "Ensure that there are no more than %(max)s digit before the decimal point."
+#~ msgid_plural ""
+#~ "Ensure that there are no more than %(max)s digits before the decimal "
+#~ "point."
+#~ msgstr[0] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن %(max)s."
+#~ msgstr[1] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن رقم واحد."
+#~ msgstr[2] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن رقمين."
+#~ msgstr[3] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن %(max)s أرقام."
+#~ msgstr[4] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن %(max)s رقمًا."
+#~ msgstr[5] "تأكد ألا يزيد عدد الأرقام قبل الفاصلة العشرية عن %(max)s رقم."
 
-#: .\venv\Lib\site-packages\django\core\validators.py:659
-msgid "Null characters are not allowed."
-msgstr "لا يُسمح بمحارف NULL."
-
-#: .\venv\Lib\site-packages\django\db\models\base.py:1600
-#: .\venv\Lib\site-packages\django\forms\models.py:908
-msgid "and"
-msgstr "و"
-
-#: .\venv\Lib\site-packages\django\db\models\base.py:1602
 #, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr "%(model_name)s بهذه %(field_labels)s موجود بالفعل."
+#~ msgid ""
+#~ "File extension “%(extension)s” is not allowed. Allowed extensions are: "
+#~ "%(allowed_extensions)s."
+#~ msgstr ""
+#~ "امتداد الملف “%(extension)s” غير مسموح به. الامتدادات المسموح بها هي: "
+#~ "%(allowed_extensions)s."
 
-#: .\venv\Lib\site-packages\django\db\models\constraints.py:22
+#~ msgid "Null characters are not allowed."
+#~ msgstr "لا يُسمح بمحارف NULL."
+
+#~ msgid "and"
+#~ msgstr "و"
+
 #, python-format
-msgid "Constraint “%(name)s” is violated."
-msgstr "تم انتهاك القيد “%(name)s”."
+#~ msgid "%(model_name)s with this %(field_labels)s already exists."
+#~ msgstr "%(model_name)s بهذه %(field_labels)s موجود بالفعل."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:134
 #, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr "القيمة %(value)r ليست خيارًا صالحًا."
+#~ msgid "Constraint “%(name)s” is violated."
+#~ msgstr "تم انتهاك القيد “%(name)s”."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:135
-msgid "This field cannot be null."
-msgstr "لا يمكن أن يكون هذا الحقل فارغًا (NULL)."
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:136
-msgid "This field cannot be blank."
-msgstr "لا يمكن ترك هذا الحقل فارغًا."
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:137
 #, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr "%(model_name)s بهذه %(field_label)s موجود بالفعل."
+#~ msgid "Value %(value)r is not a valid choice."
+#~ msgstr "القيمة %(value)r ليست خيارًا صالحًا."
 
-#. Translators: The 'lookup_type' is one of 'date', 'year' or
-#. 'month'. Eg: "Title must be unique for pub_date year"
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:141
+#~ msgid "This field cannot be null."
+#~ msgstr "لا يمكن أن يكون هذا الحقل فارغًا (NULL)."
+
+#~ msgid "This field cannot be blank."
+#~ msgstr "لا يمكن ترك هذا الحقل فارغًا."
+
 #, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr ""
-"يجب أن تكون %(field_label)s فريدة بحسب %(date_field_label)s "
-"(%(lookup_type)s)."
+#~ msgid "%(model_name)s with this %(field_label)s already exists."
+#~ msgstr "%(model_name)s بهذه %(field_label)s موجود بالفعل."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:180
 #, python-format
-msgid "Field of type: %(field_type)s"
-msgstr "حقل من النوع: %(field_type)s"
+#~ msgid ""
+#~ "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+#~ msgstr ""
+#~ "يجب أن تكون %(field_label)s فريدة بحسب %(date_field_label)s "
+#~ "(%(lookup_type)s)."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1162
 #, python-format
-msgid "“%(value)s” value must be either True or False."
-msgstr "يجب أن تكون القيمة “%(value)s” إما True أو False."
+#~ msgid "Field of type: %(field_type)s"
+#~ msgstr "حقل من النوع: %(field_type)s"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1163
 #, python-format
-msgid "“%(value)s” value must be either True, False, or None."
-msgstr "يجب أن تكون القيمة “%(value)s” إما True أو False أو None."
+#~ msgid "“%(value)s” value must be either True or False."
+#~ msgstr "يجب أن تكون القيمة “%(value)s” إما True أو False."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1165
-msgid "Boolean (Either True or False)"
-msgstr "منطقي (إما True أو False)"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1215
 #, python-format
-msgid "String (up to %(max_length)s)"
-msgstr "نص (حتى %(max_length)s)"
+#~ msgid "“%(value)s” value must be either True, False, or None."
+#~ msgstr "يجب أن تكون القيمة “%(value)s” إما True أو False أو None."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1217
-msgid "String (unlimited)"
-msgstr "نص (غير محدود)"
+#~ msgid "Boolean (Either True or False)"
+#~ msgstr "منطقي (إما True أو False)"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1326
-msgid "Comma-separated integers"
-msgstr "أعداد صحيحة مفصولة بفواصل"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1427
 #, python-format
-msgid ""
-"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr ""
-"القيمة “%(value)s” بتنسيق تاريخ غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD."
+#~ msgid "String (up to %(max_length)s)"
+#~ msgstr "نص (حتى %(max_length)s)"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1431
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1566
+#~ msgid "String (unlimited)"
+#~ msgstr "نص (غير محدود)"
+
+#~ msgid "Comma-separated integers"
+#~ msgstr "أعداد صحيحة مفصولة بفواصل"
+
 #, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr "القيمة “%(value)s” بالتنسيق الصحيح (YYYY-MM-DD) لكنها تاريخ غير صالح."
+#~ msgid ""
+#~ "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+#~ "format."
+#~ msgstr ""
+#~ "القيمة “%(value)s” بتنسيق تاريخ غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1435
-msgid "Date (without time)"
-msgstr "تاريخ (بدون وقت)"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1562
 #, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ] format."
-msgstr ""
-"القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ]."
+#~ msgid ""
+#~ "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an "
+#~ "invalid date."
+#~ msgstr ""
+#~ "القيمة “%(value)s” بالتنسيق الصحيح (YYYY-MM-DD) لكنها تاريخ غير صالح."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1570
+#~ msgid "Date (without time)"
+#~ msgstr "تاريخ (بدون وقت)"
+
 #, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr ""
-"القيمة “%(value)s” بالتنسيق الصحيح (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) "
-"لكنها تاريخ/وقت غير صالح."
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+#~ "HH:MM[:ss[.uuuuuu]][TZ] format."
+#~ msgstr ""
+#~ "القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق YYYY-MM-DD "
+#~ "HH:MM[:ss[.uuuuuu]][TZ]."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1575
-msgid "Date (with time)"
-msgstr "تاريخ (مع وقت)"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1702
 #, python-format
-msgid "“%(value)s” value must be a decimal number."
-msgstr "يجب أن تكون القيمة “%(value)s” عددًا عشريًا."
+#~ msgid ""
+#~ "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+#~ "[TZ]) but it is an invalid date/time."
+#~ msgstr ""
+#~ "القيمة “%(value)s” بالتنسيق الصحيح (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) "
+#~ "لكنها تاريخ/وقت غير صالح."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1704
-msgid "Decimal number"
-msgstr "عدد عشري"
+#~ msgid "Date (with time)"
+#~ msgstr "تاريخ (مع وقت)"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1864
 #, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] "
-"[[HH:]MM:]ss[.uuuuuu] format."
-msgstr ""
-"القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق [DD] "
-"[[HH:]MM:]ss[.uuuuuu]."
+#~ msgid "“%(value)s” value must be a decimal number."
+#~ msgstr "يجب أن تكون القيمة “%(value)s” عددًا عشريًا."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1868
-msgid "Duration"
-msgstr "مدة"
+#~ msgid "Decimal number"
+#~ msgstr "عدد عشري"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1920
-msgid "Email address"
-msgstr "عنوان بريد إلكتروني"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1945
-msgid "File path"
-msgstr "مسار ملف"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2023
 #, python-format
-msgid "“%(value)s” value must be a float."
-msgstr "يجب أن تكون القيمة “%(value)s” عددًا عشريًا (float)."
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format. It must be in [DD] "
+#~ "[[HH:]MM:]ss[.uuuuuu] format."
+#~ msgstr ""
+#~ "القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق [DD] "
+#~ "[[HH:]MM:]ss[.uuuuuu]."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2025
-msgid "Floating point number"
-msgstr "عدد عشري (نقطة عائمة)"
+#~ msgid "Duration"
+#~ msgstr "مدة"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2065
+#~ msgid "Email address"
+#~ msgstr "عنوان بريد إلكتروني"
+
+#~ msgid "File path"
+#~ msgstr "مسار ملف"
+
 #, python-format
-msgid "“%(value)s” value must be an integer."
-msgstr "يجب أن تكون القيمة “%(value)s” عددًا صحيحًا."
+#~ msgid "“%(value)s” value must be a float."
+#~ msgstr "يجب أن تكون القيمة “%(value)s” عددًا عشريًا (float)."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2067
-msgid "Integer"
-msgstr "عدد صحيح"
+#~ msgid "Floating point number"
+#~ msgstr "عدد عشري (نقطة عائمة)"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2163
-msgid "Big (8 byte) integer"
-msgstr "عدد صحيح كبير (8 بايت)"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2180
-msgid "Small integer"
-msgstr "عدد صحيح صغير"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2188
-msgid "IPv4 address"
-msgstr "عنوان IPv4"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2219
-msgid "IP address"
-msgstr "عنوان IP"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2310
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2311
 #, python-format
-msgid "“%(value)s” value must be either None, True or False."
-msgstr "يجب أن تكون القيمة “%(value)s” إما None أو True أو False."
+#~ msgid "“%(value)s” value must be an integer."
+#~ msgstr "يجب أن تكون القيمة “%(value)s” عددًا صحيحًا."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2313
-msgid "Boolean (Either True, False or None)"
-msgstr "منطقي (إما True أو False أو None)"
+#~ msgid "Integer"
+#~ msgstr "عدد صحيح"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2364
-msgid "Positive big integer"
-msgstr "عدد صحيح كبير موجب"
+#~ msgid "Big (8 byte) integer"
+#~ msgstr "عدد صحيح كبير (8 بايت)"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2379
-msgid "Positive integer"
-msgstr "عدد صحيح موجب"
+#~ msgid "Small integer"
+#~ msgstr "عدد صحيح صغير"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2394
-msgid "Positive small integer"
-msgstr "عدد صحيح صغير موجب"
+#~ msgid "IPv4 address"
+#~ msgstr "عنوان IPv4"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2410
+#~ msgid "IP address"
+#~ msgstr "عنوان IP"
+
 #, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr "سلاج (حتى %(max_length)s)"
+#~ msgid "“%(value)s” value must be either None, True or False."
+#~ msgstr "يجب أن تكون القيمة “%(value)s” إما None أو True أو False."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2446
-msgid "Text"
-msgstr "نص"
+#~ msgid "Boolean (Either True, False or None)"
+#~ msgstr "منطقي (إما True أو False أو None)"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2526
+#~ msgid "Positive big integer"
+#~ msgstr "عدد صحيح كبير موجب"
+
+#~ msgid "Positive integer"
+#~ msgstr "عدد صحيح موجب"
+
+#~ msgid "Positive small integer"
+#~ msgstr "عدد صحيح صغير موجب"
+
 #, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr ""
-"القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق HH:MM[:ss[.uuuuuu]]."
+#~ msgid "Slug (up to %(max_length)s)"
+#~ msgstr "سلاج (حتى %(max_length)s)"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2530
+#~ msgid "Text"
+#~ msgstr "نص"
+
 #, python-format
-msgid ""
-"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr ""
-"القيمة “%(value)s” بالتنسيق الصحيح (HH:MM[:ss[.uuuuuu]]) لكنها وقت غير صالح."
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format. It must be in "
+#~ "HH:MM[:ss[.uuuuuu]] format."
+#~ msgstr ""
+#~ "القيمة “%(value)s” بتنسيق غير صالح. يجب أن يكون بالتنسيق "
+#~ "HH:MM[:ss[.uuuuuu]]."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2534
-msgid "Time"
-msgstr "وقت"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2642
-msgid "URL"
-msgstr "رابط (URL)"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2666
-msgid "Raw binary data"
-msgstr "بيانات ثنائية خام"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2731
 #, python-format
-msgid "“%(value)s” is not a valid UUID."
-msgstr "‏“%(value)s” ليس UUID صالحًا."
+#~ msgid ""
+#~ "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is "
+#~ "an invalid time."
+#~ msgstr ""
+#~ "القيمة “%(value)s” بالتنسيق الصحيح (HH:MM[:ss[.uuuuuu]]) لكنها وقت غير "
+#~ "صالح."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2733
-msgid "Universally unique identifier"
-msgstr "معرّف فريد عالميًا"
+#~ msgid "Time"
+#~ msgstr "وقت"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\files.py:244
-msgid "File"
-msgstr "ملف"
+#~ msgid "URL"
+#~ msgstr "رابط (URL)"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
-msgid "Image"
-msgstr "صورة"
+#~ msgid "Raw binary data"
+#~ msgstr "بيانات ثنائية خام"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\json.py:24
-msgid "A JSON object"
-msgstr "كائن JSON"
-
-#: .\venv\Lib\site-packages\django\db\models\fields\json.py:26
-msgid "Value must be valid JSON."
-msgstr "يجب أن تكون القيمة JSON صالحة."
-
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:979
 #, python-format
-msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
-msgstr "كائن %(model)s بحقل %(field)s والقيمة %(value)r ليس خيارًا صالحًا."
+#~ msgid "“%(value)s” is not a valid UUID."
+#~ msgstr "‏“%(value)s” ليس UUID صالحًا."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:982
-msgid "Foreign Key (type determined by related field)"
-msgstr "مفتاح أجنبي (يُحدد النوع بواسطة الحقل المرتبط)"
+#~ msgid "Universally unique identifier"
+#~ msgstr "معرّف فريد عالميًا"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1276
-msgid "One-to-one relationship"
-msgstr "علاقة واحد لواحد"
+#~ msgid "File"
+#~ msgstr "ملف"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1333
+#~ msgid "Image"
+#~ msgstr "صورة"
+
+#~ msgid "A JSON object"
+#~ msgstr "كائن JSON"
+
+#~ msgid "Value must be valid JSON."
+#~ msgstr "يجب أن تكون القيمة JSON صالحة."
+
 #, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr "علاقة %(from)s-%(to)s"
+#~ msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
+#~ msgstr "كائن %(model)s بحقل %(field)s والقيمة %(value)r ليس خيارًا صالحًا."
 
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1335
+#~ msgid "Foreign Key (type determined by related field)"
+#~ msgstr "مفتاح أجنبي (يُحدد النوع بواسطة الحقل المرتبط)"
+
+#~ msgid "One-to-one relationship"
+#~ msgstr "علاقة واحد لواحد"
+
 #, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr "علاقات %(from)s-%(to)s"
+#~ msgid "%(from)s-%(to)s relationship"
+#~ msgstr "علاقة %(from)s-%(to)s"
 
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1383
-msgid "Many-to-many relationship"
-msgstr "علاقة متعدد لمتعدد"
+#, python-format
+#~ msgid "%(from)s-%(to)s relationships"
+#~ msgstr "علاقات %(from)s-%(to)s"
 
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
-#: .\venv\Lib\site-packages\django\forms\boundfield.py:185
-msgid ":?.!"
-msgstr ":?.!"
+#~ msgid "Many-to-many relationship"
+#~ msgstr "علاقة متعدد لمتعدد"
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:95
-msgid "This field is required."
-msgstr "هذا الحقل مطلوب."
+#~ msgid ":?.!"
+#~ msgstr ":?.!"
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:315
-msgid "Enter a whole number."
-msgstr "أدخل عددًا صحيحًا."
+#~ msgid "This field is required."
+#~ msgstr "هذا الحقل مطلوب."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:486
-#: .\venv\Lib\site-packages\django\forms\fields.py:1267
-msgid "Enter a valid date."
-msgstr "أدخل تاريخًا صالحًا."
+#~ msgid "Enter a whole number."
+#~ msgstr "أدخل عددًا صحيحًا."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:509
-#: .\venv\Lib\site-packages\django\forms\fields.py:1268
-msgid "Enter a valid time."
-msgstr "أدخل وقتًا صالحًا."
+#~ msgid "Enter a valid date."
+#~ msgstr "أدخل تاريخًا صالحًا."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:536
-msgid "Enter a valid date/time."
-msgstr "أدخل تاريخًا/وقتًا صالحًا."
+#~ msgid "Enter a valid time."
+#~ msgstr "أدخل وقتًا صالحًا."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:570
-msgid "Enter a valid duration."
-msgstr "أدخل مدة صالحة."
+#~ msgid "Enter a valid date/time."
+#~ msgstr "أدخل تاريخًا/وقتًا صالحًا."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:571
+#~ msgid "Enter a valid duration."
+#~ msgstr "أدخل مدة صالحة."
+
 #, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr "يجب أن يكون عدد الأيام بين {min_days} و {max_days}."
+#~ msgid "The number of days must be between {min_days} and {max_days}."
+#~ msgstr "يجب أن يكون عدد الأيام بين {min_days} و {max_days}."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:640
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr "لم يتم إرسال أي ملف. تحقق من نوع الترميز في النموذج."
+#~ msgid "No file was submitted. Check the encoding type on the form."
+#~ msgstr "لم يتم إرسال أي ملف. تحقق من نوع الترميز في النموذج."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:641
-msgid "No file was submitted."
-msgstr "لم يتم إرسال أي ملف."
+#~ msgid "No file was submitted."
+#~ msgstr "لم يتم إرسال أي ملف."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:642
-msgid "The submitted file is empty."
-msgstr "الملف المُرسل فارغ."
+#~ msgid "The submitted file is empty."
+#~ msgstr "الملف المُرسل فارغ."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:644
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] "تأكد ألا يزيد اسم الملف عن %(max)d حرف (يحتوي على %(length)d)."
-msgstr[1] "تأكد ألا يزيد اسم الملف عن حرف واحد (يحتوي على %(length)d)."
-msgstr[2] "تأكد ألا يزيد اسم الملف عن حرفين (يحتوي على %(length)d)."
-msgstr[3] "تأكد ألا يزيد اسم الملف عن %(max)d أحرف (يحتوي على %(length)d)."
-msgstr[4] "تأكد ألا يزيد اسم الملف عن %(max)d حرفًا (يحتوي على %(length)d)."
-msgstr[5] "تأكد ألا يزيد اسم الملف عن %(max)d حرف (يحتوي على %(length)d)."
+#~ msgid ""
+#~ "Ensure this filename has at most %(max)d character (it has %(length)d)."
+#~ msgid_plural ""
+#~ "Ensure this filename has at most %(max)d characters (it has %(length)d)."
+#~ msgstr[0] "تأكد ألا يزيد اسم الملف عن %(max)d حرف (يحتوي على %(length)d)."
+#~ msgstr[1] "تأكد ألا يزيد اسم الملف عن حرف واحد (يحتوي على %(length)d)."
+#~ msgstr[2] "تأكد ألا يزيد اسم الملف عن حرفين (يحتوي على %(length)d)."
+#~ msgstr[3] "تأكد ألا يزيد اسم الملف عن %(max)d أحرف (يحتوي على %(length)d)."
+#~ msgstr[4] "تأكد ألا يزيد اسم الملف عن %(max)d حرفًا (يحتوي على %(length)d)."
+#~ msgstr[5] "تأكد ألا يزيد اسم الملف عن %(max)d حرف (يحتوي على %(length)d)."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:649
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr "يرجى إما رفع ملف أو تحديد مربع المسح، وليس كليهما."
+#~ msgid "Please either submit a file or check the clear checkbox, not both."
+#~ msgstr "يرجى إما رفع ملف أو تحديد مربع المسح، وليس كليهما."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:717
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr "ارفع صورة صالحة. الملف الذي رفعته ليس صورة أو أنه صورة تالفة."
+#~ msgid ""
+#~ "Upload a valid image. The file you uploaded was either not an image or a "
+#~ "corrupted image."
+#~ msgstr "ارفع صورة صالحة. الملف الذي رفعته ليس صورة أو أنه صورة تالفة."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:889
-#: .\venv\Lib\site-packages\django\forms\fields.py:975
-#: .\venv\Lib\site-packages\django\forms\models.py:1592
 #, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr "اختر خيارًا صالحًا. ‏%(value)s ليس من الخيارات المتاحة."
+#~ msgid ""
+#~ "Select a valid choice. %(value)s is not one of the available choices."
+#~ msgstr "اختر خيارًا صالحًا. ‏%(value)s ليس من الخيارات المتاحة."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:977
-#: .\venv\Lib\site-packages\django\forms\fields.py:1096
-#: .\venv\Lib\site-packages\django\forms\models.py:1590
-msgid "Enter a list of values."
-msgstr "أدخل قائمة من القيم."
+#~ msgid "Enter a list of values."
+#~ msgstr "أدخل قائمة من القيم."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:1097
-msgid "Enter a complete value."
-msgstr "أدخل قيمة كاملة."
+#~ msgid "Enter a complete value."
+#~ msgstr "أدخل قيمة كاملة."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:1339
-msgid "Enter a valid UUID."
-msgstr "أدخل UUID صالحًا."
+#~ msgid "Enter a valid UUID."
+#~ msgstr "أدخل UUID صالحًا."
 
-#: .\venv\Lib\site-packages\django\forms\fields.py:1369
-msgid "Enter a valid JSON."
-msgstr "أدخل JSON صالحًا."
+#~ msgid "Enter a valid JSON."
+#~ msgstr "أدخل JSON صالحًا."
 
-#. Translators: This is the default suffix added to form field labels
-#: .\venv\Lib\site-packages\django\forms\forms.py:97
-msgid ":"
-msgstr ":"
+#~ msgid ":"
+#~ msgstr ":"
 
-#: .\venv\Lib\site-packages\django\forms\forms.py:239
 #, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr "(حقل مخفي %(name)s) %(error)s"
+#~ msgid "(Hidden field %(name)s) %(error)s"
+#~ msgstr "(حقل مخفي %(name)s) %(error)s"
 
-#: .\venv\Lib\site-packages\django\forms\formsets.py:61
 #, python-format
-msgid ""
-"ManagementForm data is missing or has been tampered with. Missing fields: "
-"%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr ""
-"بيانات ManagementForm مفقودة أو تم العبث بها. الحقول المفقودة: "
-"%(field_names)s. قد تحتاج إلى إرسال تقرير خطأ إذا استمرت المشكلة."
+#~ msgid ""
+#~ "ManagementForm data is missing or has been tampered with. Missing fields: "
+#~ "%(field_names)s. You may need to file a bug report if the issue persists."
+#~ msgstr ""
+#~ "بيانات ManagementForm مفقودة أو تم العبث بها. الحقول المفقودة: "
+#~ "%(field_names)s. قد تحتاج إلى إرسال تقرير خطأ إذا استمرت المشكلة."
 
-#: .\venv\Lib\site-packages\django\forms\formsets.py:65
 #, python-format
-msgid "Please submit at most %(num)d form."
-msgid_plural "Please submit at most %(num)d forms."
-msgstr[0] "يرجى إرسال %(num)d نموذج كحد أقصى."
-msgstr[1] "يرجى إرسال نموذج واحد كحد أقصى."
-msgstr[2] "يرجى إرسال نموذجين كحد أقصى."
-msgstr[3] "يرجى إرسال %(num)d نماذج كحد أقصى."
-msgstr[4] "يرجى إرسال %(num)d نموذجًا كحد أقصى."
-msgstr[5] "يرجى إرسال %(num)d نموذج كحد أقصى."
+#~ msgid "Please submit at most %(num)d form."
+#~ msgid_plural "Please submit at most %(num)d forms."
+#~ msgstr[0] "يرجى إرسال %(num)d نموذج كحد أقصى."
+#~ msgstr[1] "يرجى إرسال نموذج واحد كحد أقصى."
+#~ msgstr[2] "يرجى إرسال نموذجين كحد أقصى."
+#~ msgstr[3] "يرجى إرسال %(num)d نماذج كحد أقصى."
+#~ msgstr[4] "يرجى إرسال %(num)d نموذجًا كحد أقصى."
+#~ msgstr[5] "يرجى إرسال %(num)d نموذج كحد أقصى."
 
-#: .\venv\Lib\site-packages\django\forms\formsets.py:70
 #, python-format
-msgid "Please submit at least %(num)d form."
-msgid_plural "Please submit at least %(num)d forms."
-msgstr[0] "يرجى إرسال %(num)d نموذج على الأقل."
-msgstr[1] "يرجى إرسال نموذج واحد على الأقل."
-msgstr[2] "يرجى إرسال نموذجين على الأقل."
-msgstr[3] "يرجى إرسال %(num)d نماذج على الأقل."
-msgstr[4] "يرجى إرسال %(num)d نموذجًا على الأقل."
-msgstr[5] "يرجى إرسال %(num)d نموذج على الأقل."
+#~ msgid "Please submit at least %(num)d form."
+#~ msgid_plural "Please submit at least %(num)d forms."
+#~ msgstr[0] "يرجى إرسال %(num)d نموذج على الأقل."
+#~ msgstr[1] "يرجى إرسال نموذج واحد على الأقل."
+#~ msgstr[2] "يرجى إرسال نموذجين على الأقل."
+#~ msgstr[3] "يرجى إرسال %(num)d نماذج على الأقل."
+#~ msgstr[4] "يرجى إرسال %(num)d نموذجًا على الأقل."
+#~ msgstr[5] "يرجى إرسال %(num)d نموذج على الأقل."
 
-#: .\venv\Lib\site-packages\django\forms\formsets.py:484
-#: .\venv\Lib\site-packages\django\forms\formsets.py:491
-msgid "Order"
-msgstr "ترتيب"
+#~ msgid "Delete"
+#~ msgstr "حذف"
 
-#: .\venv\Lib\site-packages\django\forms\formsets.py:499
-msgid "Delete"
-msgstr "حذف"
-
-#: .\venv\Lib\site-packages\django\forms\models.py:901
 #, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr "يرجى تصحيح البيانات المكررة للحقل %(field)s."
+#~ msgid "Please correct the duplicate data for %(field)s."
+#~ msgstr "يرجى تصحيح البيانات المكررة للحقل %(field)s."
 
-#: .\venv\Lib\site-packages\django\forms\models.py:906
 #, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr "يرجى تصحيح البيانات المكررة للحقل %(field)s، ويجب أن تكون فريدة."
+#~ msgid ""
+#~ "Please correct the duplicate data for %(field)s, which must be unique."
+#~ msgstr "يرجى تصحيح البيانات المكررة للحقل %(field)s، ويجب أن تكون فريدة."
 
-#: .\venv\Lib\site-packages\django\forms\models.py:913
 #, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr ""
-"يرجى تصحيح البيانات المكررة للحقل %(field_name)s والتي يجب أن تكون فريدة حسب "
-"%(lookup)s في %(date_field)s."
+#~ msgid ""
+#~ "Please correct the duplicate data for %(field_name)s which must be unique "
+#~ "for the %(lookup)s in %(date_field)s."
+#~ msgstr ""
+#~ "يرجى تصحيح البيانات المكررة للحقل %(field_name)s والتي يجب أن تكون فريدة "
+#~ "حسب %(lookup)s في %(date_field)s."
 
-#: .\venv\Lib\site-packages\django\forms\models.py:922
-msgid "Please correct the duplicate values below."
-msgstr "يرجى تصحيح القيم المكررة أدناه."
+#~ msgid "Please correct the duplicate values below."
+#~ msgstr "يرجى تصحيح القيم المكررة أدناه."
 
-#: .\venv\Lib\site-packages\django\forms\models.py:1359
-msgid "The inline value did not match the parent instance."
-msgstr "القيمة المضمنة لا تطابق الكائن الأب."
+#~ msgid "The inline value did not match the parent instance."
+#~ msgstr "القيمة المضمنة لا تطابق الكائن الأب."
 
-#: .\venv\Lib\site-packages\django\forms\models.py:1450
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr "اختر خيارًا صالحًا. هذا الخيار غير متاح ضمن الخيارات."
+#~ msgid ""
+#~ "Select a valid choice. That choice is not one of the available choices."
+#~ msgstr "اختر خيارًا صالحًا. هذا الخيار غير متاح ضمن الخيارات."
 
-#: .\venv\Lib\site-packages\django\forms\models.py:1594
 #, python-format
-msgid "“%(pk)s” is not a valid value."
-msgstr "‏“%(pk)s” ليست قيمة صالحة."
+#~ msgid "“%(pk)s” is not a valid value."
+#~ msgstr "‏“%(pk)s” ليست قيمة صالحة."
 
-#: .\venv\Lib\site-packages\django\forms\utils.py:229
 #, python-format
-msgid ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr ""
-"تعذّر تفسير %(datetime)s في المنطقة الزمنية %(current_timezone)s؛ قد يكون "
-"ملتبسًا أو قد لا يكون موجودًا."
+#~ msgid ""
+#~ "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; "
+#~ "it may be ambiguous or it may not exist."
+#~ msgstr ""
+#~ "تعذّر تفسير %(datetime)s في المنطقة الزمنية %(current_timezone)s؛ قد يكون "
+#~ "ملتبسًا أو قد لا يكون موجودًا."
 
-#: .\venv\Lib\site-packages\django\forms\widgets.py:527
-msgid "Clear"
-msgstr "مسح"
+#~ msgid "Clear"
+#~ msgstr "مسح"
 
-#: .\venv\Lib\site-packages\django\forms\widgets.py:528
-msgid "Currently"
-msgstr "حاليًا"
+#~ msgid "Currently"
+#~ msgstr "حاليًا"
 
-#: .\venv\Lib\site-packages\django\forms\widgets.py:529
-msgid "Change"
-msgstr "تغيير"
+#~ msgid "Change"
+#~ msgstr "تغيير"
 
-#: .\venv\Lib\site-packages\django\forms\widgets.py:866
-msgid "Unknown"
-msgstr "غير معروف"
+#~ msgid "Unknown"
+#~ msgstr "غير معروف"
 
-#: .\venv\Lib\site-packages\django\forms\widgets.py:867
-msgid "Yes"
-msgstr "نعم"
+#~ msgid "Yes"
+#~ msgstr "نعم"
 
-#: .\venv\Lib\site-packages\django\forms\widgets.py:868
-msgid "No"
-msgstr "لا"
+#~ msgid "No"
+#~ msgstr "لا"
 
-#. Translators: Please do not add spaces around commas.
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:873
-msgid "yes,no,maybe"
-msgstr "نعم,لا,ربما"
+#~ msgid "yes,no,maybe"
+#~ msgstr "نعم,لا,ربما"
 
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:903
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:920
 #, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] "%(size)d بايت"
-msgstr[1] "%(size)d بايت"
-msgstr[2] "%(size)d بايت"
-msgstr[3] "%(size)d بايت"
-msgstr[4] "%(size)d بايت"
-msgstr[5] "%(size)d بايت"
+#~ msgid "%(size)d byte"
+#~ msgid_plural "%(size)d bytes"
+#~ msgstr[0] "%(size)d بايت"
+#~ msgstr[1] "%(size)d بايت"
+#~ msgstr[2] "%(size)d بايت"
+#~ msgstr[3] "%(size)d بايت"
+#~ msgstr[4] "%(size)d بايت"
+#~ msgstr[5] "%(size)d بايت"
 
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:922
 #, python-format
-msgid "%s KB"
-msgstr "%s كيلوبايت"
+#~ msgid "%s KB"
+#~ msgstr "%s كيلوبايت"
 
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:924
 #, python-format
-msgid "%s MB"
-msgstr "%s ميجابايت"
+#~ msgid "%s MB"
+#~ msgstr "%s ميجابايت"
 
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:926
 #, python-format
-msgid "%s GB"
-msgstr "%s جيجابايت"
+#~ msgid "%s GB"
+#~ msgstr "%s جيجابايت"
 
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:928
 #, python-format
-msgid "%s TB"
-msgstr "%s تيرابايت"
+#~ msgid "%s TB"
+#~ msgstr "%s تيرابايت"
 
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:930
 #, python-format
-msgid "%s PB"
-msgstr "%s بيتابايت"
-
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:74
-msgid "p.m."
-msgstr "م"
-
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:75
-msgid "a.m."
-msgstr "ص"
-
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:80
-msgid "PM"
-msgstr "م"
-
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:81
-msgid "AM"
-msgstr "ص"
-
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:153
-msgid "midnight"
-msgstr "منتصف الليل"
-
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:155
-msgid "noon"
-msgstr "الظهر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:7
-msgid "Monday"
-msgstr "الاثنين"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:8
-msgid "Tuesday"
-msgstr "الثلاثاء"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:9
-msgid "Wednesday"
-msgstr "الأربعاء"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:10
-msgid "Thursday"
-msgstr "الخميس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:11
-msgid "Friday"
-msgstr "الجمعة"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:12
-msgid "Saturday"
-msgstr "السبت"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:13
-msgid "Sunday"
-msgstr "الأحد"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:16
-msgid "Mon"
-msgstr "اثن"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:17
-msgid "Tue"
-msgstr "ثلث"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:18
-msgid "Wed"
-msgstr "أرب"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:19
-msgid "Thu"
-msgstr "خمس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:20
-msgid "Fri"
-msgstr "جمع"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:21
-msgid "Sat"
-msgstr "سبت"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:22
-msgid "Sun"
-msgstr "أحد"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:25
-msgid "January"
-msgstr "يناير"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:26
-msgid "February"
-msgstr "فبراير"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:27
-msgid "March"
-msgstr "مارس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:28
-msgid "April"
-msgstr "أبريل"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:29
-msgid "May"
-msgstr "مايو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:30
-msgid "June"
-msgstr "يونيو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:31
-msgid "July"
-msgstr "يوليو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:32
-msgid "August"
-msgstr "أغسطس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:33
-msgid "September"
-msgstr "سبتمبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:34
-msgid "October"
-msgstr "أكتوبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:35
-msgid "November"
-msgstr "نوفمبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:36
-msgid "December"
-msgstr "ديسمبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:39
-msgid "jan"
-msgstr "ينا"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:40
-msgid "feb"
-msgstr "فبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:41
-msgid "mar"
-msgstr "مار"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:42
-msgid "apr"
-msgstr "أبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:43
-msgid "may"
-msgstr "ماي"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:44
-msgid "jun"
-msgstr "يون"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:45
-msgid "jul"
-msgstr "يول"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:46
-msgid "aug"
-msgstr "أغس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:47
-msgid "sep"
-msgstr "سبت"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:48
-msgid "oct"
-msgstr "أكت"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:49
-msgid "nov"
-msgstr "نوف"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:50
-msgid "dec"
-msgstr "ديس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:53
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr "ينا."
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:54
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr "فبر."
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:55
-msgctxt "abbrev. month"
-msgid "March"
-msgstr "مارس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:56
-msgctxt "abbrev. month"
-msgid "April"
-msgstr "أبريل"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:57
-msgctxt "abbrev. month"
-msgid "May"
-msgstr "مايو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:58
-msgctxt "abbrev. month"
-msgid "June"
-msgstr "يونيو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:59
-msgctxt "abbrev. month"
-msgid "July"
-msgstr "يوليو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:60
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr "أغس."
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:61
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr "سبتم."
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:62
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr "أكت."
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:63
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr "نوف."
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:64
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr "ديس."
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:67
-msgctxt "alt. month"
-msgid "January"
-msgstr "يناير"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:68
-msgctxt "alt. month"
-msgid "February"
-msgstr "فبراير"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:69
-msgctxt "alt. month"
-msgid "March"
-msgstr "مارس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:70
-msgctxt "alt. month"
-msgid "April"
-msgstr "أبريل"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:71
-msgctxt "alt. month"
-msgid "May"
-msgstr "مايو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:72
-msgctxt "alt. month"
-msgid "June"
-msgstr "يونيو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:73
-msgctxt "alt. month"
-msgid "July"
-msgstr "يوليو"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:74
-msgctxt "alt. month"
-msgid "August"
-msgstr "أغسطس"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:75
-msgctxt "alt. month"
-msgid "September"
-msgstr "سبتمبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:76
-msgctxt "alt. month"
-msgid "October"
-msgstr "أكتوبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:77
-msgctxt "alt. month"
-msgid "November"
-msgstr "نوفمبر"
-
-#: .\venv\Lib\site-packages\django\utils\dates.py:78
-msgctxt "alt. month"
-msgid "December"
-msgstr "ديسمبر"
-
-#: .\venv\Lib\site-packages\django\utils\ipv6.py:20
-msgid "This is not a valid IPv6 address."
-msgstr "هذا ليس عنوان IPv6 صالحًا."
-
-#: .\venv\Lib\site-packages\django\utils\text.py:76
+#~ msgid "%s PB"
+#~ msgstr "%s بيتابايت"
+
+#~ msgid "p.m."
+#~ msgstr "م"
+
+#~ msgid "a.m."
+#~ msgstr "ص"
+
+#~ msgid "PM"
+#~ msgstr "م"
+
+#~ msgid "AM"
+#~ msgstr "ص"
+
+#~ msgid "midnight"
+#~ msgstr "منتصف الليل"
+
+#~ msgid "noon"
+#~ msgstr "الظهر"
+
+#~ msgid "Monday"
+#~ msgstr "الاثنين"
+
+#~ msgid "Tuesday"
+#~ msgstr "الثلاثاء"
+
+#~ msgid "Wednesday"
+#~ msgstr "الأربعاء"
+
+#~ msgid "Thursday"
+#~ msgstr "الخميس"
+
+#~ msgid "Friday"
+#~ msgstr "الجمعة"
+
+#~ msgid "Saturday"
+#~ msgstr "السبت"
+
+#~ msgid "Sunday"
+#~ msgstr "الأحد"
+
+#~ msgid "Mon"
+#~ msgstr "اثن"
+
+#~ msgid "Tue"
+#~ msgstr "ثلث"
+
+#~ msgid "Wed"
+#~ msgstr "أرب"
+
+#~ msgid "Thu"
+#~ msgstr "خمس"
+
+#~ msgid "Fri"
+#~ msgstr "جمع"
+
+#~ msgid "Sat"
+#~ msgstr "سبت"
+
+#~ msgid "Sun"
+#~ msgstr "أحد"
+
+#~ msgid "January"
+#~ msgstr "يناير"
+
+#~ msgid "February"
+#~ msgstr "فبراير"
+
+#~ msgid "March"
+#~ msgstr "مارس"
+
+#~ msgid "April"
+#~ msgstr "أبريل"
+
+#~ msgid "May"
+#~ msgstr "مايو"
+
+#~ msgid "June"
+#~ msgstr "يونيو"
+
+#~ msgid "July"
+#~ msgstr "يوليو"
+
+#~ msgid "August"
+#~ msgstr "أغسطس"
+
+#~ msgid "September"
+#~ msgstr "سبتمبر"
+
+#~ msgid "October"
+#~ msgstr "أكتوبر"
+
+#~ msgid "November"
+#~ msgstr "نوفمبر"
+
+#~ msgid "December"
+#~ msgstr "ديسمبر"
+
+#~ msgid "jan"
+#~ msgstr "ينا"
+
+#~ msgid "feb"
+#~ msgstr "فبر"
+
+#~ msgid "mar"
+#~ msgstr "مار"
+
+#~ msgid "apr"
+#~ msgstr "أبر"
+
+#~ msgid "may"
+#~ msgstr "ماي"
+
+#~ msgid "jun"
+#~ msgstr "يون"
+
+#~ msgid "jul"
+#~ msgstr "يول"
+
+#~ msgid "aug"
+#~ msgstr "أغس"
+
+#~ msgid "sep"
+#~ msgstr "سبت"
+
+#~ msgid "oct"
+#~ msgstr "أكت"
+
+#~ msgid "nov"
+#~ msgstr "نوف"
+
+#~ msgid "dec"
+#~ msgstr "ديس"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Jan."
+#~ msgstr "ينا."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Feb."
+#~ msgstr "فبر."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "March"
+#~ msgstr "مارس"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "April"
+#~ msgstr "أبريل"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "May"
+#~ msgstr "مايو"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "June"
+#~ msgstr "يونيو"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "July"
+#~ msgstr "يوليو"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Aug."
+#~ msgstr "أغس."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Sept."
+#~ msgstr "سبتم."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Oct."
+#~ msgstr "أكت."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Nov."
+#~ msgstr "نوف."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Dec."
+#~ msgstr "ديس."
+
+#~ msgctxt "alt. month"
+#~ msgid "January"
+#~ msgstr "يناير"
+
+#~ msgctxt "alt. month"
+#~ msgid "February"
+#~ msgstr "فبراير"
+
+#~ msgctxt "alt. month"
+#~ msgid "March"
+#~ msgstr "مارس"
+
+#~ msgctxt "alt. month"
+#~ msgid "April"
+#~ msgstr "أبريل"
+
+#~ msgctxt "alt. month"
+#~ msgid "May"
+#~ msgstr "مايو"
+
+#~ msgctxt "alt. month"
+#~ msgid "June"
+#~ msgstr "يونيو"
+
+#~ msgctxt "alt. month"
+#~ msgid "July"
+#~ msgstr "يوليو"
+
+#~ msgctxt "alt. month"
+#~ msgid "August"
+#~ msgstr "أغسطس"
+
+#~ msgctxt "alt. month"
+#~ msgid "September"
+#~ msgstr "سبتمبر"
+
+#~ msgctxt "alt. month"
+#~ msgid "October"
+#~ msgstr "أكتوبر"
+
+#~ msgctxt "alt. month"
+#~ msgid "November"
+#~ msgstr "نوفمبر"
+
+#~ msgctxt "alt. month"
+#~ msgid "December"
+#~ msgstr "ديسمبر"
+
+#~ msgid "This is not a valid IPv6 address."
+#~ msgstr "هذا ليس عنوان IPv6 صالحًا."
+
 #, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr "%(truncated_text)s…"
+#~ msgctxt "String to return when truncating text"
+#~ msgid "%(truncated_text)s…"
+#~ msgstr "%(truncated_text)s…"
 
-#: .\venv\Lib\site-packages\django\utils\text.py:288
-msgid "or"
-msgstr "أو"
+#~ msgid "or"
+#~ msgstr "أو"
 
-#. Translators: This string is used as a separator between list elements
-#: .\venv\Lib\site-packages\django\utils\text.py:307
-#: .\venv\Lib\site-packages\django\utils\timesince.py:135
-msgid ", "
-msgstr ", "
+#~ msgid ", "
+#~ msgstr ", "
 
-#: .\venv\Lib\site-packages\django\utils\timesince.py:8
 #, python-format
-msgid "%(num)d year"
-msgid_plural "%(num)d years"
-msgstr[0] "%(num)d سنة"
-msgstr[1] "%(num)d سنة"
-msgstr[2] "%(num)d سنتان"
-msgstr[3] "%(num)d سنوات"
-msgstr[4] "%(num)d سنةً"
-msgstr[5] "%(num)d سنة"
+#~ msgid "%(num)d year"
+#~ msgid_plural "%(num)d years"
+#~ msgstr[0] "%(num)d سنة"
+#~ msgstr[1] "%(num)d سنة"
+#~ msgstr[2] "%(num)d سنتان"
+#~ msgstr[3] "%(num)d سنوات"
+#~ msgstr[4] "%(num)d سنةً"
+#~ msgstr[5] "%(num)d سنة"
 
-#: .\venv\Lib\site-packages\django\utils\timesince.py:9
 #, python-format
-msgid "%(num)d month"
-msgid_plural "%(num)d months"
-msgstr[0] "%(num)d شهر"
-msgstr[1] "%(num)d شهر"
-msgstr[2] "%(num)d شهران"
-msgstr[3] "%(num)d أشهر"
-msgstr[4] "%(num)d شهرًا"
-msgstr[5] "%(num)d شهر"
+#~ msgid "%(num)d month"
+#~ msgid_plural "%(num)d months"
+#~ msgstr[0] "%(num)d شهر"
+#~ msgstr[1] "%(num)d شهر"
+#~ msgstr[2] "%(num)d شهران"
+#~ msgstr[3] "%(num)d أشهر"
+#~ msgstr[4] "%(num)d شهرًا"
+#~ msgstr[5] "%(num)d شهر"
 
-#: .\venv\Lib\site-packages\django\utils\timesince.py:10
 #, python-format
-msgid "%(num)d week"
-msgid_plural "%(num)d weeks"
-msgstr[0] "%(num)d أسبوع"
-msgstr[1] "%(num)d أسبوع"
-msgstr[2] "%(num)d أسبوعان"
-msgstr[3] "%(num)d أسابيع"
-msgstr[4] "%(num)d أسبوعًا"
-msgstr[5] "%(num)d أسبوع"
+#~ msgid "%(num)d week"
+#~ msgid_plural "%(num)d weeks"
+#~ msgstr[0] "%(num)d أسبوع"
+#~ msgstr[1] "%(num)d أسبوع"
+#~ msgstr[2] "%(num)d أسبوعان"
+#~ msgstr[3] "%(num)d أسابيع"
+#~ msgstr[4] "%(num)d أسبوعًا"
+#~ msgstr[5] "%(num)d أسبوع"
 
-#: .\venv\Lib\site-packages\django\utils\timesince.py:11
 #, python-format
-msgid "%(num)d day"
-msgid_plural "%(num)d days"
-msgstr[0] "%(num)d يوم"
-msgstr[1] "%(num)d يوم"
-msgstr[2] "%(num)d يومان"
-msgstr[3] "%(num)d أيام"
-msgstr[4] "%(num)d يومًا"
-msgstr[5] "%(num)d يوم"
+#~ msgid "%(num)d day"
+#~ msgid_plural "%(num)d days"
+#~ msgstr[0] "%(num)d يوم"
+#~ msgstr[1] "%(num)d يوم"
+#~ msgstr[2] "%(num)d يومان"
+#~ msgstr[3] "%(num)d أيام"
+#~ msgstr[4] "%(num)d يومًا"
+#~ msgstr[5] "%(num)d يوم"
 
-#: .\venv\Lib\site-packages\django\utils\timesince.py:12
 #, python-format
-msgid "%(num)d hour"
-msgid_plural "%(num)d hours"
-msgstr[0] "%(num)d ساعة"
-msgstr[1] "%(num)d ساعة"
-msgstr[2] "%(num)d ساعتان"
-msgstr[3] "%(num)d ساعات"
-msgstr[4] "%(num)d ساعةً"
-msgstr[5] "%(num)d ساعة"
+#~ msgid "%(num)d hour"
+#~ msgid_plural "%(num)d hours"
+#~ msgstr[0] "%(num)d ساعة"
+#~ msgstr[1] "%(num)d ساعة"
+#~ msgstr[2] "%(num)d ساعتان"
+#~ msgstr[3] "%(num)d ساعات"
+#~ msgstr[4] "%(num)d ساعةً"
+#~ msgstr[5] "%(num)d ساعة"
 
-#: .\venv\Lib\site-packages\django\utils\timesince.py:13
 #, python-format
-msgid "%(num)d minute"
-msgid_plural "%(num)d minutes"
-msgstr[0] "%(num)d دقيقة"
-msgstr[1] "%(num)d دقيقة"
-msgstr[2] "%(num)d دقيقتان"
-msgstr[3] "%(num)d دقائق"
-msgstr[4] "%(num)d دقيقةً"
-msgstr[5] "%(num)d دقيقة"
+#~ msgid "%(num)d minute"
+#~ msgid_plural "%(num)d minutes"
+#~ msgstr[0] "%(num)d دقيقة"
+#~ msgstr[1] "%(num)d دقيقة"
+#~ msgstr[2] "%(num)d دقيقتان"
+#~ msgstr[3] "%(num)d دقائق"
+#~ msgstr[4] "%(num)d دقيقةً"
+#~ msgstr[5] "%(num)d دقيقة"
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:29
-msgid "Forbidden"
-msgstr "ممنوع"
+#~ msgid "Forbidden"
+#~ msgstr "ممنوع"
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:30
-msgid "CSRF verification failed. Request aborted."
-msgstr "فشل التحقق من CSRF. تم إلغاء الطلب."
+#~ msgid "CSRF verification failed. Request aborted."
+#~ msgstr "فشل التحقق من CSRF. تم إلغاء الطلب."
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:34
-msgid ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-"تظهر هذه الرسالة لأن هذا الموقع عبر HTTPS يتطلب إرسال ترويسة “Referer” من "
-"المتصفح، لكن لم يتم إرسالها. هذه الترويسة مطلوبة لأسباب أمنية للتأكد من أن "
-"متصفحك لم يتم اختطافه من طرف ثالث."
+#~ msgid ""
+#~ "You are seeing this message because this HTTPS site requires a “Referer "
+#~ "header” to be sent by your web browser, but none was sent. This header is "
+#~ "required for security reasons, to ensure that your browser is not being "
+#~ "hijacked by third parties."
+#~ msgstr ""
+#~ "تظهر هذه الرسالة لأن هذا الموقع عبر HTTPS يتطلب إرسال ترويسة “Referer” من "
+#~ "المتصفح، لكن لم يتم إرسالها. هذه الترويسة مطلوبة لأسباب أمنية للتأكد من "
+#~ "أن متصفحك لم يتم اختطافه من طرف ثالث."
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:40
-msgid ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
-msgstr ""
-"إذا كنت قد ضبطت متصفحك لتعطيل ترويسات “Referer”، يرجى إعادة تفعيلها على "
-"الأقل لهذا الموقع، أو لاتصالات HTTPS، أو لطلبات “same-origin”."
+#~ msgid ""
+#~ "If you have configured your browser to disable “Referer” headers, please "
+#~ "re-enable them, at least for this site, or for HTTPS connections, or for "
+#~ "“same-origin” requests."
+#~ msgstr ""
+#~ "إذا كنت قد ضبطت متصفحك لتعطيل ترويسات “Referer”، يرجى إعادة تفعيلها على "
+#~ "الأقل لهذا الموقع، أو لاتصالات HTTPS، أو لطلبات “same-origin”."
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:45
-msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
-msgstr ""
-"إذا كنت تستخدم الوسم <meta name=\"referrer\" content=\"no-referrer\"> أو "
-"ترويسة “Referrer-Policy: no-referrer”، يرجى إزالتهما. حماية CSRF تحتاج "
-"ترويسة “Referer” لإجراء تحقق صارم. إذا كنت قلقًا بشأن الخصوصية، استخدم بدائل "
-"مثل <a rel=\"noreferrer\" …> للروابط نحو مواقع الطرف الثالث."
+#~ msgid ""
+#~ "If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag "
+#~ "or including the “Referrer-Policy: no-referrer” header, please remove "
+#~ "them. The CSRF protection requires the “Referer” header to do strict "
+#~ "referer checking. If you’re concerned about privacy, use alternatives "
+#~ "like <a rel=\"noreferrer\" …> for links to third-party sites."
+#~ msgstr ""
+#~ "إذا كنت تستخدم الوسم <meta name=\"referrer\" content=\"no-referrer\"> أو "
+#~ "ترويسة “Referrer-Policy: no-referrer”، يرجى إزالتهما. حماية CSRF تحتاج "
+#~ "ترويسة “Referer” لإجراء تحقق صارم. إذا كنت قلقًا بشأن الخصوصية، استخدم "
+#~ "بدائل مثل <a rel=\"noreferrer\" …> للروابط نحو مواقع الطرف الثالث."
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:54
-msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-"تظهر هذه الرسالة لأن هذا الموقع يتطلب ملف تعريف ارتباط CSRF عند إرسال "
-"النماذج. هذا الملف مطلوب لأسباب أمنية للتأكد من أن متصفحك لم يتم اختطافه من "
-"طرف ثالث."
+#~ msgid ""
+#~ "You are seeing this message because this site requires a CSRF cookie when "
+#~ "submitting forms. This cookie is required for security reasons, to ensure "
+#~ "that your browser is not being hijacked by third parties."
+#~ msgstr ""
+#~ "تظهر هذه الرسالة لأن هذا الموقع يتطلب ملف تعريف ارتباط CSRF عند إرسال "
+#~ "النماذج. هذا الملف مطلوب لأسباب أمنية للتأكد من أن متصفحك لم يتم اختطافه "
+#~ "من طرف ثالث."
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:60
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
-msgstr ""
-"إذا كنت قد ضبطت متصفحك لتعطيل ملفات تعريف الارتباط، يرجى إعادة تفعيلها على "
-"الأقل لهذا الموقع أو لطلبات “same-origin”."
+#~ msgid ""
+#~ "If you have configured your browser to disable cookies, please re-enable "
+#~ "them, at least for this site, or for “same-origin” requests."
+#~ msgstr ""
+#~ "إذا كنت قد ضبطت متصفحك لتعطيل ملفات تعريف الارتباط، يرجى إعادة تفعيلها "
+#~ "على الأقل لهذا الموقع أو لطلبات “same-origin”."
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:66
-msgid "More information is available with DEBUG=True."
-msgstr "تتوفر معلومات أكثر عند ضبط DEBUG=True."
+#~ msgid "More information is available with DEBUG=True."
+#~ msgstr "تتوفر معلومات أكثر عند ضبط DEBUG=True."
 
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:44
-msgid "No year specified"
-msgstr "لم يتم تحديد سنة"
+#~ msgid "No year specified"
+#~ msgstr "لم يتم تحديد سنة"
 
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:64
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:115
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:214
-msgid "Date out of range"
-msgstr "التاريخ خارج النطاق"
+#~ msgid "Date out of range"
+#~ msgstr "التاريخ خارج النطاق"
 
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:94
-msgid "No month specified"
-msgstr "لم يتم تحديد شهر"
+#~ msgid "No month specified"
+#~ msgstr "لم يتم تحديد شهر"
 
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:147
-msgid "No day specified"
-msgstr "لم يتم تحديد يوم"
+#~ msgid "No day specified"
+#~ msgstr "لم يتم تحديد يوم"
 
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:194
-msgid "No week specified"
-msgstr "لم يتم تحديد أسبوع"
+#~ msgid "No week specified"
+#~ msgstr "لم يتم تحديد أسبوع"
 
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:353
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:384
 #, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr "لا توجد %(verbose_name_plural)s متاحة"
+#~ msgid "No %(verbose_name_plural)s available"
+#~ msgstr "لا توجد %(verbose_name_plural)s متاحة"
 
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:680
 #, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because "
-"%(class_name)s.allow_future is False."
-msgstr ""
-"لا تتوفر %(verbose_name_plural)s المستقبلية لأن %(class_name)s.allow_future "
-"يساوي False."
+#~ msgid ""
+#~ "Future %(verbose_name_plural)s not available because "
+#~ "%(class_name)s.allow_future is False."
+#~ msgstr ""
+#~ "لا تتوفر %(verbose_name_plural)s المستقبلية لأن "
+#~ "%(class_name)s.allow_future يساوي False."
 
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:720
 #, python-format
-msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr "سلسلة تاريخ غير صالحة “%(datestr)s” بالتنسيق “%(format)s”"
+#~ msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+#~ msgstr "سلسلة تاريخ غير صالحة “%(datestr)s” بالتنسيق “%(format)s”"
 
-#: .\venv\Lib\site-packages\django\views\generic\detail.py:56
 #, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr "لم يتم العثور على %(verbose_name)s مطابق للاستعلام"
+#~ msgid "No %(verbose_name)s found matching the query"
+#~ msgstr "لم يتم العثور على %(verbose_name)s مطابق للاستعلام"
 
-#: .\venv\Lib\site-packages\django\views\generic\list.py:70
-msgid "Page is not “last”, nor can it be converted to an int."
-msgstr "الصفحة ليست “الأخيرة”، ولا يمكن تحويلها إلى عدد صحيح."
+#~ msgid "Page is not “last”, nor can it be converted to an int."
+#~ msgstr "الصفحة ليست “الأخيرة”، ولا يمكن تحويلها إلى عدد صحيح."
 
-#: .\venv\Lib\site-packages\django\views\generic\list.py:77
 #, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr "صفحة غير صالحة (%(page_number)s): %(message)s"
+#~ msgid "Invalid page (%(page_number)s): %(message)s"
+#~ msgstr "صفحة غير صالحة (%(page_number)s): %(message)s"
 
-#: .\venv\Lib\site-packages\django\views\generic\list.py:173
 #, python-format
-msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr "القائمة فارغة و “%(class_name)s.allow_empty” يساوي False."
+#~ msgid "Empty list and “%(class_name)s.allow_empty” is False."
+#~ msgstr "القائمة فارغة و “%(class_name)s.allow_empty” يساوي False."
 
-#: .\venv\Lib\site-packages\django\views\static.py:49
-msgid "Directory indexes are not allowed here."
-msgstr "فهرسة المجلدات غير مسموح بها هنا."
+#~ msgid "Directory indexes are not allowed here."
+#~ msgstr "فهرسة المجلدات غير مسموح بها هنا."
 
-#: .\venv\Lib\site-packages\django\views\static.py:51
 #, python-format
-msgid "“%(path)s” does not exist"
-msgstr "‏“%(path)s” غير موجود"
+#~ msgid "“%(path)s” does not exist"
+#~ msgstr "‏“%(path)s” غير موجود"
 
-#: .\venv\Lib\site-packages\django\views\static.py:68
-#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:8
-#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:11
 #, python-format
-msgid "Index of %(directory)s"
-msgstr "فهرس %(directory)s"
+#~ msgid "Index of %(directory)s"
+#~ msgstr "فهرس %(directory)s"
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:204
-msgid "The install worked successfully! Congratulations!"
-msgstr "تم التثبيت بنجاح! تهانينا!"
+#~ msgid "The install worked successfully! Congratulations!"
+#~ msgstr "تم التثبيت بنجاح! تهانينا!"
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:206
 #, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
-"اطّلع على <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">ملاحظات الإصدار</a> لـ Django %(version)s"
+#~ msgid ""
+#~ "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+#~ "target=\"_blank\" rel=\"noopener\">release notes</a> for Django "
+#~ "%(version)s"
+#~ msgstr ""
+#~ "اطّلع على <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/"
+#~ "\" target=\"_blank\" rel=\"noopener\">ملاحظات الإصدار</a> لـ Django "
+#~ "%(version)s"
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:208
 #, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
-msgstr ""
-"ترى هذه الصفحة لأن <a href=\"https://docs.djangoproject.com/en/%(version)s/"
-"ref/settings/#debug\" target=\"_blank\" rel=\"noopener\">DEBUG=True</a> "
-"موجودة في ملف الإعدادات لديك ولم تقم بإعداد أي روابط (URLs)."
+#~ msgid ""
+#~ "You are seeing this page because <a href=\"https://docs.djangoproject.com/"
+#~ "en/%(version)s/ref/settings/#debug\" target=\"_blank\" "
+#~ "rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+#~ "configured any URLs."
+#~ msgstr ""
+#~ "ترى هذه الصفحة لأن <a href=\"https://docs.djangoproject.com/en/"
+#~ "%(version)s/ref/settings/#debug\" target=\"_blank\" "
+#~ "rel=\"noopener\">DEBUG=True</a> موجودة في ملف الإعدادات لديك ولم تقم "
+#~ "بإعداد أي روابط (URLs)."
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:217
-msgid "Django Documentation"
-msgstr "توثيق Django"
+#~ msgid "Django Documentation"
+#~ msgstr "توثيق Django"
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:218
-msgid "Topics, references, &amp; how-to’s"
-msgstr "المواضيع والمراجع وأدلة التنفيذ"
+#~ msgid "Topics, references, &amp; how-to’s"
+#~ msgstr "المواضيع والمراجع وأدلة التنفيذ"
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:226
-msgid "Tutorial: A Polling App"
-msgstr "دليل تعليمي: تطبيق الاستطلاعات"
+#~ msgid "Tutorial: A Polling App"
+#~ msgstr "دليل تعليمي: تطبيق الاستطلاعات"
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:227
-msgid "Get started with Django"
-msgstr "ابدأ مع Django"
+#~ msgid "Get started with Django"
+#~ msgstr "ابدأ مع Django"
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:235
-msgid "Django Community"
-msgstr "مجتمع Django"
+#~ msgid "Django Community"
+#~ msgstr "مجتمع Django"
 
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
-msgid "Connect, get help, or contribute"
-msgstr "تواصل، احصل على مساعدة، أو ساهم"
+#~ msgid "Connect, get help, or contribute"
+#~ msgstr "تواصل، احصل على مساعدة، أو ساهم"
 
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:14
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:53
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:61
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:71
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:81
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:85
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:117
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:136
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:363
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:368
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:378
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:398
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:415
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:434
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:440
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:457
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:469
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:477
-msgid "title"
-msgstr ""
+#~ msgid "About Us"
+#~ msgstr "من نحن"
 
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:18
-msgid "password"
-msgstr ""
+#~ msgid "Contact"
+#~ msgstr "اتصل بنا"
 
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:244
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:263
-msgid "title a"
-msgstr ""
+#~ msgid "Shipping"
+#~ msgstr "الشحن"
 
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:248
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:274
-msgid "title b"
-msgstr ""
+#~ msgid "FREE"
+#~ msgstr "مجاني"
 
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:252
-msgid "title c"
-msgstr ""
+#, fuzzy
+#~| msgid "Free shipping on orders over $50"
+#~ msgid "Free shipping on orders over EGP 50"
+#~ msgstr "شحن مجاني للطلبات التي تزيد عن 50 دولار"
 
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:256
-msgid "title d"
-msgstr ""
+# =============================================
+# Hero Section
+# =============================================
+#~ msgid "Curated Elegance"
+#~ msgstr "أناقة مختارة"
 
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:379
-msgid "visits"
-msgstr ""
+#~ msgid "Timeless Antiques"
+#~ msgstr "تحف خالدة"
 
-#: .\venv\Lib\site-packages\modeltranslation\tests\translation.py:62
-msgid "Sorry, translation is not available."
-msgstr ""
+#~ msgid "& Premium Decor"
+#~ msgstr "وديكور فاخر"
 
-#: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
-msgid "None"
-msgstr ""
+#~ msgid ""
+#~ "Discover handpicked treasures from around the world — vintage furniture, "
+#~ "artisan crafts, and exquisite decorative pieces that tell a story."
+#~ msgstr ""
+#~ "اكتشف كنوزًا مختارة بعناية من حول العالم — أثاث عتيق، حِرف يدوية، وقطع "
+#~ "ديكور رائعة تحكي قصة."
+
+#~ msgid "Explore Collection"
+#~ msgstr "استكشف المجموعة"
+
+#~ msgid "View All Products"
+#~ msgstr "عرض جميع المنتجات"
+
+#~ msgid "Shop by Category"
+#~ msgstr "تسوق حسب الفئة"
+
+#~ msgid ""
+#~ "Browse our wide range of categories to find exactly what you're looking "
+#~ "for."
+#~ msgstr "تصفح مجموعة واسعة من الفئات للعثور على ما تبحث عنه."
+
+#~ msgid "Trending Now"
+#~ msgstr "الأكثر رواجًا"
+
+#~ msgid "Our most popular products based on sales."
+#~ msgstr "منتجاتنا الأكثر شعبية بناءً على المبيعات."
+
+#, fuzzy
+#~| msgid "Products"
+#~ msgid "Featured Products"
+#~ msgstr "المنتجات"
+
+#~ msgid "Special Offers"
+#~ msgstr "عروض خاصة"
+
+#~ msgid "Don't miss out on these amazing deals!"
+#~ msgstr "لا تفوت هذه الصفقات الرائعة!"
+
+#, fuzzy
+#~| msgid "Order #"
+#~ msgid "Order Placed!"
+#~ msgstr "رقم الطلب"
 
 #~ msgid "Medium Store"
 #~ msgstr "متجر متوسط"
@@ -3911,12 +3884,6 @@ msgstr ""
 
 #~ msgid "Shop Now"
 #~ msgstr "تسوق الآن"
-
-#~ msgid "Customer Information"
-#~ msgstr "معلومات العميل"
-
-#~ msgid "Shipping Address"
-#~ msgstr "عنوان الشحن"
 
 #~ msgid "optional"
 #~ msgstr "اختياري"
@@ -3953,197 +3920,46 @@ msgstr ""
 
 #~ msgid "Sale"
 #~ msgstr "تخفيض"
+
 #
 # Home page refresh
 #
-#: .\pages\templates\pages\home.html
-msgid "Home essentials with character."
-msgstr "أساسيات للمنزل بطابع مميز."
+#~ msgid "Home essentials with character."
+#~ msgstr "أساسيات للمنزل بطابع مميز."
 
-#: .\pages\templates\pages\home.html
-msgid "Furniture, decor, and useful pieces selected for everyday homes. No noise, just clear choices and simple ordering."
-msgstr "أثاث وديكور وقطع عملية مختارة للمنازل اليومية. اختيارات واضحة وطلب بسيط بدون تعقيد."
+#~ msgid ""
+#~ "Furniture, decor, and useful pieces selected for everyday homes. No "
+#~ "noise, just clear choices and simple ordering."
+#~ msgstr ""
+#~ "أثاث وديكور وقطع عملية مختارة للمنازل اليومية. اختيارات واضحة وطلب بسيط "
+#~ "بدون تعقيد."
 
-#: .\pages\templates\pages\home.html
-msgid "Shop all products"
-msgstr "تسوق كل المنتجات"
+#~ msgid "Choose a category"
+#~ msgstr "اختر قسما"
 
-#: .\pages\templates\pages\home.html
-msgid "Choose a category"
-msgstr "اختر قسما"
+#~ msgid "Featured"
+#~ msgstr "مميز"
 
-#: .\pages\templates\pages\home.html
-msgid "Featured"
-msgstr "مميز"
+#~ msgid "See the full collection"
+#~ msgstr "شاهد المجموعة كاملة"
 
-#: .\pages\templates\pages\home.html
-msgid "Browse new products"
-msgstr "تصفح المنتجات الجديدة"
+#~ msgid "Shop by room or style"
+#~ msgstr "تسوق حسب الغرفة أو النمط"
 
-#: .\pages\templates\pages\home.html
-msgid "See the full collection"
-msgstr "شاهد المجموعة كاملة"
+#~ msgid "Popular now"
+#~ msgstr "الأكثر رواجا الآن"
 
-#: .\pages\templates\pages\home.html
-msgid "Available now"
-msgstr "متاح الآن"
+#~ msgid "Selected pieces"
+#~ msgstr "قطع مختارة"
 
-#: .\pages\templates\pages\home.html
-msgid "Shop by room or style"
-msgstr "تسوق حسب الغرفة أو النمط"
+#~ msgid "Worth a closer look"
+#~ msgstr "تستحق نظرة أقرب"
 
-#: .\pages\templates\pages\home.html
-msgid "Popular now"
-msgstr "الأكثر رواجا الآن"
+#~ msgid "Active categories"
+#~ msgstr "الأقسام النشطة"
 
-#: .\pages\templates\pages\home.html
-msgid "Best sellers"
-msgstr "الأكثر مبيعا"
+#~ msgid "Featured picks"
+#~ msgstr "اختيارات مميزة"
 
-#: .\pages\templates\pages\home.html
-msgid "View all"
-msgstr "عرض الكل"
-
-#: .\pages\templates\pages\home.html
-msgid "Selected pieces"
-msgstr "قطع مختارة"
-
-#: .\pages\templates\pages\home.html
-msgid "Worth a closer look"
-msgstr "تستحق نظرة أقرب"
-
-#: .\pages\templates\pages\home.html
-msgid "Current discounts"
-msgstr "الخصومات الحالية"
-
-#: .\pages\templates\pages\home.html
-msgid "New showroom edit"
-msgstr "مختارات المعرض الجديدة"
-
-#: .\pages\templates\pages\home.html
-msgid "Pieces that make a room feel finished."
-msgstr "قطع تجعل الغرفة تبدو مكتملة."
-
-#: .\pages\templates\pages\home.html
-msgid "Explore practical furniture and decor chosen for texture, proportion, and everyday use."
-msgstr "اكتشف أثاثا وديكورا عمليا مختارا للخامة والتناسق والاستخدام اليومي."
-
-#: .\pages\templates\pages\home.html
-msgid "Shop the collection"
-msgstr "تسوق المجموعة"
-
-#: .\pages\templates\pages\home.html
-msgid "Start with categories"
-msgstr "ابدأ بالأقسام"
-
-#: .\pages\templates\pages\home.html
-msgid "Active categories"
-msgstr "الأقسام النشطة"
-
-#: .\pages\templates\pages\home.html
-msgid "Featured picks"
-msgstr "اختيارات مميزة"
-
-#: .\pages\templates\pages\home.html
-msgid "Live offers"
-msgstr "عروض متاحة"
-
-#: .\pages\templates\pages\home.html
-msgid "Featured piece"
-msgstr "قطعة مميزة"
-
-#: .\pages\templates\pages\home.html
-msgid "Browse latest arrivals"
-msgstr "تصفح أحدث المنتجات"
-
-#: .\pages\templates\pages\home.html
-msgid "Today at Al-Serag"
-msgstr "اليوم في السراج"
-
-#: .\pages\templates\pages\home.html
-msgid "Browse the shop"
-msgstr "تصفح المتجر"
-
-#: .\pages\templates\pages\home.html
-msgid "Find the right corner to start."
-msgstr "اختر القسم المناسب للبدء."
-
-#: .\pages\templates\pages\home.html
-msgid "All products"
-msgstr "كل المنتجات"
-
-#: .\pages\templates\pages\home.html
-msgid "Customer favorites"
-msgstr "مفضلات العملاء"
-
-#: .\pages\templates\pages\home.html
-msgid "The showroom shelf"
-msgstr "رف المعرض"
-
-#: .\pages\templates\pages\home.html
-msgid "Fresh pieces to consider."
-msgstr "قطع جديدة تستحق الاهتمام."
-
-#: .\pages\templates\pages\home.html
-msgid "Marked down"
-msgstr "خصومات مختارة"
-
-#: .\pages\templates\pages\home.html
-msgid "Hand-picked pieces"
-msgstr "قطع مختارة بعناية"
-
-#: .\pages\templates\pages\home.html
-msgid "Delivery across Egypt"
-msgstr "توصيل داخل مصر"
-
-#: .\pages\templates\pages\home.html
-msgid "Clear order follow-up"
-msgstr "متابعة واضحة للطلب"
-
-#: .\pages\templates\pages\home.html
-msgid "Mobile showroom"
-msgstr "معرض الهاتف"
-
-#: .\pages\templates\pages\home.html
-msgid "Shop all"
-msgstr "تسوق الكل"
-
-#: .\pages\templates\pages\home.html
-msgid "Pieces for real homes"
-msgstr "قطع لمنازل حقيقية"
-
-#: .\pages\templates\pages\home.html
-msgid "Browse the collection"
-msgstr "تصفح المجموعة"
-
-#: .\pages\templates\pages\home.html
-msgid "View piece"
-msgstr "عرض القطعة"
-
-#: .\pages\templates\pages\home.html
-msgid "Shop similar"
-msgstr "تسوق المشابه"
-
-#: .\pages\templates\pages\home.html
-msgid "Hand-picked pieces for everyday rooms"
-msgstr "قطع مختارة بعناية لغرف الاستخدام اليومي"
-
-#: .\pages\templates\pages\home.html
-msgid "Simple ordering with clear follow-up"
-msgstr "طلب بسيط مع متابعة واضحة"
-
-#: .\pages\templates\accounts\login.html
-msgid "Staff access"
-msgstr "دخول فريق العمل"
-
-#: .\pages\templates\pages\all_products.html
-msgid "Catalog"
-msgstr "الكتالوج"
-
-#: .\pages\templates\pages\order_success.html
-msgid "Order confirmed"
-msgstr "تم تأكيد الطلب"
-
-#: .\pages\templates\pages\admin_order_detail.html
-msgid "Staff order"
-msgstr "طلب فريق العمل"
+#~ msgid "Live offers"
+#~ msgstr "عروض متاحة"

@@ -18,7 +18,7 @@
 </section>
 
 <!-- Product Detail -->
-<section class="py-8 md:py-12 bg-[#fdfbf7]">
+<section class="pt-8 pb-28 md:py-12 bg-[#fdfbf7]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="overflow-hidden rounded-lg border border-black/10 bg-[#f7f4ee]">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -95,6 +95,49 @@
                         {% else %}
                         <span class="text-3xl sm:text-4xl font-extrabold text-gray-950">EGP {{ product.price }}</span>
                         {% endif %}
+                    </div>
+
+                    <!-- Lightweight trust notes -->
+                    <div class="mb-6 grid gap-2 rounded-lg border border-black/10 bg-[#f7f4ee] p-3 sm:grid-cols-2">
+                        <div class="flex items-start gap-3 rounded-md bg-[#fdfbf7] px-3 py-3">
+                            <svg class="mt-0.5 h-5 w-5 shrink-0 text-[#47644a]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 7h11v10H3zM14 11h4l3 3v3h-7zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                            </svg>
+                            <div>
+                                <p class="text-sm font-bold text-gray-950">{% trans "Delivery across Egypt" %}</p>
+                                <p class="text-xs leading-5 text-gray-500">
+                                    {% trans "Delivery fee" %}: EGP 100{% if estimated_delivery_text %} · {{ estimated_delivery_text }}{% endif %}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 rounded-md bg-[#fdfbf7] px-3 py-3">
+                            <svg class="mt-0.5 h-5 w-5 shrink-0 text-[#47644a]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M6 11h8M7 17h10a3 3 0 0 0 3-3V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a3 3 0 0 0 3 3Z" />
+                            </svg>
+                            <div>
+                                <p class="text-sm font-bold text-gray-950">{{ payment_methods_text }}</p>
+                                <p class="text-xs leading-5 text-gray-500">{% trans "No online payment is required on this checkout." %}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 rounded-md bg-[#fdfbf7] px-3 py-3">
+                            <svg class="mt-0.5 h-5 w-5 shrink-0 text-[#47644a]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3 4 7v6c0 5 3.5 7.5 8 8 4.5-.5 8-3 8-8V7l-8-4Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m9 12 2 2 4-5" />
+                            </svg>
+                            <div>
+                                <p class="text-sm font-bold text-gray-950">{% trans "Secure checkout" %}</p>
+                                <p class="text-xs leading-5 text-gray-500">{{ secure_checkout_text }}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 rounded-md bg-[#fdfbf7] px-3 py-3">
+                            <svg class="mt-0.5 h-5 w-5 shrink-0 text-[#47644a]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 11h8M8 15h5M21 12a8 8 0 0 1-11.4 7.25L4 20l.75-5.6A8 8 0 1 1 21 12Z" />
+                            </svg>
+                            <div>
+                                <p class="text-sm font-bold text-gray-950">{% trans "WhatsApp support" %}</p>
+                                <p class="text-xs leading-5 text-gray-500">{% trans "Ask before you order if you need help." %}</p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Offer Banner -->
@@ -183,10 +226,10 @@
                             <!-- Add to Cart Form -->
                             <form action="{% url 'cart_add' product.id %}" method="post" class="flex-1">
                                 {% csrf_token %}
-                                <input type="hidden" name="quantity" id="cart-quantity" value="1">
+                                <input type="hidden" name="quantity" id="cart-quantity" class="js-product-quantity" value="1">
                                 <input type="hidden" name="color" id="cart-color" value="">
                                 <input type="hidden" name="next" value="{{ request.path }}">
-                                <button type="submit" id="add-to-cart-btn"
+                                <button type="submit" id="add-to-cart-btn" data-add-cart-tracker
                                     class="w-full flex min-h-12 items-center justify-center gap-2 rounded-lg border border-gray-950 px-6 py-3.5 font-bold text-gray-950 hover:bg-gray-950 hover:text-white transition-colors {% if not in_stock %}opacity-50 cursor-not-allowed{% endif %}"
                                     {% if not in_stock %}disabled{% endif %}>
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -200,10 +243,10 @@
                             <!-- Buy Now Form -->
                             <form action="{% url 'cart_add' product.id %}" method="post" class="flex-1">
                                 {% csrf_token %}
-                                <input type="hidden" name="quantity" id="buynow-quantity" value="1">
+                                <input type="hidden" name="quantity" id="buynow-quantity" class="js-product-quantity" value="1">
                                 <input type="hidden" name="override" value="true">
                                 <input type="hidden" name="next" value="{% url 'checkout' %}">
-                                <button type="submit"
+                                <button type="submit" data-add-cart-tracker
                                     class="w-full flex min-h-12 items-center justify-center gap-2 rounded-lg bg-gray-950 px-6 py-3.5 font-bold text-white hover:bg-[#a64224] transition-colors {% if not in_stock %}opacity-50 cursor-not-allowed bg-gray-400 hover:bg-gray-400{% endif %}"
                                     {% if not in_stock %}disabled{% endif %}>
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -215,9 +258,71 @@
                             </form>
 
                         </div>
+
+                        {% if product_whatsapp_url %}
+                        <a href="{{ product_whatsapp_url }}" target="_blank" rel="noopener"
+                            class="flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-[#47644a]/40 bg-[#47644a]/10 px-6 py-3.5 text-sm font-bold text-[#28442b] transition-colors hover:bg-[#47644a] hover:text-white">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 11h8M8 15h5M21 12a8 8 0 0 1-11.4 7.25L4 20l.75-5.6A8 8 0 1 1 21 12Z" />
+                            </svg>
+                            {% trans "Ask about this product on WhatsApp" %}
+                        </a>
+                        {% endif %}
                     </div>
 
                 </div>
+            </div>
+        </div>
+
+        <div class="mt-6 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+            <div class="rounded-lg border border-black/10 bg-[#f7f4ee] p-4 sm:p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#7b563f]">{% trans "Product information" %}</p>
+                <dl class="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+                    <div class="rounded-md bg-[#fdfbf7] px-3 py-3">
+                        <dt class="font-bold text-gray-950">{% trans "Category" %}</dt>
+                        <dd class="mt-1 text-gray-600">{{ product.category.name }}</dd>
+                    </div>
+                    <div class="rounded-md bg-[#fdfbf7] px-3 py-3">
+                        <dt class="font-bold text-gray-950">{% trans "Stock status" %}</dt>
+                        <dd class="mt-1 text-gray-600">
+                            {% if in_stock %}{% trans "In stock" %}: {{ product.stock }}{% else %}{% trans "Out of Stock" %}{% endif %}
+                        </dd>
+                    </div>
+                    {% if product.colors.all %}
+                    <div class="rounded-md bg-[#fdfbf7] px-3 py-3 sm:col-span-2">
+                        <dt class="font-bold text-gray-950">{% trans "Available colors" %}</dt>
+                        <dd class="mt-1 text-gray-600">
+                            {% for color in product.colors.all %}{{ color.name }}{% if not forloop.last %}, {% endif %}{% endfor %}
+                        </dd>
+                    </div>
+                    {% endif %}
+                </dl>
+            </div>
+
+            <div class="space-y-3">
+                <details class="rounded-lg border border-black/10 bg-[#f7f4ee] p-4 open:bg-[#fdfbf7]">
+                    <summary class="cursor-pointer text-sm font-bold text-gray-950">{% trans "Shipping and delivery" %}</summary>
+                    <div class="mt-3 space-y-2 text-sm leading-6 text-gray-600">
+                        <p>{% trans "Areas served" %}: {{ delivery_areas_text }}</p>
+                        <p>{% trans "Delivery fee" %}: EGP 100.</p>
+                        {% if estimated_delivery_text %}<p>{% trans "Estimated delivery" %}: {{ estimated_delivery_text }}</p>{% endif %}
+                        <p>{{ order_next_step_text }}</p>
+                    </div>
+                </details>
+                <details class="rounded-lg border border-black/10 bg-[#f7f4ee] p-4 open:bg-[#fdfbf7]">
+                    <summary class="cursor-pointer text-sm font-bold text-gray-950">{% trans "Exchange and returns" %}</summary>
+                    <p class="mt-3 text-sm leading-6 text-gray-600">{{ returns_text }}</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="mt-6 rounded-lg border border-black/10 bg-gray-950 p-4 text-white sm:p-6">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/55">{% trans "Why buy from Al-Serag?" %}</p>
+            <div class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="rounded-md bg-white/10 px-3 py-3 text-sm font-semibold">{% trans "Hand-picked products" %}</div>
+                <div class="rounded-md bg-white/10 px-3 py-3 text-sm font-semibold">{% trans "WhatsApp customer support" %}</div>
+                <div class="rounded-md bg-white/10 px-3 py-3 text-sm font-semibold">{% trans "Delivery inside Egypt" %}</div>
+                <div class="rounded-md bg-white/10 px-3 py-3 text-sm font-semibold">{% trans "Clear order follow-up" %}</div>
             </div>
         </div>
 
@@ -235,6 +340,28 @@
 
     </div>
 </section>
+
+{% if in_stock %}
+<div class="product-mobile-buy-bar border-t border-black/10 bg-[#fdfbf7]/95 px-4 py-3 shadow-[0_-12px_35px_rgba(20,20,20,0.12)] backdrop-blur md:hidden">
+    <div class="mx-auto flex max-w-md items-center gap-3">
+        <div class="min-w-0 flex-1">
+            <p class="truncate text-xs font-bold text-gray-500">{{ product.name }}</p>
+            <p class="text-base font-extrabold text-gray-950">
+                {% if discount_price %}EGP {{ discount_price }}{% else %}EGP {{ product.price }}{% endif %}
+            </p>
+        </div>
+        <form action="{% url 'cart_add' product.id %}" method="post" class="shrink-0">
+            {% csrf_token %}
+            <input type="hidden" name="quantity" class="js-product-quantity" value="1">
+            <input type="hidden" name="next" value="{% url 'checkout' %}">
+            <button type="submit" data-add-cart-tracker
+                class="inline-flex min-h-12 items-center justify-center rounded-lg bg-gray-950 px-5 text-sm font-bold text-white">
+                {% trans "Buy Now" %}
+            </button>
+        </form>
+    </div>
+</div>
+{% endif %}
 
 <!-- JavaScript for Gallery and Quantity -->
 <script>
@@ -260,11 +387,9 @@
         if (!qtyInput) return;
 
         const qty = qtyInput.value;
-        const cartQty = document.getElementById('cart-quantity');
-        const buyNowQty = document.getElementById('buynow-quantity');
-
-        if (cartQty) cartQty.value = qty;
-        if (buyNowQty) buyNowQty.value = qty;
+        document.querySelectorAll('.js-product-quantity').forEach(input => {
+            input.value = qty;
+        });
     }
 
     function incrementQty() {
@@ -324,10 +449,8 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("add-to-cart-btn");
-  if (!btn) return;
-
-  btn.addEventListener("click", function () {
+  document.querySelectorAll("[data-add-cart-tracker]").forEach(btn => {
+    btn.addEventListener("click", function () {
     if (typeof fbq !== "function") return;
 
     fbq('track', 'AddToCart', {
@@ -338,14 +461,17 @@ document.addEventListener("DOMContentLoaded", function () {
       currency: "EGP"
     });
   });
+  });
 });
 
-fbq('track', 'ViewContent', {
-  content_name: "{{ product.name|escapejs }}",
-  content_ids: ["{{ product.id }}"],
-  content_type: "product",
-  value: {{ product.price|floatformat:2 }},
-  currency: "EGP"
-});
+if (typeof fbq === "function") {
+  fbq('track', 'ViewContent', {
+    content_name: "{{ product.name|escapejs }}",
+    content_ids: ["{{ product.id }}"],
+    content_type: "product",
+    value: {{ product.price|floatformat:2 }},
+    currency: "EGP"
+  });
+}
 </script>
 {% endblock %}

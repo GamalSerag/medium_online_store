@@ -146,6 +146,25 @@ ANALYTICS_GEOIP_ENABLED = env.bool('ANALYTICS_GEOIP_ENABLED', default=True)
 ANALYTICS_GEOIP_ENDPOINT = env('ANALYTICS_GEOIP_ENDPOINT', default='')
 ANALYTICS_GEOIP_TIMEOUT = env.float('ANALYTICS_GEOIP_TIMEOUT', default=0.8)
 
+# Public store service details. Keep policy-style copy configurable so the UI
+# does not promise details the business has not confirmed.
+STORE_SUPPORT_WHATSAPP_NUMBER = env('STORE_SUPPORT_WHATSAPP_NUMBER', default='+201099628684')
+STORE_DELIVERY_AREAS_TEXT = env('STORE_DELIVERY_AREAS_TEXT', default='Egypt')
+STORE_ESTIMATED_DELIVERY_TEXT = env('STORE_ESTIMATED_DELIVERY_TEXT', default='')
+STORE_PAYMENT_METHODS_TEXT = env('STORE_PAYMENT_METHODS_TEXT', default='Cash on delivery')
+STORE_RETURNS_TEXT = env(
+    'STORE_RETURNS_TEXT',
+    default='Contact us on WhatsApp before ordering if you need exchange or return details.'
+)
+STORE_ORDER_NEXT_STEP_TEXT = env(
+    'STORE_ORDER_NEXT_STEP_TEXT',
+    default='We will contact you by phone or WhatsApp to confirm the order details.'
+)
+STORE_SECURE_CHECKOUT_TEXT = env(
+    'STORE_SECURE_CHECKOUT_TEXT',
+    default='Your details are used only to complete your order.'
+)
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 

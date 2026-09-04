@@ -6,11 +6,45 @@ from django.urls import reverse
 from django.utils import timezone
 from datetime import timedelta
 from django.contrib import messages
+from django.conf import settings
+from django.utils.http import urlencode
+from django.utils.translation import gettext as _
 import json
+import re
 from orders.models import Order, OrderItem
 from catalog.models import Product, Category, Offer
 from pages.forms import CheckoutForm
 from pages.middleware import WebsiteAnalyticsMiddleware
+
+
+def build_whatsapp_url(message):
+    digits = re.sub(r'\D+', '', settings.STORE_SUPPORT_WHATSAPP_NUMBER or '')
+    if digits.startswith('00'):
+        digits = digits[2:]
+    if not digits:
+        return ''
+    return f"https://wa.me/{digits}?{urlencode({'text': message})}"
+
+
+def store_policy_text(setting_name):
+    default_sources = {
+        'STORE_DELIVERY_AREAS_TEXT': 'Egypt',
+        'STORE_PAYMENT_METHODS_TEXT': 'Cash on delivery',
+        'STORE_RETURNS_TEXT': 'Contact us on WhatsApp before ordering if you need exchange or return details.',
+        'STORE_ORDER_NEXT_STEP_TEXT': 'We will contact you by phone or WhatsApp to confirm the order details.',
+        'STORE_SECURE_CHECKOUT_TEXT': 'Your details are used only to complete your order.',
+    }
+    translated_defaults = {
+        'STORE_DELIVERY_AREAS_TEXT': _('Egypt'),
+        'STORE_PAYMENT_METHODS_TEXT': _('Cash on delivery'),
+        'STORE_RETURNS_TEXT': _('Contact us on WhatsApp before ordering if you need exchange or return details.'),
+        'STORE_ORDER_NEXT_STEP_TEXT': _('We will contact you by phone or WhatsApp to confirm the order details.'),
+        'STORE_SECURE_CHECKOUT_TEXT': _('Your details are used only to complete your order.'),
+    }
+    value = getattr(settings, setting_name, '')
+    if value == default_sources.get(setting_name, ''):
+        return translated_defaults.get(setting_name, value)
+    return value
 
 
 class HomePageView(TemplateView):
@@ -247,6 +281,19 @@ class ProductDetailView(TemplateView):
         # Stock status
         context['in_stock'] = product.stock > 0
         context['max_quantity'] = min(product.stock, 10)  # Limit max quantity to 10
+        context['delivery_areas_text'] = store_policy_text('STORE_DELIVERY_AREAS_TEXT')
+        context['estimated_delivery_text'] = settings.STORE_ESTIMATED_DELIVERY_TEXT
+        context['payment_methods_text'] = store_policy_text('STORE_PAYMENT_METHODS_TEXT')
+        context['returns_text'] = store_policy_text('STORE_RETURNS_TEXT')
+        context['order_next_step_text'] = store_policy_text('STORE_ORDER_NEXT_STEP_TEXT')
+        context['secure_checkout_text'] = store_policy_text('STORE_SECURE_CHECKOUT_TEXT')
+        context['product_whatsapp_url'] = build_whatsapp_url(
+            _("Hello, I want to ask about this product:\n%(name)s\nPrice: EGP %(price)s\n%(url)s") % {
+                'name': product.name,
+                'price': product.price,
+                'url': self.request.build_absolute_uri(),
+            }
+        )
         
         # Related products from same category
         context['related_products'] = Product.objects.filter(
@@ -285,8 +332,6 @@ class AdminDashboardView(StaffRequiredMixin, TemplateView):
         context['status_choices'] = Order.STATUS_CHOICES
         
         return context
-
-from django.utils.translation import gettext as _
 
 class UpdateOrderStatusView(StaffRequiredMixin, View):
     def post(self, request, pk):
@@ -384,6 +429,9 @@ class CheckoutView(TemplateView):
         context['shipping'] = cart.get_shipping()
         context['total'] = cart.get_total()
         context['form'] = CheckoutForm() # Add the form
+        context['payment_methods_text'] = store_policy_text('STORE_PAYMENT_METHODS_TEXT')
+        context['order_next_step_text'] = store_policy_text('STORE_ORDER_NEXT_STEP_TEXT')
+        context['secure_checkout_text'] = store_policy_text('STORE_SECURE_CHECKOUT_TEXT')
         return context
 
     def post(self, request, *args, **kwargs):
@@ -421,6 +469,7 @@ class CheckoutView(TemplateView):
 
             # Store order number in session for success page
             request.session['last_order_number'] = order.order_number
+            request.session['last_order_pixel_pending'] = True
 
             # Redirect to success page
             return redirect('order_success')
@@ -438,7 +487,21 @@ class OrderSuccessView(TemplateView):
         context = super().get_context_data(**kwargs)
         order_number = self.request.session.get('last_order_number')
         if order_number:
-            context['order'] = get_object_or_404(Order, order_number=order_number)
+            order = get_object_or_404(Order, order_number=order_number)
+            context['order'] = order
+            context['order_next_step_text'] = store_policy_text('STORE_ORDER_NEXT_STEP_TEXT')
+            context['product_ids'] = list(
+                order.items.exclude(product__isnull=True).values_list('product_id', flat=True)
+            )
+            context['purchase_items'] = list(
+                order.items.exclude(product__isnull=True).values('product_id', 'quantity')
+            )
+            context['success_whatsapp_url'] = build_whatsapp_url(
+                _("Hello, I want to follow up on order %(order_number)s.") % {
+                    'order_number': order.order_number,
+                }
+            )
+            context['fire_purchase_event'] = self.request.session.pop('last_order_pixel_pending', False)
         return context
 
 class AdminOrderDetailView(StaffRequiredMixin, DetailView):

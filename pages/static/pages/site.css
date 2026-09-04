@@ -71,6 +71,20 @@ button:focus-visible {
     font-size: 0.875rem;
 }
 
+.product-mobile-buy-bar {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 45;
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+@media (min-width: 768px) {
+    .product-mobile-buy-bar {
+        display: none;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
